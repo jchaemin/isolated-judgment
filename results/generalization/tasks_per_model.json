@@ -1,0 +1,38 @@
+{
+ "entailment": {
+  "Qwen2.5-7B": {
+   "readout_vs_fitted": 0.0026155885074140572,
+   "isolated_vs_fitted": 0.016748768472906184
+  },
+  "Llama-3.1-8B": {
+   "readout_vs_fitted": 0.00869195569003034,
+   "isolated_vs_fitted": 0.008016803780850568
+  },
+  "Mistral-7B": {
+   "readout_vs_fitted": 0.010297316896301645,
+   "isolated_vs_fitted": 0.02169488134830344
+  },
+  "Qwen2.5-14B": {
+   "readout_vs_fitted": 0.0034657798004551488,
+   "isolated_vs_fitted": 0.0281363306744018
+  }
+ },
+ "safety": {
+  "Qwen2.5-7B": {
+   "readout_vs_fitted": 0.03537796004100924,
+   "isolated_vs_fitted": 0.01291790652896907
+  },
+  "Llama-3.1-8B": {
+   "readout_vs_fitted": 0.015728538921257362,
+   "isolated_vs_fitted": 0.008696956815283485
+  },
+  "Mistral-7B": {
+   "readout_vs_fitted": 0.005156160136030485,
+   "isolated_vs_fitted": 0.0284614038158586
+  },
+  "Qwen2.5-14B": {
+   "readout_vs_fitted": 0.030101772898902146,
+   "isolated_vs_fitted": 0.016623740341576765
+  }
+ }
+}

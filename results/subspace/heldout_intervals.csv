@@ -1,0 +1,5 @@
+condition,interval
+negated,"[-0.012, +0.004]"
+zero_means_correct,"[-0.005, +0.003]"
+false_means_correct,"[-0.028, -0.007]"
+no_means_correct,"[-0.043, -0.008]"
