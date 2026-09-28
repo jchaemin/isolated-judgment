@@ -1,4 +1,4 @@
-# Supplementary material
+# Isolating a Language Model’s Judgment with a Label-Free Subspace
 
 Code and result files for every table, figure and number in the paper.
 
