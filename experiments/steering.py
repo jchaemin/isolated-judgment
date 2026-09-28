@@ -16,7 +16,6 @@ from readout import config, data, models, prompts, storage
 
 BATCH_SIZE = 48
 FORMATS = ["yes_no", "a_b", "b_a"]
-COLUMN = {"yes_no": "yesno_prompt", "a_b": "ab_prompt", "b_a": "ab_reversed_prompt"}
 LABEL = {"yes_no": "Yes/No", "a_b": "A/B", "b_a": "B/A"}
 STEERED = {0.5: ["a_b", "b_a"], 0.75: ["yes_no", "a_b", "b_a"], 0.9: ["b_a"]}
 CONTROL_DEPTH, CONTROLS, CONTROL_WORDINGS, CONTROL_ALPHAS = 0.75, 5, config.FIVE[:2], [-1.0, 1.0]
@@ -50,8 +49,8 @@ def main():
     fds = list(data.folds(y, q)); fid = np.full(n_all, -1)
     for k, (tr, te) in enumerate(fds):
         fid[te] = k
-    PT = pd.read_csv(storage.path("wordings")).set_index("paraphrase_id")
-    INSTR = {f: {p: str(PT.loc[p, COLUMN[f]]) for p in config.FIVE} for f in FORMATS}
+    PT = pd.read_csv(storage.path("wordings")).set_index("wording")
+    INSTR = {f: {p: str(PT.loc[p, f]) for p in config.FIVE} for f in FORMATS}
     assert all(INSTR["yes_no"][p] == prompts.WORDINGS[p] for p in config.FIVE)
     rows, _ = prompts.answer_rows(T, task); assert (np.array([r["qid"] for r in rows]) == q).all()
     ex = pd.read_csv(storage.path("answer_hashes", model=T, task=task))

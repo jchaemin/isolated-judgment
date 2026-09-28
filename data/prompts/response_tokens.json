@@ -1,0 +1,54 @@
+{
+ "tokens": {
+  "Qwen2.5-7B-Instruct": {
+   "Yes": 9454,
+   "No": 2753,
+   "A": 32,
+   "B": 33,
+   "True": 2514,
+   "False": 4049
+  },
+  "Llama-3.1-8B-Instruct": {
+   "Yes": 9642,
+   "No": 2822,
+   "A": 32,
+   "B": 33,
+   "True": 2575,
+   "False": 4139
+  },
+  "Mistral-7B-Instruct-v0.3": {
+   "Yes": 6360,
+   "No": 2538,
+   "A": 1098,
+   "B": 1133,
+   "True": 6878,
+   "False": 9018
+  },
+  "Qwen2.5-14B-Instruct": {
+   "Yes": 9454,
+   "No": 2753,
+   "A": 32,
+   "B": 33,
+   "True": 2514,
+   "False": 4049
+  }
+ },
+ "formats": {
+  "yes_no": {
+   "correct": "Yes",
+   "incorrect": "No"
+  },
+  "true_false": {
+   "correct": "True",
+   "incorrect": "False"
+  },
+  "a_b": {
+   "correct": "A",
+   "incorrect": "B"
+  },
+  "b_a": {
+   "correct": "B",
+   "incorrect": "A"
+  }
+ }
+}

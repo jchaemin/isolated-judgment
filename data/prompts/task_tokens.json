@@ -1,0 +1,46 @@
+{
+ "templates": {
+  "entailment": "Premise:\n{p}\n\nHypothesis:\n{h}\n\n{instr}",
+  "safety": "User request:\n{q}\n\nResponse:\n{r}\n\n{instr}"
+ },
+ "tokens": {
+  "Qwen2.5-7B-Instruct": {
+   "Yes": 9454,
+   "No": 2753,
+   "A": 32,
+   "B": 33
+  },
+  "Llama-3.1-8B-Instruct": {
+   "Yes": 9642,
+   "No": 2822,
+   "A": 32,
+   "B": 33
+  },
+  "Mistral-7B-Instruct-v0.3": {
+   "Yes": 6360,
+   "No": 2538,
+   "A": 1098,
+   "B": 1133
+  },
+  "Qwen2.5-14B-Instruct": {
+   "Yes": 9454,
+   "No": 2753,
+   "A": 32,
+   "B": 33
+  }
+ },
+ "formats": {
+  "yes_no": {
+   "positive": "Yes",
+   "negative": "No"
+  },
+  "a_b": {
+   "positive": "A",
+   "negative": "B"
+  },
+  "b_a": {
+   "positive": "B",
+   "negative": "A"
+  }
+ }
+}

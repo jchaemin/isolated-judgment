@@ -110,12 +110,12 @@ def run_tasks(model_name, task, max_rows=0, out=None):
     T = model_name.split("/")[-1]; path = out_path("states", out, model=T, task=task, condition="conditions")
     if os.path.exists(path) and not max_rows:
         print("[tasks] SKIP", path, flush=True); return
-    stem = json.load(open(storage.path("task_tokens")))["stems"][task]; PT = pd.read_csv(storage.path("task_wordings")); PT = PT[PT.task == task].set_index("paraphrase_id")
+    stem = json.load(open(storage.path("task_tokens")))["templates"][task]; PT = pd.read_csv(storage.path("task_wordings")); PT = PT[PT.task == task].set_index("wording")
     rows = prompts.cross_rows(task); Z1 = data.states(T, task, "yes_no"); n = min(max_rows or ROWS, len(rows))
     rows = rows[:n]; q = np.array([r["example_id"] for r in rows], int)
     assert (Z1["qid"].astype(int)[:n] == q).all(), "rows differ from the stored states"
-    INSTR = {(c, p): v for p in config.FIVE for c, v in task_instructions(task, str(PT.loc[p, "semantic_stem"]), str(PT.loc[p, "mapping_verb"])).items()}
-    INSTR[("yes_no", "P01")] = str(PT.loc["P01", "yesno_prompt"])
+    INSTR = {(c, p): v for p in config.FIVE for c, v in task_instructions(task, str(PT.loc[p, "stem"]), str(PT.loc[p, "verb"])).items()}
+    INSTR[("yes_no", "P01")] = str(PT.loc["P01", "yes_no"])
     model, tok, Wu, nrm = load(model_name); cols, extra = {}, {}
     for c, (w1, w0) in task_answers(task).items():
         (t1, pre1), (t0, _) = first_token(tok, w1), first_token(tok, w0); (a1, _), (a0, _) = first_token(tok, w1[0].upper() + w1[1:]), first_token(tok, w0[0].upper() + w0[1:])
@@ -138,7 +138,7 @@ def run_other_model(judge, candidates, task, max_rows=0, out=None):
     J = judge.split("/")[-1]; C = candidates.split("/")[-1]; path = out_path("answers_of", out, model=J, task=task, source=C)
     if os.path.exists(path) and not max_rows:
         print("[other-model] SKIP", path, flush=True); return
-    instr = prompts.instructions(pd.read_csv(storage.path("wordings")).set_index("paraphrase_id")); n = max_rows or ROWS
+    instr = prompts.instructions(pd.read_csv(storage.path("wordings")).set_index("wording")); n = max_rows or ROWS
     yc, qc = data.labels(cell(C, task), {"yes_no": data.states(C, task, "yes_no")}); yc, qc = np.asarray(yc).astype(int)[:n], np.asarray(qc)[:n]
     rows, _ = prompts.rows_of(C, task, n); assert (np.array([r["qid"] for r in rows]) == qc).all(), "candidate rows differ from the candidate model's stored states"
     own, _ = prompts.rows_of(J, task, 16)
@@ -154,7 +154,7 @@ def run_instruction_family(model_name, task, max_rows=0, out=None):
     T = model_name.split("/")[-1]; path = out_path("states", out, model=T, task=task, condition="instruction_family")
     if os.path.exists(path) and not max_rows:
         print("[instruction-family] SKIP", path, flush=True); return
-    instr = prompts.new_family(); check = prompts.instructions(pd.read_csv(storage.path("wordings")).set_index("paraphrase_id"))[("yes_no", "P01")]
+    instr = prompts.new_family(); check = prompts.instructions(pd.read_csv(storage.path("wordings")).set_index("wording"))[("yes_no", "P01")]
     D1 = data.states(T, task, "yes_no"); n = max_rows or ROWS; q = D1["qid"].astype(int)[:n]
     rows, _ = prompts.rows_of(T, task, n); assert (np.array([r["qid"] for r in rows]) == q).all()
     model, tok, Wu, nrm = load(model_name); norm = [None]
@@ -169,7 +169,7 @@ def run_dataset_candidates(model_name, task, max_rows=0, out=None):
     T = model_name.split("/")[-1]; path = out_path("states", out, model=T, task=task, condition="dataset_candidates")
     if os.path.exists(path) and not max_rows:
         print("[dataset-candidates] SKIP", path, flush=True); return
-    instr = prompts.instructions(pd.read_csv(storage.path("wordings")).set_index("paraphrase_id"))
+    instr = prompts.instructions(pd.read_csv(storage.path("wordings")).set_index("wording"))
     rows, _ = prompts.option_rows(T, task); rows = rows[:max_rows] if max_rows else rows; n = len(rows)
     own, _ = prompts.rows_of(T, task, 16); _, ids = config.response_tokens(cell(T, task))
     cols = {c: [int(ids[w]) for w in prompts.PAIR[c]] for c in prompts.SEVEN if c in prompts.PAIR}

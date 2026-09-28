@@ -40,11 +40,11 @@ def negate_cross(t, task):
 def instructions(prompt_table, wordings=FIVE):
     I = {}
     for p in wordings:
-        stem, verb = str(prompt_table.loc[p, "semantic_stem"]), str(prompt_table.loc[p, "mapping_verb"])
-        I.update({("yes_no", p): str(prompt_table.loc[p, "yesno_prompt"]), ("true_false", p): str(prompt_table.loc[p, "semantic_pair_prompt"]), ("a_b", p): str(prompt_table.loc[p, "ab_prompt"]),
-                  ("b_a", p): str(prompt_table.loc[p, "ab_reversed_prompt"]),
+        stem, verb = str(prompt_table.loc[p, "stem"]), str(prompt_table.loc[p, "verb"])
+        I.update({("yes_no", p): str(prompt_table.loc[p, "yes_no"]), ("true_false", p): str(prompt_table.loc[p, "true_false"]), ("a_b", p): str(prompt_table.loc[p, "a_b"]),
+                  ("b_a", p): str(prompt_table.loc[p, "b_a"]),
                   ("sentence", p): f"{stem} {verb} with exactly one of the following sentences:\nThe proposed answer is correct.\nThe proposed answer is incorrect.",
-                  ("negated", p): negate(str(prompt_table.loc[p, "yesno_prompt"])), ("no_means_correct", p): f"{stem} Answer No if the candidate is correct and Yes if it is incorrect."})
+                  ("negated", p): negate(str(prompt_table.loc[p, "yes_no"])), ("no_means_correct", p): f"{stem} Answer No if the candidate is correct and Yes if it is incorrect."})
     return I
 
 

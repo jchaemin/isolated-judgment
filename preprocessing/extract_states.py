@@ -19,7 +19,6 @@ DEPTHS = [0.25, 0.5, 0.75, 0.9]
 FORMATS = ["yes_no", "true_false", "a_b", "b_a"]
 TASK_FORMATS = ["yes_no", "a_b", "b_a"]
 FORMAT_FIRST = ["yes_no", "a_b", "b_a"]
-COLUMN = {"yes_no": "yesno_prompt", "true_false": "semantic_pair_prompt", "a_b": "ab_prompt", "b_a": "ab_reversed_prompt"}
 CLAUSES = {"one_zero": "Respond 1 if correct, 0 if incorrect.", "correct_incorrect": "Respond with the word correct or incorrect.",
            "zero_means_correct": "Respond 0 if correct, 1 if incorrect.", "false_means_correct": "Respond False if correct, True if incorrect.",
            "no_means_correct": "Answer No if the candidate is correct and Yes if it is incorrect."}
@@ -57,12 +56,12 @@ def batch_for(task):
 
 
 def wordings():
-    return pd.read_csv(storage.path("wordings")).set_index("paraphrase_id")
+    return pd.read_csv(storage.path("wordings")).set_index("wording")
 
 
 def task_wordings(task):
     PT = pd.read_csv(storage.path("task_wordings"))
-    return PT[PT.task == task].set_index("paraphrase_id")
+    return PT[PT.task == task].set_index("wording")
 
 
 def text(tok, r, instr, chat=True):
@@ -74,7 +73,7 @@ def task_text(tok, stem, task, r, instr):
 
 
 def stated(PT, p, clause):
-    return f"{PT.loc[p, 'semantic_stem']} {clause}"
+    return f"{PT.loc[p, 'stem']} {clause}"
 
 
 def word_tokens(tok, w, chat=True):
@@ -164,7 +163,7 @@ def run_formats(model, task, max_rows=0, out=None):
         if f == "true_false":
             store["token_names"] = np.array(config.SIX)
         for p in ALL_WORDINGS:
-            G, Z, t20i = models.forward(net, W, nrm, tok, [text(tok, r, str(PT.loc[p, COLUMN[f]])) for r in rows], BATCH_SIZE, tid)
+            G, Z, t20i = models.forward(net, W, nrm, tok, [text(tok, r, str(PT.loc[p, f])) for r in rows], BATCH_SIZE, tid)
             store.update({f"G_{p}": G, f"Z_{p}": Z, f"t20i_{p}": t20i})
         models.save(paths[f], compressed=True, **store)
         print(f"[formats] {T} {task} {f}", flush=True)
@@ -176,14 +175,14 @@ def run_task_formats(model, task, max_rows=0, out=None):
     if not todo:
         print(f"[cross-task] {T} {task} SKIP", flush=True); return
     _, ids = config.response_tokens(cell(T, task)); names = ["Yes", "No", "A", "B"]; tid = [ids[nm] for nm in names]
-    PT = task_wordings(task); stem = json.load(open(storage.path("task_tokens")))["stems"][task]; rows = prompts.cross_rows(task, n=max_rows)
+    PT = task_wordings(task); stem = json.load(open(storage.path("task_tokens")))["templates"][task]; rows = prompts.cross_rows(task, n=max_rows)
     net, tok, W, nrm = load(model)
     for f in todo:
         store = {}
         if f == "yes_no":
             store = {"y": np.array([r["y"] for r in rows], int), "qid": np.array([r["example_id"] for r in rows], int), "token_names": np.array(names), "token_ids": np.array(tid)}
         for p in config.FIVE:
-            G, Z, t20i = models.forward(net, W, nrm, tok, [task_text(tok, stem, task, r, str(PT.loc[p, COLUMN[f]])) for r in rows], BATCH_SIZE, tid)
+            G, Z, t20i = models.forward(net, W, nrm, tok, [task_text(tok, stem, task, r, str(PT.loc[p, f])) for r in rows], BATCH_SIZE, tid)
             store.update({f"G_{p}": G, f"Z_{p}": Z, **({f"t20i_{p}": t20i} if f == "yes_no" else {})})
         models.save(paths[f], compressed=True, **store)
         print(f"[cross-task] {T} {task} {f}", flush=True)
@@ -197,7 +196,7 @@ def run_negated(model, task, max_rows=0, out=None):
     rows, _ = prompts.answer_rows(T, task, n=max_rows)
     net, tok, W, nrm = load(model); store = {}
     for p in ALL_WORDINGS:
-        G, Z, t20i = models.forward(net, W, nrm, tok, [text(tok, r, prompts.negate(str(PT.loc[p, "yesno_prompt"]))) for r in rows], BATCH_SIZE, tid)
+        G, Z, t20i = models.forward(net, W, nrm, tok, [text(tok, r, prompts.negate(str(PT.loc[p, "yes_no"]))) for r in rows], BATCH_SIZE, tid)
         store.update({f"G_{p}": G, f"Z_{p}": Z, f"t20i_{p}": t20i})
     models.save(path, compressed=True, **store)
     print(f"[negated] {T} {task}", flush=True)
@@ -214,7 +213,7 @@ def run_sentence(model, task, max_rows=0, out=None):
     assert ids_pos[:k] == ids_pre and ids_neg[:k] == ids_pre and ids_pos[k] != ids_neg[k], (ids_pos, ids_neg, ids_pre)
     div = torch.tensor([ids_pos[k], ids_neg[k]]); store = {}
     for p in ALL_WORDINGS:
-        instr = f"{PT.loc[p, 'semantic_stem']} {PT.loc[p, 'mapping_verb']} with exactly one of the following sentences:\n{STATEMENT_CORRECT}\n{STATEMENT_INCORRECT}"
+        instr = f"{PT.loc[p, 'stem']} {PT.loc[p, 'verb']} with exactly one of the following sentences:\n{STATEMENT_CORRECT}\n{STATEMENT_INCORRECT}"
         texts = [text(tok, r, instr) for r in rows]
         store[f"G_{p}"] = models.forward(net, W, nrm, tok, texts, BATCH_SIZE, tid)[0]
         if p not in config.FIVE:
@@ -258,7 +257,7 @@ def run_format_first(model, task, max_rows=0, out=None):
 
     cap = {}; hook = last_block.register_forward_hook(lambda _mod, _inp, o_: cap.__setitem__("h", (o_[0] if isinstance(o_, tuple) else o_).detach()))
     for f, p in todo:
-        stem = str(PT.loc[p, "semantic_stem"]); instr = str(PT.loc[p, COLUMN[f]]); clause = instr[len(stem):].strip()
+        stem = str(PT.loc[p, "stem"]); instr = str(PT.loc[p, f]); clause = instr[len(stem):].strip()
         H = np.zeros((n, 4, dmod), np.float16); texts, ptoks = [], []
         for i in range(n):
             w, es = ends(i, clause, stem); texts.append(w); ptoks.append(tok_positions(w, es))
@@ -467,7 +466,7 @@ def run_task_depth(model_name, max_rows=0, out=None):
             Hs[i:i + len(enc.input_ids)] = torch.stack([o.hidden_states[l][:, -1, :].float() for l in LI], 1).cpu().numpy().astype(np.float16); del o
         return Hs
 
-    stems = json.load(open(storage.path("task_tokens")))["stems"]
+    stems = json.load(open(storage.path("task_tokens")))["templates"]
     for task in config.CROSS_TASKS:
         PT = task_wordings(task); rows = prompts.cross_rows(task, n=max_rows)
         for p in config.FIVE:
@@ -475,7 +474,7 @@ def run_task_depth(model_name, max_rows=0, out=None):
                 path = out_path("task_depth", out, model=T, task=task, condition=c, wording=p)
                 if os.path.exists(path) and not max_rows:
                     continue
-                ins = str(PT.loc[p, "yesno_prompt"]); ins = ins if c == "yes_no" else prompts.negate_cross(ins, task)
+                ins = str(PT.loc[p, "yes_no"]); ins = ins if c == "yes_no" else prompts.negate_cross(ins, task)
                 models.save(path, compressed=True, H=states([task_text(tok, stems[task], task, r, ins) for r in rows]))
                 print(f"[cross-task-depth] {T} {task} {c} {p}  {time.time()-t0:.0f}s", flush=True)
     print(f"[cross-task-depth] done {T} layers {LI} of {L}  {time.time()-t0:.0f}s", flush=True)
@@ -486,11 +485,11 @@ def run_task_negated(model, task, max_rows=0, out=None):
     if os.path.exists(path) and not max_rows:
         print(f"[cross-task-negated] {T} {task} SKIP", flush=True); return
     _, ids = config.response_tokens(cell(T, task)); names = ["Yes", "No", "A", "B"]; tid = [ids[nm] for nm in names]
-    PT = task_wordings(task); stem = json.load(open(storage.path("task_tokens")))["stems"][task]; rows = prompts.cross_rows(task, n=max_rows)
+    PT = task_wordings(task); stem = json.load(open(storage.path("task_tokens")))["templates"][task]; rows = prompts.cross_rows(task, n=max_rows)
     net, tok, W, nrm = load(model)
     store = {"qid": np.array([r["example_id"] for r in rows], int), "prompt_ids": np.array(config.FIVE), "token_names": np.array(names), "token_ids": np.array(tid)}
     for p in config.FIVE:
-        G, Z, t20i = models.forward(net, W, nrm, tok, [task_text(tok, stem, task, r, prompts.negate_cross(str(PT.loc[p, "yesno_prompt"]), task)) for r in rows], BATCH_SIZE, tid)
+        G, Z, t20i = models.forward(net, W, nrm, tok, [task_text(tok, stem, task, r, prompts.negate_cross(str(PT.loc[p, "yes_no"]), task)) for r in rows], BATCH_SIZE, tid)
         store.update({f"G_{p}": G, f"Z_{p}": Z, f"t20i_{p}": t20i})
     models.save(path, compressed=True, **store)
     print(f"[cross-task-negated] {T} {task}", flush=True)
@@ -532,13 +531,13 @@ def run_other_models(model_name, task, max_rows=0, out=None):
     d, _ = prompts.answers(T, task)
     rows = [{"qid": int(r.qid), "question": r.question, "options": (r.options if "options" in d.columns and isinstance(r.options, str) and r.options else ""), "answer": r.generated_text, "y": int(r.correct)} for _, r in d.iterrows()]
     rows = rows[:max_rows] if max_rows else rows; y = np.array([r["y"] for r in rows], int); q = np.array([r["qid"] for r in rows], int)
-    PT = wordings(); INSTR = {(f, p): str(PT.loc[p, COLUMN[f]]) for f in FORMATS for p in ws}
+    PT = wordings(); INSTR = {(f, p): str(PT.loc[p, f]) for f in FORMATS for p in ws}
     for p in ws:
-        stem, verb = str(PT.loc[p, "semantic_stem"]), str(PT.loc[p, "mapping_verb"])
-        INSTR.update({("negated", p): prompts.negate(str(PT.loc[p, "yesno_prompt"])), ("sentence", p): f"{stem} {verb} with exactly one of the following sentences:\n{STATEMENT_CORRECT}\n{STATEMENT_INCORRECT}",
+        stem, verb = str(PT.loc[p, "stem"]), str(PT.loc[p, "verb"])
+        INSTR.update({("negated", p): prompts.negate(str(PT.loc[p, "yes_no"])), ("sentence", p): f"{stem} {verb} with exactly one of the following sentences:\n{STATEMENT_CORRECT}\n{STATEMENT_INCORRECT}",
                       **{(c, p): f"{stem} {CLAUSES[c]}" for c in WORDS}})
     model, tok = models.chat_model(model_name); chat = models.uses_chat_template(tok); Wu = model.get_output_embeddings().weight; nrm = models.final_norm(model)
-    probe = [text(tok, r, str(PT.loc[ws[0], "yesno_prompt"]), chat) for r in rows[:8]]
+    probe = [text(tok, r, str(PT.loc[ws[0], "yes_no"]), chat) for r in rows[:8]]
     first, rule = response_token_rule(tok, model, probe, lambda w: first_token(tok, w, chat))
     TID = [first(w) for w in config.SIX]; assert len(set(TID)) == 6, ("response tokens collide", TID)
     print(f"[other-models] {T} {task}: response tokens by the {rule} rule", flush=True)
