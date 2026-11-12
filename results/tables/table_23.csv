@@ -1,0 +1,25 @@
+location,context,value,source_file,source_key
+Table 23 / Mistral-Nemo-12B-Instruct / TriviaQA / Yes/No,additional models by cell,0.7756326770346536,generalization/models/mistral-nemo-12b.csv,cell=TriviaQA; method=readout; condition=yes_no
+Table 23 / Mistral-Nemo-12B-Instruct / TriviaQA / frozen vs fitted,additional models by cell,0.006496590822033355,generalization/models/mistral-nemo-12b.csv,"cell=TriviaQA; max over a_b, b_a, true_false of |readout - fitted|"
+Table 23 / Mistral-Nemo-12B-Instruct / TriviaQA / fall,additional models by cell,0.1506320386118133,generalization/models/mistral-nemo-12b.csv,cell=TriviaQA; readout yes_no - readout negated
+Table 23 / Mistral-Nemo-12B-Instruct / TriviaQA / isolated vs fitted,additional models by cell,0.0029265302995479248,generalization/models/mistral-nemo-12b.csv,"cell=TriviaQA; max over negated, no_means_correct of |isolated - fitted|"
+Table 23 / Mistral-Nemo-12B-Instruct / MMLU / Yes/No,additional models by cell,0.7562870683050029,generalization/models/mistral-nemo-12b.csv,cell=MMLU; method=readout; condition=yes_no
+Table 23 / Mistral-Nemo-12B-Instruct / MMLU / frozen vs fitted,additional models by cell,0.006305513777348781,generalization/models/mistral-nemo-12b.csv,"cell=MMLU; max over a_b, b_a, true_false of |readout - fitted|"
+Table 23 / Mistral-Nemo-12B-Instruct / MMLU / fall,additional models by cell,0.03297482902466009,generalization/models/mistral-nemo-12b.csv,cell=MMLU; readout yes_no - readout negated
+Table 23 / Mistral-Nemo-12B-Instruct / MMLU / isolated vs fitted,additional models by cell,0.003013706404835559,generalization/models/mistral-nemo-12b.csv,"cell=MMLU; max over negated, no_means_correct of |isolated - fitted|"
+Table 23 / Ministral-8B-Instruct / TriviaQA / Yes/No,additional models by cell,0.8068283279220779,generalization/models/ministral-8b.csv,cell=TriviaQA; method=readout; condition=yes_no
+Table 23 / Ministral-8B-Instruct / TriviaQA / frozen vs fitted,additional models by cell,0.007330560064935043,generalization/models/ministral-8b.csv,"cell=TriviaQA; max over a_b, b_a, true_false of |readout - fitted|"
+Table 23 / Ministral-8B-Instruct / TriviaQA / fall,additional models by cell,0.14034090909090913,generalization/models/ministral-8b.csv,cell=TriviaQA; readout yes_no - readout negated
+Table 23 / Ministral-8B-Instruct / TriviaQA / isolated vs fitted,additional models by cell,0.003987418831168821,generalization/models/ministral-8b.csv,"cell=TriviaQA; max over negated, no_means_correct of |isolated - fitted|"
+Table 23 / Ministral-8B-Instruct / MMLU / Yes/No,additional models by cell,0.7883252626286683,generalization/models/ministral-8b.csv,cell=MMLU; method=readout; condition=yes_no
+Table 23 / Ministral-8B-Instruct / MMLU / frozen vs fitted,additional models by cell,0.01832182265618798,generalization/models/ministral-8b.csv,"cell=MMLU; max over a_b, b_a, true_false of |readout - fitted|"
+Table 23 / Ministral-8B-Instruct / MMLU / fall,additional models by cell,0.06189304331719203,generalization/models/ministral-8b.csv,cell=MMLU; readout yes_no - readout negated
+Table 23 / Ministral-8B-Instruct / MMLU / isolated vs fitted,additional models by cell,0.007583816252546893,generalization/models/ministral-8b.csv,"cell=MMLU; max over negated, no_means_correct of |isolated - fitted|"
+Table 23 / OLMo-2-7B-Instruct / TriviaQA / Yes/No,additional models by cell,0.7639935684855793,generalization/models/olmo-2-7b.csv,cell=TriviaQA; method=readout; condition=yes_no
+Table 23 / OLMo-2-7B-Instruct / TriviaQA / frozen vs fitted,additional models by cell,0.00560245201487275,generalization/models/olmo-2-7b.csv,"cell=TriviaQA; max over a_b, b_a, true_false of |readout - fitted|"
+Table 23 / OLMo-2-7B-Instruct / TriviaQA / fall,additional models by cell,0.013908149934679925,generalization/models/olmo-2-7b.csv,cell=TriviaQA; readout yes_no - readout negated
+Table 23 / OLMo-2-7B-Instruct / TriviaQA / isolated vs fitted,additional models by cell,0.009506582253039908,generalization/models/olmo-2-7b.csv,"cell=TriviaQA; max over negated, no_means_correct of |isolated - fitted|"
+Table 23 / OLMo-2-7B-Instruct / MMLU / Yes/No,additional models by cell,0.7369560755336617,generalization/models/olmo-2-7b.csv,cell=MMLU; method=readout; condition=yes_no
+Table 23 / OLMo-2-7B-Instruct / MMLU / frozen vs fitted,additional models by cell,0.011997126436781635,generalization/models/olmo-2-7b.csv,"cell=MMLU; max over a_b, b_a, true_false of |readout - fitted|"
+Table 23 / OLMo-2-7B-Instruct / MMLU / fall,additional models by cell,0.030264778325123087,generalization/models/olmo-2-7b.csv,cell=MMLU; readout yes_no - readout negated
+Table 23 / OLMo-2-7B-Instruct / MMLU / isolated vs fitted,additional models by cell,0.008548850574712774,generalization/models/olmo-2-7b.csv,"cell=MMLU; max over negated, no_means_correct of |isolated - fitted|"

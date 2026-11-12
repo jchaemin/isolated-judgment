@@ -1,0 +1,17 @@
+location,context,value,source_file,source_key
+Table 15 / No means correct / readout,concept erasure (median),0.6901205119918293,subspace/erasure.csv,condition=no_means_correct; method=readout; median over 14 cells
+Table 15 / No means correct / after LEACE,concept erasure (median),0.6895530452858505,subspace/erasure.csv,condition=no_means_correct; method=leace; median over 14 cells
+Table 15 / No means correct / after INLP,concept erasure (median),0.6974793845429974,subspace/erasure.csv,condition=no_means_correct; method=inlp; median over 14 cells
+Table 15 / No means correct / isolated,concept erasure (median),0.7995868269614158,subspace/erasure.csv,condition=no_means_correct; method=isolated; median over 14 cells
+Table 15 / False means correct / readout,concept erasure (median),0.6754037117729725,subspace/erasure.csv,condition=false_means_correct; method=readout; median over 14 cells
+Table 15 / False means correct / after LEACE,concept erasure (median),0.6754440462232691,subspace/erasure.csv,condition=false_means_correct; method=leace; median over 14 cells
+Table 15 / False means correct / after INLP,concept erasure (median),0.6895675168504902,subspace/erasure.csv,condition=false_means_correct; method=inlp; median over 14 cells
+Table 15 / False means correct / isolated,concept erasure (median),0.7943890231205198,subspace/erasure.csv,condition=false_means_correct; method=isolated; median over 14 cells
+Table 15 / 0 means correct / readout,concept erasure (median),0.7657241713049336,subspace/erasure.csv,condition=zero_means_correct; method=readout; median over 14 cells
+Table 15 / 0 means correct / after LEACE,concept erasure (median),0.759810191041286,subspace/erasure.csv,condition=zero_means_correct; method=leace; median over 14 cells
+Table 15 / 0 means correct / after INLP,concept erasure (median),0.7587945353922365,subspace/erasure.csv,condition=zero_means_correct; method=inlp; median over 14 cells
+Table 15 / 0 means correct / isolated,concept erasure (median),0.818356711818883,subspace/erasure.csv,condition=zero_means_correct; method=isolated; median over 14 cells
+Table 15 / negated question / readout,concept erasure (median),0.6944214861389667,subspace/erasure.csv,condition=negated; method=readout; median over 14 cells
+Table 15 / negated question / after LEACE,concept erasure (median),0.6954362959695628,subspace/erasure.csv,condition=negated; method=leace; median over 14 cells
+Table 15 / negated question / after INLP,concept erasure (median),0.6853188534533317,subspace/erasure.csv,condition=negated; method=inlp; median over 14 cells
+Table 15 / negated question / isolated,concept erasure (median),0.8088941896918871,subspace/erasure.csv,condition=negated; method=isolated; median over 14 cells

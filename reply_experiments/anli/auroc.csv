@@ -1,0 +1,2 @@
+cell,condition,verdict_auroc,iso_k8_auroc,readout_auroc
+Qwen2.5-7B Entailment,negated,0.3977907464868184,0.8824923007538672,0.7710505550722047

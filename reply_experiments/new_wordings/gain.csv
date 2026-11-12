@@ -1,0 +1,7 @@
+statistic,value,detail
+mean,0.12349648932786654,11 cells
+lo,0.064905613231439,2.5 percentile
+hi,0.1957112779660129,97.5 percentile
+lowest_wording,0.05250547031065524,N04
+highest_wording,0.18844702052336582,N11
+mean_without_negator,0.12396537414178373,N02 N05 N08 N09 N14 N15

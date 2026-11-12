@@ -26,7 +26,7 @@ def cell_run(cell):
             other = [ss.transform(H[("yes_no", p2)][tr]) for p2 in pids if p2 != p]
             Bm, k_B = est.expression_subspace(H, tr, p, q, cross, rule="split_half")
             Bs, _ = np.linalg.qr((Bm / ss.scale_).T); Bs = Bs.T
-            wcm = est.class_mean(X, ytr); w_fijr = wcm - Bs.T @ (Bs @ wcm)
+            wcm = est.class_mean(X, ytr); w_fijr = est.unit(wcm - Bs.T @ (Bs @ wcm))
             wlr, _, _, _ = est.tuned_probe(X, ytr, q[tr], other)
             Xp = np.r_[ss.transform(H[("a_b", p)][tr]), ss.transform(H[("b_a", p)][tr])]; yp = np.r_[ytr, ytr]
             w_pool = est.class_mean(Xp, yp)
@@ -93,7 +93,7 @@ def _per_wording_cell(cell):
             ytr = y[tr]; Hy = H[("yes_no", p)]; ss = StandardScaler().fit(Hy[tr]); X = ss.transform(Hy[tr])
             Bm, _ = est.expression_subspace(H, tr, p, q, cross, rule="split_half")
             Bs, _ = np.linalg.qr((Bm / ss.scale_).T); Bs = Bs.T
-            wcm = est.class_mean(X, ytr); w_fijr = wcm - Bs.T @ (Bs @ wcm)
+            wcm = est.class_mean(X, ytr); w_fijr = est.unit(wcm - Bs.T @ (Bs @ wcm))
             for t in have:
                 put(("isolated", t, p), te, ss.transform(H[(t, p)][te]) @ w_fijr)
                 st = StandardScaler().fit(H[(t, p)][tr]); Xt = st.transform(H[(t, p)][tr]); wt = est.class_mean(Xt, ytr)
@@ -140,13 +140,11 @@ _PAIR_RANK = {"formats": "format_pairs", "negation": "negation_pairs"}
 
 def _pair_subspaces(H, tr, p, q, cross):
     fmt = [H[(g, p)][tr] - H[(f, p)][tr] for i, f in enumerate(config.FORMATS) for g in config.FORMATS[i + 1:] if (f, p) in H and (g, p) in H]
-    xb = cross[np.random.default_rng(1).choice(len(cross), min(len(cross), 4 * len(tr)), replace=False)] if cross is not None else None
-    out = {}
-    ka = est.split_half_rank(fmt, [q[tr]] * len(fmt)); out["formats"] = (est.top_directions(np.concatenate(fmt), ka)[0], ka)
+    xb = est.sub_cross(cross, len(tr)) if cross is not None else None
+    out = {"formats": est.fit_blocks(fmt, [q[tr]] * len(fmt), None)}
     if xb is not None:
-        kb = est.split_half_rank([xb], [np.arange(len(xb))]); out["negation"] = (est.top_directions(xb, kb)[0], kb)
-        kr = est.split_half_rank(fmt + [xb], [q[tr]] * len(fmt) + [np.arange(len(xb))])
-        out["both"] = (est.top_directions(np.concatenate(fmt + [xb]), kr)[0], kr)
+        out["negation"] = est.fit_blocks([], [], xb)
+        out["both"] = est.fit_blocks(fmt, [q[tr]] * len(fmt), xb)
     return out
 
 
@@ -163,7 +161,7 @@ def _pair_sources_cell(cell):
             ss = StandardScaler().fit(H[("yes_no", p)][tr]); X = ss.transform(H[("yes_no", p)][tr]); w = est.class_mean(X, y[tr])
             Bs = _pair_subspaces(H, tr, p, q, cross); Wd = {"readout": w}
             for nm, (Bm, k) in Bs.items():
-                Qb = np.linalg.qr((Bm / ss.scale_).T)[0]; pw = Qb @ (Qb.T @ w); Wd[f"minus_{nm}"] = w - pw
+                Qb = np.linalg.qr((Bm / ss.scale_).T)[0]; pw = Qb @ (Qb.T @ w); Wd[f"minus_{nm}"] = est.unit(w - pw)
                 shares.append(dict(fold=fi, wording=p, subspace=nm, k=int(k)))
             targets = set(config.HELD_OUT) if p in config.FIVE else set()
             for t in targets:
@@ -197,13 +195,13 @@ def run_pair_sources():
 
 
 def _negation_directions(cross):
-    V3, _, _ = est.top_directions(cross, 3)
+    V3, _ = est.fit_blocks([], [], cross, k=3)
     return dict(rank_1=V3[:1], rank_3=V3[:3])
 
 
 def _negation_pair_variants(model):
     out = {"whole": [], "agree": [], "balanced": []}
-    for tk in config.CROSS_TASKS:
+    for ti, tk in enumerate(config.CROSS_TASKS):
         Zn = np.load(storage.path("states", model=model, task=tk, condition="negated"), allow_pickle=True)
         Za = np.load(storage.path("states", model=model, task=tk, condition="yes_no"), allow_pickle=True)
         nmA = [str(x) for x in Za["token_names"]]; nmN = [str(x) for x in Zn["token_names"]]
@@ -215,22 +213,22 @@ def _negation_pair_variants(model):
             za = Za[f"Z_{p}"]; zn = Zn[f"Z_{p}"]
             va = np.where(np.isin(Za[f"t20i_{p}"][:, 0], [idA["Yes"], idA["No"]]), (za[:, nmA.index("Yes")] > za[:, nmA.index("No")]).astype(int), -1)
             vn = np.where(np.isin(Zn[f"t20i_{p}"][:, 0], [idN["Yes"], idN["No"]]), (zn[:, nmN.index("No")] > zn[:, nmN.index("Yes")]).astype(int), -1)
-            out["whole"].append(D); ok = (va >= 0) & (vn >= 0) & (va == vn); out["agree"].append(D[ok])
+            qd = Zn["qid"]; wn = est.wording_number(p); out["whole"].append((D, ti, qd, wn)); ok = (va >= 0) & (vn >= 0) & (va == vn); out["agree"].append((D[ok], ti, qd[ok], wn))
             m = va >= 0; s = 2.0 * va[m] - 1; sc = s - s.mean(); Dm = D[m]
             beta = (sc[:, None] * (Dm - Dm.mean(0))).sum(0) / (sc @ sc) if sc @ sc > 0 else np.zeros(D.shape[1])
-            out["balanced"].append(Dm - sc[:, None] * beta[None, :])
-    return {k: np.concatenate(v) for k, v in out.items()}
+            out["balanced"].append((Dm - sc[:, None] * beta[None, :], ti, qd[m], wn))
+    return {k: est.cross_block(v) for k, v in out.items()}
 
 
 def _negation_pairs_at(model, wordings):
     X = []
-    for tk in config.CROSS_TASKS:
+    for ti, tk in enumerate(config.CROSS_TASKS):
         Za = np.load(storage.path("states", model=model, task=tk, condition="negated"), allow_pickle=True)
         Zb = np.load(storage.path("states", model=model, task=tk, condition="yes_no"), allow_pickle=True)
         for p in wordings:
             if f"G_{p}" in Za and f"G_{p}" in Zb:
-                X.append(Za[f"G_{p}"].astype(np.float64) - Zb[f"G_{p}"].astype(np.float64))
-    return np.concatenate(X) if X else None
+                X.append((Za[f"G_{p}"].astype(np.float64) - Zb[f"G_{p}"].astype(np.float64), ti, Za["qid"], est.wording_number(p)))
+    return est.cross_block(X) if X else None
 
 
 def _verdicts(S, p):
@@ -255,7 +253,7 @@ def _directions_cell(cell):
             w = est.class_mean(X, ytr)
             Bm, _ = est.expression_subspace(H, tr, p, q, cross, rule="split_half")
             Q8 = np.linalg.qr((Bm / ss.scale_).T)[0]; Q1 = np.linalg.qr((Pz["rank_1"] / ss.scale_).T)[0]; Q3 = np.linalg.qr((Pz["rank_3"] / ss.scale_).T)[0]
-            ws = {"readout": w, "negation_rank_1": w - Q1 @ (Q1.T @ w), "negation_rank_3": w - Q3 @ (Q3.T @ w), "subspace_rank_8": w - Q8 @ (Q8.T @ w)}
+            ws = {"readout": w, "negation_rank_1": est.unit(w - Q1 @ (Q1.T @ w)), "negation_rank_3": est.unit(w - Q3 @ (Q3.T @ w)), "subspace_full": est.unit(w - Q8 @ (Q8.T @ w))}
             for t in config.CONDITIONS:
                 if (t, p) not in H:
                     continue
@@ -300,7 +298,7 @@ def _components_cell(cell):
             _, cosv, _ = np.linalg.svd(Qb.T @ Qp); cosv = np.clip(cosv, 0, 1)
             nw = float(w @ w); pb = Qb @ (Qb.T @ w); pp = Qp @ (Qp.T @ w)
             units.append(dict(mean_abs_cos=float(cosv.mean()), n_overlap_dirs=int((cosv >= TH).sum()), share_in_subspace=float(pb @ pb / nw), share_in_components=float(pp @ pp / nw)))
-            W_ = {"readout": w, "minus_subspace": w - pb, "minus_components": w - pp}
+            W_ = {"readout": w, "minus_subspace": est.unit(w - pb), "minus_components": est.unit(w - pp)}
             if ("negated", p) in H:
                 Zt = ss.transform(H[("negated", p)][te])
                 for nm, ww in W_.items():
@@ -345,7 +343,7 @@ def _erasure_cell(cell):
             mu, A = est.leace(Xst, Z); era = lambda X: X - (X - mu) @ A
             ssp = StandardScaler().fit(Xst); R = est.inlp(ssp.transform(Xst), zst, iters=8); ein = lambda X: ssp.transform(X) @ R
             ytr = y[tr]; ss = StandardScaler().fit(H[("yes_no", p)][tr]); X = ss.transform(H[("yes_no", p)][tr]); w = est.class_mean(X, ytr)
-            Bm, _ = est.expression_subspace(H, tr, p, q, cross, rule="split_half"); Qb = np.linalg.qr((Bm / ss.scale_).T)[0]; wp = w - Qb @ (Qb.T @ w)
+            Bm, _ = est.expression_subspace(H, tr, p, q, cross, rule="split_half"); Qb = np.linalg.qr((Bm / ss.scale_).T)[0]; wp = est.unit(w - Qb @ (Qb.T @ w))
             for nm, f_ in (("leace", era), ("inlp", ein)):
                 Etr = f_(H[("yes_no", p)][tr]); se = StandardScaler().fit(Etr); Xe = se.transform(Etr); we = est.class_mean(Xe, ytr)
                 for c in config.HELD_OUT:
@@ -396,10 +394,7 @@ def _verdict_free_cell(cell):
                     beta = (sc[:, None] * (Dm - Dm.mean(0))).sum(0) / (sc @ sc) if sc @ sc > 0 else np.zeros(D.shape[1])
                     blocks["balanced"].append(Dm - sc[:, None] * beta[None, :]); groups["balanced"].append(q[tr][m])
             for v in ("whole", "agree", "balanced"):
-                xb = CX[v][np.random.default_rng(1).choice(len(CX[v]), min(len(CX[v]), 4 * len(tr)), replace=False)]
-                bl = blocks[v] + [xb]; gr = groups[v] + [np.arange(len(xb))]
-                k_rule = est.split_half_rank(bl, gr)
-                Bm, _, _ = est.top_directions(np.concatenate(bl), k_rule); Qb = np.linalg.qr((Bm / ss.scale_).T)[0]; wp = w - Qb @ (Qb.T @ w)
+                Bm, _ = est.fit_blocks(blocks[v], groups[v], est.sub_cross(CX[v], len(tr))); Qb = np.linalg.qr((Bm / ss.scale_).T)[0]; wp = est.unit(w - Qb @ (Qb.T @ w))
                 for t in config.HELD_OUT:
                     if (t, p) in H:
                         put((v, t, p), te, ss.transform(H[(t, p)][te]) @ wp)
@@ -440,14 +435,12 @@ def _wordings_cell(cell):
         xs = _negation_pairs_at(model, src)
         for tr, te in fld:
             pairs = [H[(g, p)][tr] - H[(f, p)][tr] for p in src for i, f in enumerate(config.FORMATS) for g in config.FORMATS[i + 1:] if (f, p) in H and (g, p) in H]
-            if xs is not None:
-                pairs.append(xs[np.random.default_rng(1).choice(len(xs), min(len(xs), 4 * len(tr)), replace=False)])
-            Bsrc, _, _ = est.top_directions(np.concatenate(pairs), 8)
+            Bsrc, _ = est.fit_blocks(pairs, [q[tr]] * len(pairs), est.sub_cross(xs, len(tr)) if xs is not None else None)
             for e in ev:
                 ytr = y[tr]; ss = StandardScaler().fit(H[("yes_no", e)][tr]); X_ = ss.transform(H[("yes_no", e)][tr]); w = est.class_mean(X_, ytr)
                 Qs = np.linalg.qr((Bsrc / ss.scale_).T)[0]
-                Bin, _ = est.expression_subspace(H, tr, e, q, cross_all, rule="split_half"); Qi = np.linalg.qr((Bin / ss.scale_).T)[0]
-                Wd = {"readout": w, "isolated_other_wordings": w - Qs @ (Qs.T @ w), "isolated_same_wording": w - Qi @ (Qi.T @ w)}
+                Bin, _ = est.expression_subspace(H, tr, e, q, cross_all.rows(cross_all.wording != est.wording_number(e)), rule="split_half"); Qi = np.linalg.qr((Bin / ss.scale_).T)[0]
+                Wd = {"readout": w, "isolated_other_wordings": est.unit(w - Qs @ (Qs.T @ w)), "isolated_same_wording": est.unit(w - Qi @ (Qi.T @ w))}
                 for t in config.HELD_OUT:
                     if (t, e) not in H:
                         continue
@@ -480,7 +473,7 @@ def run_wordings():
 
 
 def _controls_cell(cell):
-    S = data.load_cell(cell, config.FIVE, rows=None)
+    S = data.load_cell(cell, config.FIVE, rows=400)
     y, q, n, H = S["y"], S["q"], S["n"], S["H"]
     pids = [p for p in config.FIVE if all((f, p) in H for f in config.FORMATS) and ("negated", p) in H]
     SC = {}
@@ -492,14 +485,12 @@ def _controls_cell(cell):
         for p in pids:
             ytr = y[tr]; Hy = H[("yes_no", p)]; ss = StandardScaler().fit(Hy[tr]); X = ss.transform(Hy[tr])
             Hneg = H[("negated", p)]
-            pairs = [H[(g, p)][tr] - H[(f, p)][tr] for i, f in enumerate(config.FORMATS) for g in config.FORMATS[i + 1:] if (f, p) in H and (g, p) in H]
-            pairs.append(Hneg[tr] - Hy[tr])
-            k, _ = est.choose_k(pairs, q[tr])
+            _, k = est.expression_subspace(H, tr, p, q, S["cross"], rule="split_half")
             wcm = est.class_mean(X, ytr)
             rng = np.random.default_rng(1000 + 10 * fi + config.FIVE.index(p))
             Rr = np.linalg.qr(rng.standard_normal((X.shape[1], k)))[0].T
             Xc = X - X.mean(0); _, _, Vt = np.linalg.svd(Xc, full_matrices=False); Pk = Vt[:k]
-            R = {"readout": wcm, "random_removed": wcm - Rr.T @ (Rr @ wcm), "components_removed": wcm - Pk.T @ (Pk @ wcm)}
+            R = {"readout": wcm, "random_removed": est.unit(wcm - Rr.T @ (Rr @ wcm)), "components_removed": est.unit(wcm - Pk.T @ (Pk @ wcm))}
             for nm in ("readout", "random_removed"):
                 put(("source", nm, p), te, ss.transform(H[("yes_no", p)][te]) @ R[nm])
             for nm, w in R.items():
@@ -543,12 +534,14 @@ def _depth_cell(cell):
     for j, dpt in enumerate(_DEPTHS):
         X = []
         for p in config.FIVE:
-            for tk in config.CROSS_TASKS:
+            for ti, tk in enumerate(config.CROSS_TASKS):
                 fa = storage.path("task_depth", model=cell["model"], task=tk, condition="yes_no", wording=p)
                 fn = storage.path("task_depth", model=cell["model"], task=tk, condition="negated", wording=p)
                 if dpt < 1.0 and os.path.exists(fa) and os.path.exists(fn):
-                    X.append(np.load(fn, allow_pickle=True)["H"][:, j, :].astype(np.float64) - np.load(fa, allow_pickle=True)["H"][:, j, :].astype(np.float64))
-        cross = (np.concatenate(X) if X else None) if dpt < 1.0 else cross0
+                    D = np.load(fn, allow_pickle=True)["H"][:, j, :].astype(np.float64) - np.load(fa, allow_pickle=True)["H"][:, j, :].astype(np.float64)
+                    qd = data.states(cell["model"], tk, "negated")["qid"]; assert len(qd) == len(D)
+                    X.append((D, ti, qd, est.wording_number(p)))
+        cross = (est.cross_block(X) if X else None) if dpt < 1.0 else cross0
         SC = {}
 
         def put(key, te, v):
@@ -564,7 +557,7 @@ def _depth_cell(cell):
                 Hp = {(c, p): v for c, v in Hd.items()}
                 Bm, _ = est.expression_subspace(Hp, tr, p, q, cross, rule="split_half")
                 Bs, _ = np.linalg.qr((Bm / ss.scale_).T); Bs = Bs.T
-                u_out = w - Bs.T @ (Bs @ w)
+                u_out = est.unit(w - Bs.T @ (Bs @ w))
                 for t in _DEPTH_TARGETS:
                     if t not in Hd:
                         continue

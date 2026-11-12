@@ -1,0 +1,99 @@
+location,context,value,source_file,source_key
+Table 3 / Llama-3.1-8B ARC / Yes/No own,per-cell format transfer,0.7373272959479856,subspace/heldout.csv,cell=Llama-3.1-8B ARC; method=readout; condition=yes_no
+Table 3 / Llama-3.1-8B ARC / frozen->A/B,per-cell format transfer,0.7030690042184295,subspace/heldout.csv,cell=Llama-3.1-8B ARC; method=readout; condition=a_b
+Table 3 / Llama-3.1-8B ARC / A/B fitted,per-cell format transfer,0.694895313286118,subspace/heldout.csv,cell=Llama-3.1-8B ARC; method=fitted; condition=a_b
+Table 3 / Llama-3.1-8B ARC / frozen->B/A,per-cell format transfer,0.7137118309532102,subspace/heldout.csv,cell=Llama-3.1-8B ARC; method=readout; condition=b_a
+Table 3 / Llama-3.1-8B ARC / B/A fitted,per-cell format transfer,0.7021711366538953,subspace/heldout.csv,cell=Llama-3.1-8B ARC; method=fitted; condition=b_a
+Table 3 / Llama-3.1-8B ARC / frozen->sentence,per-cell format transfer,0.7302449785208406,subspace/heldout.csv,cell=Llama-3.1-8B ARC; method=readout; condition=sentence
+Table 3 / Llama-3.1-8B ARC / sentence fitted,per-cell format transfer,0.7314292348775108,subspace/heldout.csv,cell=Llama-3.1-8B ARC; method=fitted; condition=sentence
+Table 3 / Llama-3.1-8B GSM8K / Yes/No own,per-cell format transfer,0.9661034767590296,subspace/heldout.csv,cell=Llama-3.1-8B GSM8K; method=readout; condition=yes_no
+Table 3 / Llama-3.1-8B GSM8K / frozen->A/B,per-cell format transfer,0.9714400140171712,subspace/heldout.csv,cell=Llama-3.1-8B GSM8K; method=readout; condition=a_b
+Table 3 / Llama-3.1-8B GSM8K / A/B fitted,per-cell format transfer,0.969667843107807,subspace/heldout.csv,cell=Llama-3.1-8B GSM8K; method=fitted; condition=a_b
+Table 3 / Llama-3.1-8B GSM8K / frozen->B/A,per-cell format transfer,0.9723561362669269,subspace/heldout.csv,cell=Llama-3.1-8B GSM8K; method=readout; condition=b_a
+Table 3 / Llama-3.1-8B GSM8K / B/A fitted,per-cell format transfer,0.9718254862206204,subspace/heldout.csv,cell=Llama-3.1-8B GSM8K; method=fitted; condition=b_a
+Table 3 / Llama-3.1-8B GSM8K / frozen->sentence,per-cell format transfer,0.951956146279192,subspace/heldout.csv,cell=Llama-3.1-8B GSM8K; method=readout; condition=sentence
+Table 3 / Llama-3.1-8B GSM8K / sentence fitted,per-cell format transfer,0.9614978348476886,subspace/heldout.csv,cell=Llama-3.1-8B GSM8K; method=fitted; condition=sentence
+Table 3 / Llama-3.1-8B MMLU / Yes/No own,per-cell format transfer,0.7185948988970589,subspace/heldout.csv,cell=Llama-3.1-8B MMLU; method=readout; condition=yes_no
+Table 3 / Llama-3.1-8B MMLU / frozen->A/B,per-cell format transfer,0.6789407169117647,subspace/heldout.csv,cell=Llama-3.1-8B MMLU; method=readout; condition=a_b
+Table 3 / Llama-3.1-8B MMLU / A/B fitted,per-cell format transfer,0.6717313878676472,subspace/heldout.csv,cell=Llama-3.1-8B MMLU; method=fitted; condition=a_b
+Table 3 / Llama-3.1-8B MMLU / frozen->B/A,per-cell format transfer,0.6875057444852941,subspace/heldout.csv,cell=Llama-3.1-8B MMLU; method=readout; condition=b_a
+Table 3 / Llama-3.1-8B MMLU / B/A fitted,per-cell format transfer,0.6780503216911764,subspace/heldout.csv,cell=Llama-3.1-8B MMLU; method=fitted; condition=b_a
+Table 3 / Llama-3.1-8B MMLU / frozen->sentence,per-cell format transfer,0.7078239889705883,subspace/heldout.csv,cell=Llama-3.1-8B MMLU; method=readout; condition=sentence
+Table 3 / Llama-3.1-8B MMLU / sentence fitted,per-cell format transfer,0.6992934283088236,subspace/heldout.csv,cell=Llama-3.1-8B MMLU; method=fitted; condition=sentence
+Table 3 / Llama-3.1-8B TriviaQA / Yes/No own,per-cell format transfer,0.842086956521739,subspace/heldout.csv,cell=Llama-3.1-8B TriviaQA; method=readout; condition=yes_no
+Table 3 / Llama-3.1-8B TriviaQA / frozen->A/B,per-cell format transfer,0.8461571319603356,subspace/heldout.csv,cell=Llama-3.1-8B TriviaQA; method=readout; condition=a_b
+Table 3 / Llama-3.1-8B TriviaQA / A/B fitted,per-cell format transfer,0.8433135011441648,subspace/heldout.csv,cell=Llama-3.1-8B TriviaQA; method=fitted; condition=a_b
+Table 3 / Llama-3.1-8B TriviaQA / frozen->B/A,per-cell format transfer,0.8449427917620136,subspace/heldout.csv,cell=Llama-3.1-8B TriviaQA; method=readout; condition=b_a
+Table 3 / Llama-3.1-8B TriviaQA / B/A fitted,per-cell format transfer,0.8422578184591915,subspace/heldout.csv,cell=Llama-3.1-8B TriviaQA; method=fitted; condition=b_a
+Table 3 / Llama-3.1-8B TriviaQA / frozen->sentence,per-cell format transfer,0.8438993135011442,subspace/heldout.csv,cell=Llama-3.1-8B TriviaQA; method=readout; condition=sentence
+Table 3 / Llama-3.1-8B TriviaQA / sentence fitted,per-cell format transfer,0.8463401983218917,subspace/heldout.csv,cell=Llama-3.1-8B TriviaQA; method=fitted; condition=sentence
+Table 3 / Mistral-7B ARC / Yes/No own,per-cell format transfer,0.7301708876765779,subspace/heldout.csv,cell=Mistral-7B ARC; method=readout; condition=yes_no
+Table 3 / Mistral-7B ARC / frozen->A/B,per-cell format transfer,0.6615195635680481,subspace/heldout.csv,cell=Mistral-7B ARC; method=readout; condition=a_b
+Table 3 / Mistral-7B ARC / A/B fitted,per-cell format transfer,0.6955525849922324,subspace/heldout.csv,cell=Mistral-7B ARC; method=fitted; condition=a_b
+Table 3 / Mistral-7B ARC / frozen->B/A,per-cell format transfer,0.648708407095632,subspace/heldout.csv,cell=Mistral-7B ARC; method=readout; condition=b_a
+Table 3 / Mistral-7B ARC / B/A fitted,per-cell format transfer,0.669764081072293,subspace/heldout.csv,cell=Mistral-7B ARC; method=fitted; condition=b_a
+Table 3 / Mistral-7B ARC / frozen->sentence,per-cell format transfer,0.6853137757866974,subspace/heldout.csv,cell=Mistral-7B ARC; method=readout; condition=sentence
+Table 3 / Mistral-7B ARC / sentence fitted,per-cell format transfer,0.6902416994833628,subspace/heldout.csv,cell=Mistral-7B ARC; method=fitted; condition=sentence
+Table 3 / Mistral-7B GSM8K / Yes/No own,per-cell format transfer,0.8263950892857144,subspace/heldout.csv,cell=Mistral-7B GSM8K; method=readout; condition=yes_no
+Table 3 / Mistral-7B GSM8K / frozen->A/B,per-cell format transfer,0.8144937094155843,subspace/heldout.csv,cell=Mistral-7B GSM8K; method=readout; condition=a_b
+Table 3 / Mistral-7B GSM8K / A/B fitted,per-cell format transfer,0.8221946022727273,subspace/heldout.csv,cell=Mistral-7B GSM8K; method=fitted; condition=a_b
+Table 3 / Mistral-7B GSM8K / frozen->B/A,per-cell format transfer,0.8119419642857142,subspace/heldout.csv,cell=Mistral-7B GSM8K; method=readout; condition=b_a
+Table 3 / Mistral-7B GSM8K / B/A fitted,per-cell format transfer,0.8213930600649351,subspace/heldout.csv,cell=Mistral-7B GSM8K; method=fitted; condition=b_a
+Table 3 / Mistral-7B GSM8K / frozen->sentence,per-cell format transfer,0.8285359172077922,subspace/heldout.csv,cell=Mistral-7B GSM8K; method=readout; condition=sentence
+Table 3 / Mistral-7B GSM8K / sentence fitted,per-cell format transfer,0.8270748782467532,subspace/heldout.csv,cell=Mistral-7B GSM8K; method=fitted; condition=sentence
+Table 3 / Mistral-7B MMLU / Yes/No own,per-cell format transfer,0.7205104166666667,subspace/heldout.csv,cell=Mistral-7B MMLU; method=readout; condition=yes_no
+Table 3 / Mistral-7B MMLU / frozen->A/B,per-cell format transfer,0.6607552083333333,subspace/heldout.csv,cell=Mistral-7B MMLU; method=readout; condition=a_b
+Table 3 / Mistral-7B MMLU / A/B fitted,per-cell format transfer,0.696453125,subspace/heldout.csv,cell=Mistral-7B MMLU; method=fitted; condition=a_b
+Table 3 / Mistral-7B MMLU / frozen->B/A,per-cell format transfer,0.6549270833333333,subspace/heldout.csv,cell=Mistral-7B MMLU; method=readout; condition=b_a
+Table 3 / Mistral-7B MMLU / B/A fitted,per-cell format transfer,0.6829947916666667,subspace/heldout.csv,cell=Mistral-7B MMLU; method=fitted; condition=b_a
+Table 3 / Mistral-7B MMLU / frozen->sentence,per-cell format transfer,0.7215052083333332,subspace/heldout.csv,cell=Mistral-7B MMLU; method=readout; condition=sentence
+Table 3 / Mistral-7B MMLU / sentence fitted,per-cell format transfer,0.7309114583333333,subspace/heldout.csv,cell=Mistral-7B MMLU; method=fitted; condition=sentence
+Table 3 / Mistral-7B TriviaQA / Yes/No own,per-cell format transfer,0.8145319592688015,subspace/heldout.csv,cell=Mistral-7B TriviaQA; method=readout; condition=yes_no
+Table 3 / Mistral-7B TriviaQA / frozen->A/B,per-cell format transfer,0.795761256287572,subspace/heldout.csv,cell=Mistral-7B TriviaQA; method=readout; condition=a_b
+Table 3 / Mistral-7B TriviaQA / A/B fitted,per-cell format transfer,0.807661636609005,subspace/heldout.csv,cell=Mistral-7B TriviaQA; method=fitted; condition=a_b
+Table 3 / Mistral-7B TriviaQA / frozen->B/A,per-cell format transfer,0.7920439209912894,subspace/heldout.csv,cell=Mistral-7B TriviaQA; method=readout; condition=b_a
+Table 3 / Mistral-7B TriviaQA / B/A fitted,per-cell format transfer,0.808998895841001,subspace/heldout.csv,cell=Mistral-7B TriviaQA; method=fitted; condition=b_a
+Table 3 / Mistral-7B TriviaQA / frozen->sentence,per-cell format transfer,0.8095203042571464,subspace/heldout.csv,cell=Mistral-7B TriviaQA; method=readout; condition=sentence
+Table 3 / Mistral-7B TriviaQA / sentence fitted,per-cell format transfer,0.8057784320942215,subspace/heldout.csv,cell=Mistral-7B TriviaQA; method=fitted; condition=sentence
+Table 3 / Qwen2.5-14B GSM8K / Yes/No own,per-cell format transfer,0.9366606170598912,subspace/heldout.csv,cell=Qwen2.5-14B GSM8K; method=readout; condition=yes_no
+Table 3 / Qwen2.5-14B GSM8K / frozen->A/B,per-cell format transfer,0.9389897156684816,subspace/heldout.csv,cell=Qwen2.5-14B GSM8K; method=readout; condition=a_b
+Table 3 / Qwen2.5-14B GSM8K / A/B fitted,per-cell format transfer,0.9375882234321434,subspace/heldout.csv,cell=Qwen2.5-14B GSM8K; method=fitted; condition=a_b
+Table 3 / Qwen2.5-14B GSM8K / frozen->B/A,per-cell format transfer,0.9382435974994958,subspace/heldout.csv,cell=Qwen2.5-14B GSM8K; method=readout; condition=b_a
+Table 3 / Qwen2.5-14B GSM8K / B/A fitted,per-cell format transfer,0.9380721919741885,subspace/heldout.csv,cell=Qwen2.5-14B GSM8K; method=fitted; condition=b_a
+Table 3 / Qwen2.5-14B GSM8K / frozen->sentence,per-cell format transfer,0.9336156483161928,subspace/heldout.csv,cell=Qwen2.5-14B GSM8K; method=readout; condition=sentence
+Table 3 / Qwen2.5-14B GSM8K / sentence fitted,per-cell format transfer,0.9325368017745512,subspace/heldout.csv,cell=Qwen2.5-14B GSM8K; method=fitted; condition=sentence
+Table 3 / Qwen2.5-14B MMLU / Yes/No own,per-cell format transfer,0.7431968093265838,subspace/heldout.csv,cell=Qwen2.5-14B MMLU; method=readout; condition=yes_no
+Table 3 / Qwen2.5-14B MMLU / frozen->A/B,per-cell format transfer,0.7319604233778186,subspace/heldout.csv,cell=Qwen2.5-14B MMLU; method=readout; condition=a_b
+Table 3 / Qwen2.5-14B MMLU / A/B fitted,per-cell format transfer,0.7440558367847829,subspace/heldout.csv,cell=Qwen2.5-14B MMLU; method=fitted; condition=a_b
+Table 3 / Qwen2.5-14B MMLU / frozen->B/A,per-cell format transfer,0.7172265684921,subspace/heldout.csv,cell=Qwen2.5-14B MMLU; method=readout; condition=b_a
+Table 3 / Qwen2.5-14B MMLU / B/A fitted,per-cell format transfer,0.7405737076238686,subspace/heldout.csv,cell=Qwen2.5-14B MMLU; method=fitted; condition=b_a
+Table 3 / Qwen2.5-14B MMLU / frozen->sentence,per-cell format transfer,0.7472618499769903,subspace/heldout.csv,cell=Qwen2.5-14B MMLU; method=readout; condition=sentence
+Table 3 / Qwen2.5-14B MMLU / sentence fitted,per-cell format transfer,0.7591885258475226,subspace/heldout.csv,cell=Qwen2.5-14B MMLU; method=fitted; condition=sentence
+Table 3 / Qwen2.5-14B TriviaQA / Yes/No own,per-cell format transfer,0.8588127112914131,subspace/heldout.csv,cell=Qwen2.5-14B TriviaQA; method=readout; condition=yes_no
+Table 3 / Qwen2.5-14B TriviaQA / frozen->A/B,per-cell format transfer,0.8616362407031778,subspace/heldout.csv,cell=Qwen2.5-14B TriviaQA; method=readout; condition=a_b
+Table 3 / Qwen2.5-14B TriviaQA / A/B fitted,per-cell format transfer,0.8634645030425965,subspace/heldout.csv,cell=Qwen2.5-14B TriviaQA; method=fitted; condition=a_b
+Table 3 / Qwen2.5-14B TriviaQA / frozen->B/A,per-cell format transfer,0.8384638269100744,subspace/heldout.csv,cell=Qwen2.5-14B TriviaQA; method=readout; condition=b_a
+Table 3 / Qwen2.5-14B TriviaQA / B/A fitted,per-cell format transfer,0.8663962136578769,subspace/heldout.csv,cell=Qwen2.5-14B TriviaQA; method=fitted; condition=b_a
+Table 3 / Qwen2.5-14B TriviaQA / frozen->sentence,per-cell format transfer,0.8619175118323191,subspace/heldout.csv,cell=Qwen2.5-14B TriviaQA; method=readout; condition=sentence
+Table 3 / Qwen2.5-14B TriviaQA / sentence fitted,per-cell format transfer,0.8623989181879649,subspace/heldout.csv,cell=Qwen2.5-14B TriviaQA; method=fitted; condition=sentence
+Table 3 / Qwen2.5-7B GSM8K / Yes/No own,per-cell format transfer,0.8956225641025641,subspace/heldout.csv,cell=Qwen2.5-7B GSM8K; method=readout; condition=yes_no
+Table 3 / Qwen2.5-7B GSM8K / frozen->A/B,per-cell format transfer,0.886588717948718,subspace/heldout.csv,cell=Qwen2.5-7B GSM8K; method=readout; condition=a_b
+Table 3 / Qwen2.5-7B GSM8K / A/B fitted,per-cell format transfer,0.8873764102564102,subspace/heldout.csv,cell=Qwen2.5-7B GSM8K; method=fitted; condition=a_b
+Table 3 / Qwen2.5-7B GSM8K / frozen->B/A,per-cell format transfer,0.8729846153846154,subspace/heldout.csv,cell=Qwen2.5-7B GSM8K; method=readout; condition=b_a
+Table 3 / Qwen2.5-7B GSM8K / B/A fitted,per-cell format transfer,0.8818789743589743,subspace/heldout.csv,cell=Qwen2.5-7B GSM8K; method=fitted; condition=b_a
+Table 3 / Qwen2.5-7B GSM8K / frozen->sentence,per-cell format transfer,0.8528328205128206,subspace/heldout.csv,cell=Qwen2.5-7B GSM8K; method=readout; condition=sentence
+Table 3 / Qwen2.5-7B GSM8K / sentence fitted,per-cell format transfer,0.8586666666666666,subspace/heldout.csv,cell=Qwen2.5-7B GSM8K; method=fitted; condition=sentence
+Table 3 / Qwen2.5-7B MMLU / Yes/No own,per-cell format transfer,0.7786668285575522,subspace/heldout.csv,cell=Qwen2.5-7B MMLU; method=readout; condition=yes_no
+Table 3 / Qwen2.5-7B MMLU / frozen->A/B,per-cell format transfer,0.7735369111219039,subspace/heldout.csv,cell=Qwen2.5-7B MMLU; method=readout; condition=a_b
+Table 3 / Qwen2.5-7B MMLU / A/B fitted,per-cell format transfer,0.7760199125789218,subspace/heldout.csv,cell=Qwen2.5-7B MMLU; method=fitted; condition=a_b
+Table 3 / Qwen2.5-7B MMLU / frozen->B/A,per-cell format transfer,0.7674052938319573,subspace/heldout.csv,cell=Qwen2.5-7B MMLU; method=readout; condition=b_a
+Table 3 / Qwen2.5-7B MMLU / B/A fitted,per-cell format transfer,0.7642119961146188,subspace/heldout.csv,cell=Qwen2.5-7B MMLU; method=fitted; condition=b_a
+Table 3 / Qwen2.5-7B MMLU / frozen->sentence,per-cell format transfer,0.7954589606605148,subspace/heldout.csv,cell=Qwen2.5-7B MMLU; method=readout; condition=sentence
+Table 3 / Qwen2.5-7B MMLU / sentence fitted,per-cell format transfer,0.7969099077221953,subspace/heldout.csv,cell=Qwen2.5-7B MMLU; method=fitted; condition=sentence
+Table 3 / Qwen2.5-7B TriviaQA / Yes/No own,per-cell format transfer,0.8397235046292792,subspace/heldout.csv,cell=Qwen2.5-7B TriviaQA; method=readout; condition=yes_no
+Table 3 / Qwen2.5-7B TriviaQA / frozen->A/B,per-cell format transfer,0.8419586770604708,subspace/heldout.csv,cell=Qwen2.5-7B TriviaQA; method=readout; condition=a_b
+Table 3 / Qwen2.5-7B TriviaQA / A/B fitted,per-cell format transfer,0.8426196422715003,subspace/heldout.csv,cell=Qwen2.5-7B TriviaQA; method=fitted; condition=a_b
+Table 3 / Qwen2.5-7B TriviaQA / frozen->B/A,per-cell format transfer,0.83452660258836,subspace/heldout.csv,cell=Qwen2.5-7B TriviaQA; method=readout; condition=b_a
+Table 3 / Qwen2.5-7B TriviaQA / B/A fitted,per-cell format transfer,0.8389515376270845,subspace/heldout.csv,cell=Qwen2.5-7B TriviaQA; method=fitted; condition=b_a
+Table 3 / Qwen2.5-7B TriviaQA / frozen->sentence,per-cell format transfer,0.8333964025328591,subspace/heldout.csv,cell=Qwen2.5-7B TriviaQA; method=readout; condition=sentence
+Table 3 / Qwen2.5-7B TriviaQA / sentence fitted,per-cell format transfer,0.826993617397008,subspace/heldout.csv,cell=Qwen2.5-7B TriviaQA; method=fitted; condition=sentence

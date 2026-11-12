@@ -34,7 +34,7 @@ def _position_cell(cell):
     stem = Z["P01"]["H_yn"][:, 2, :].astype(np.float64)
     a_pre = _cm_auroc(pre, y, fld)
     a_stem = _cm_auroc(stem, y, fld)
-    a_post = float(np.mean([_cm_auroc(H[("yes_no", p)], y, fld) for p in pids]))
+    a_post = float(est.mean_in_order([_cm_auroc(H[("yes_no", p)], y, fld) for p in pids]))
     fitted = dict(cell=cell["name"], pre=a_pre, stem=a_stem, post=a_post, post_minus_pre=a_post - a_pre)
 
     sem = {p: Z[p]["H_yn"][:, 2, :].astype(np.float64) for p in P3}
@@ -48,7 +48,7 @@ def _position_cell(cell):
             S_post[p][te] = ss.transform(H[("yes_no", p)][te]) @ w; est.pool(S_post[p], te)
     A_pre = float(est.rank_auroc(y, S_pre))
     A_sem = float(np.mean([est.rank_auroc(y, S_sem[p]) for p in P3]))
-    A_post = float(np.mean([est.rank_auroc(y, S_post[p]) for p in pids]))
+    A_post = float(est.mean_in_order([est.rank_auroc(y, S_post[p]) for p in pids]))
     frozen = dict(cell=cell["name"], pre=A_pre, stem=A_sem, post=A_post)
     print(f"[position] {cell['name']} done", flush=True)
     return fitted, frozen
@@ -93,7 +93,7 @@ def _format_first_cell(cell):
             FF[p] = got
     pids = list(FF)
     Sc = {(pos, p): np.zeros(n) for pos in ("STEM", "POST") for p in pids}
-    ident = {(pos, p): np.zeros(n) for pos in ("PRE", "STEM") for p in pids}
+    ident = {(pos, p): (np.zeros(n), np.zeros(n)) for pos in ("PRE", "STEM") for p in pids}
     for tr, te in fld:
         for p in pids:
             HH = {(f, pos): FF[p][f]["H"][:, POS3[pos], :].astype(np.float64) for f, pos in NEED}
@@ -105,11 +105,12 @@ def _format_first_cell(cell):
                 Xs = np.r_[Xa[tr], Xb[tr]]; lab = np.r_[np.ones(len(tr)), np.zeros(len(tr))]
                 ss = StandardScaler().fit(Xs); Zc = ss.transform(Xs); wf = est.class_mean(Zc, lab)
                 sa, sb = ss.transform(Xa[te]) @ wf, ss.transform(Xb[te]) @ wf
-                ident[(pos, p)][te] = float(est.rank_auroc(np.r_[np.ones(len(te)), np.zeros(len(te))], np.r_[sa, sb]))
+                ident[(pos, p)][0][te] = sa; ident[(pos, p)][1][te] = sb
     stem = float(np.mean([est.rank_auroc(y, Sc[("STEM", p)]) for p in pids]))
     post = float(np.mean([est.rank_auroc(y, Sc[("POST", p)]) for p in pids]))
-    pre_ident = float(np.mean([float(np.mean(ident[("PRE", p)])) for p in pids]))
-    stem_ident = float(np.mean([float(np.mean(ident[("STEM", p)])) for p in pids]))
+    yid = np.r_[np.ones(n), np.zeros(n)]; fid = [(None, np.r_[te, n + te]) for _, te in fld]
+    pre_ident = est.aurocs_mean(yid, [np.r_[ident[("PRE", p)][0], ident[("PRE", p)][1]] for p in pids], fid)
+    stem_ident = est.aurocs_mean(yid, [np.r_[ident[("STEM", p)][0], ident[("STEM", p)][1]] for p in pids], fid)
     print(f"[format_first] {cell['name']} done", flush=True)
     return dict(cell=cell["name"], primary=cell["primary"], stem=stem, response_position=post, end_of_candidate=pre_ident, after_instruction=stem_ident)
 
@@ -203,14 +204,12 @@ def _reg_cell(cell):
         for tr, te in fld:
             for pi, p in enumerate(config.TEN):
                 Xs = H[("yes_no", p)]; ss = StandardScaler().fit(Xs[tr])
-                m = LogisticRegression(C=C, max_iter=3000).fit(ss.transform(Xs[tr]), y[tr])
-                diag[pi, te] = m.decision_function(ss.transform(Xs[te])); est.pool(diag[pi], te)
-                ab[pi, te] = m.decision_function(ss.transform(H[("a_b", p)][te])); est.pool(ab[pi], te)
-                ba[pi, te] = m.decision_function(ss.transform(H[("b_a", p)][te])); est.pool(ba[pi], te)
-        ad = np.array([est.rank_auroc(y, diag[i]) for i in range(len(config.TEN))])
-        aab = np.array([est.rank_auroc(y, ab[i]) for i in range(len(config.TEN))])
-        aba = np.array([est.rank_auroc(y, ba[i]) for i in range(len(config.TEN))])
-        out[C] = dict(source_auroc=float(ad.mean()), a_b_drop=float(ad.mean() - aab.mean()), b_a_drop=float(ad.mean() - aba.mean()))
+                m = LogisticRegression(C=C, max_iter=3000).fit(ss.transform(Xs[tr]), y[tr]); w = est.unit(m.coef_[0])
+                diag[pi, te] = ss.transform(Xs[te]) @ w
+                ab[pi, te] = ss.transform(H[("a_b", p)][te]) @ w
+                ba[pi, te] = ss.transform(H[("b_a", p)][te]) @ w
+        ad = est.aurocs_mean(y, list(diag), fld); aab = est.aurocs_mean(y, list(ab), fld); aba = est.aurocs_mean(y, list(ba), fld)
+        out[C] = dict(source_auroc=ad, a_b_drop=ad - aab, b_a_drop=ad - aba)
     print(f"[regularization] {cell['name']} done", flush=True)
     return out
 

@@ -1,0 +1,4 @@
+form,method,auroc,n_cells
+cot_negated,model,0.605716857426042,6
+cot_negated,plain,0.4454831571364167,6
+cot_negated,rank8,0.7021718464874896,6

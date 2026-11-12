@@ -448,7 +448,8 @@ def run_depth(model_name, task, max_rows=0, out=None):
     print(f"[depth] {T} {task} identity at P01: " + (f"MISMATCH {bad}" if bad else "OK") + f" {chk}", flush=True)
     if bad:
         raise SystemExit(3)
-    models.save(path, **{key("H", c, p): v for (c, p), v in R.items()})
+    y = data.labels(dict(model=T, task=task), {"yes_no": data.states(T, task, "yes_no")})[0]
+    models.save(path, y=y[:n], qid=q[:n], layers=np.array(LI), depths=np.array(DEPTHS), n_layers=L, **{key("H", c, p): v for (c, p), v in R.items()})
     print(f"[depth] wrote {path} (layers {LI} of {L})  {time.time()-t0:.0f}s", flush=True)
 
 

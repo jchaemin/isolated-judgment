@@ -1,0 +1,61 @@
+location,context,value,source_file,source_key
+Table 30 / Yes/No / readout median,readouts fitted to verdicts,0.9961054334828446,verdicts/self_labeled.csv,condition=yes_no; method=readout; median over 13 cells
+Table 30 / Yes/No / readout min,readouts fitted to verdicts,0.9777342457146666,verdicts/self_labeled.csv,condition=yes_no; method=readout; min over 13 cells
+Table 30 / Yes/No / readout max,readouts fitted to verdicts,0.999038237971274,verdicts/self_labeled.csv,condition=yes_no; method=readout; max over 13 cells
+Table 30 / Yes/No / isolated median,readouts fitted to verdicts,0.9855931073463992,verdicts/self_labeled.csv,condition=yes_no; method=isolated; median over 13 cells
+Table 30 / Yes/No / isolated min,readouts fitted to verdicts,0.9362177602610864,verdicts/self_labeled.csv,condition=yes_no; method=isolated; min over 13 cells
+Table 30 / Yes/No / isolated max,readouts fitted to verdicts,0.9974214099422738,verdicts/self_labeled.csv,condition=yes_no; method=isolated; max over 13 cells
+Table 30 / True/False / readout median,readouts fitted to verdicts,0.9905796819912184,verdicts/self_labeled.csv,condition=true_false; method=readout; median over 13 cells
+Table 30 / True/False / readout min,readouts fitted to verdicts,0.9375064089852913,verdicts/self_labeled.csv,condition=true_false; method=readout; min over 13 cells
+Table 30 / True/False / readout max,readouts fitted to verdicts,0.9973139220103174,verdicts/self_labeled.csv,condition=true_false; method=readout; max over 13 cells
+Table 30 / True/False / isolated median,readouts fitted to verdicts,0.9769032420298104,verdicts/self_labeled.csv,condition=true_false; method=isolated; median over 13 cells
+Table 30 / True/False / isolated min,readouts fitted to verdicts,0.8794419567774631,verdicts/self_labeled.csv,condition=true_false; method=isolated; min over 13 cells
+Table 30 / True/False / isolated max,readouts fitted to verdicts,0.9962009598078349,verdicts/self_labeled.csv,condition=true_false; method=isolated; max over 13 cells
+Table 30 / A/B / readout median,readouts fitted to verdicts,0.9766134406383846,verdicts/self_labeled.csv,condition=a_b; method=readout; median over 13 cells
+Table 30 / A/B / readout min,readouts fitted to verdicts,0.8711109530366452,verdicts/self_labeled.csv,condition=a_b; method=readout; min over 13 cells
+Table 30 / A/B / readout max,readouts fitted to verdicts,0.9974440475161648,verdicts/self_labeled.csv,condition=a_b; method=readout; max over 13 cells
+Table 30 / A/B / isolated median,readouts fitted to verdicts,0.9671515247978903,verdicts/self_labeled.csv,condition=a_b; method=isolated; median over 13 cells
+Table 30 / A/B / isolated min,readouts fitted to verdicts,0.8242363316804603,verdicts/self_labeled.csv,condition=a_b; method=isolated; min over 13 cells
+Table 30 / A/B / isolated max,readouts fitted to verdicts,0.996538099745526,verdicts/self_labeled.csv,condition=a_b; method=isolated; max over 13 cells
+Table 30 / sentence / readout median,readouts fitted to verdicts,0.9696111406094978,verdicts/self_labeled.csv,condition=sentence; method=readout; median over 13 cells
+Table 30 / sentence / readout min,readouts fitted to verdicts,0.8580922675563155,verdicts/self_labeled.csv,condition=sentence; method=readout; min over 13 cells
+Table 30 / sentence / readout max,readouts fitted to verdicts,0.9917238021712952,verdicts/self_labeled.csv,condition=sentence; method=readout; max over 13 cells
+Table 30 / sentence / isolated median,readouts fitted to verdicts,0.9517565031583248,verdicts/self_labeled.csv,condition=sentence; method=isolated; median over 13 cells
+Table 30 / sentence / isolated min,readouts fitted to verdicts,0.8168910103471865,verdicts/self_labeled.csv,condition=sentence; method=isolated; min over 13 cells
+Table 30 / sentence / isolated max,readouts fitted to verdicts,0.9909456011543174,verdicts/self_labeled.csv,condition=sentence; method=isolated; max over 13 cells
+Table 30 / 1/0 / readout median,readouts fitted to verdicts,0.9881441155374616,verdicts/self_labeled.csv,condition=one_zero; method=readout; median over 13 cells
+Table 30 / 1/0 / readout min,readouts fitted to verdicts,0.9298587256002108,verdicts/self_labeled.csv,condition=one_zero; method=readout; min over 13 cells
+Table 30 / 1/0 / readout max,readouts fitted to verdicts,0.9978595218892312,verdicts/self_labeled.csv,condition=one_zero; method=readout; max over 13 cells
+Table 30 / 1/0 / isolated median,readouts fitted to verdicts,0.962984474058483,verdicts/self_labeled.csv,condition=one_zero; method=isolated; median over 13 cells
+Table 30 / 1/0 / isolated min,readouts fitted to verdicts,0.85321131530377,verdicts/self_labeled.csv,condition=one_zero; method=isolated; min over 13 cells
+Table 30 / 1/0 / isolated max,readouts fitted to verdicts,0.996737485929428,verdicts/self_labeled.csv,condition=one_zero; method=isolated; max over 13 cells
+Table 30 / correct/incorrect / readout median,readouts fitted to verdicts,0.9862972300550644,verdicts/self_labeled.csv,condition=correct_incorrect; method=readout; median over 13 cells
+Table 30 / correct/incorrect / readout min,readouts fitted to verdicts,0.9025621088231808,verdicts/self_labeled.csv,condition=correct_incorrect; method=readout; min over 13 cells
+Table 30 / correct/incorrect / readout max,readouts fitted to verdicts,0.9969158219130052,verdicts/self_labeled.csv,condition=correct_incorrect; method=readout; max over 13 cells
+Table 30 / correct/incorrect / isolated median,readouts fitted to verdicts,0.9775576551581298,verdicts/self_labeled.csv,condition=correct_incorrect; method=isolated; median over 13 cells
+Table 30 / correct/incorrect / isolated min,readouts fitted to verdicts,0.8773132948235499,verdicts/self_labeled.csv,condition=correct_incorrect; method=isolated; min over 13 cells
+Table 30 / correct/incorrect / isolated max,readouts fitted to verdicts,0.994972175526439,verdicts/self_labeled.csv,condition=correct_incorrect; method=isolated; max over 13 cells
+Table 30 / B/A / readout median,readouts fitted to verdicts,0.976104895014204,verdicts/self_labeled.csv,condition=b_a; method=readout; median over 13 cells
+Table 30 / B/A / readout min,readouts fitted to verdicts,0.851880759932713,verdicts/self_labeled.csv,condition=b_a; method=readout; min over 13 cells
+Table 30 / B/A / readout max,readouts fitted to verdicts,0.9948116234909892,verdicts/self_labeled.csv,condition=b_a; method=readout; max over 13 cells
+Table 30 / B/A / isolated median,readouts fitted to verdicts,0.9701713623867096,verdicts/self_labeled.csv,condition=b_a; method=isolated; median over 13 cells
+Table 30 / B/A / isolated min,readouts fitted to verdicts,0.8251094603825221,verdicts/self_labeled.csv,condition=b_a; method=isolated; min over 13 cells
+Table 30 / B/A / isolated max,readouts fitted to verdicts,0.9958129638366364,verdicts/self_labeled.csv,condition=b_a; method=isolated; max over 13 cells
+Table 30 / 0 means correct / readout median,readouts fitted to verdicts,0.9165226638323594,verdicts/self_labeled.csv,condition=zero_means_correct; method=readout; median over 13 cells
+Table 30 / 0 means correct / readout min,readouts fitted to verdicts,0.6962983252996042,verdicts/self_labeled.csv,condition=zero_means_correct; method=readout; min over 13 cells
+Table 30 / 0 means correct / readout max,readouts fitted to verdicts,0.9917562015754212,verdicts/self_labeled.csv,condition=zero_means_correct; method=readout; max over 13 cells
+Table 30 / 0 means correct / isolated median,readouts fitted to verdicts,0.963858465730674,verdicts/self_labeled.csv,condition=zero_means_correct; method=isolated; median over 13 cells
+Table 30 / 0 means correct / isolated min,readouts fitted to verdicts,0.8259836836588317,verdicts/self_labeled.csv,condition=zero_means_correct; method=isolated; min over 13 cells
+Table 30 / 0 means correct / isolated max,readouts fitted to verdicts,0.9955988421118056,verdicts/self_labeled.csv,condition=zero_means_correct; method=isolated; max over 13 cells
+Table 30 / False means correct / readout median,readouts fitted to verdicts,0.7274748932883186,verdicts/self_labeled.csv,condition=false_means_correct; method=readout; median over 13 cells
+Table 30 / False means correct / readout min,readouts fitted to verdicts,0.0715949537765794,verdicts/self_labeled.csv,condition=false_means_correct; method=readout; min over 13 cells
+Table 30 / False means correct / readout max,readouts fitted to verdicts,0.855527051945981,verdicts/self_labeled.csv,condition=false_means_correct; method=readout; max over 13 cells
+Table 30 / False means correct / isolated median,readouts fitted to verdicts,0.9062514727163622,verdicts/self_labeled.csv,condition=false_means_correct; method=isolated; median over 13 cells
+Table 30 / False means correct / isolated min,readouts fitted to verdicts,0.7760878824362176,verdicts/self_labeled.csv,condition=false_means_correct; method=isolated; min over 13 cells
+Table 30 / False means correct / isolated max,readouts fitted to verdicts,0.9901039856085592,verdicts/self_labeled.csv,condition=false_means_correct; method=isolated; max over 13 cells
+Table 30 / No means correct / readout median,readouts fitted to verdicts,0.6284040944618525,verdicts/self_labeled.csv,condition=no_means_correct; method=readout; median over 13 cells
+Table 30 / No means correct / readout min,readouts fitted to verdicts,0.0570650344279522,verdicts/self_labeled.csv,condition=no_means_correct; method=readout; min over 13 cells
+Table 30 / No means correct / readout max,readouts fitted to verdicts,0.8783753152204273,verdicts/self_labeled.csv,condition=no_means_correct; method=readout; max over 13 cells
+Table 30 / No means correct / isolated median,readouts fitted to verdicts,0.9103982122117854,verdicts/self_labeled.csv,condition=no_means_correct; method=isolated; median over 13 cells
+Table 30 / No means correct / isolated min,readouts fitted to verdicts,0.7724945313452626,verdicts/self_labeled.csv,condition=no_means_correct; method=isolated; min over 13 cells
+Table 30 / No means correct / isolated max,readouts fitted to verdicts,0.991438904418812,verdicts/self_labeled.csv,condition=no_means_correct; method=isolated; max over 13 cells

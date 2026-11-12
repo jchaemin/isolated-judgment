@@ -1,0 +1,25 @@
+location,context,value,source_file,source_key
+Table 7 / No means correct / verdict,held-out No means correct,0.616903714511355,subspace/heldout.csv,condition=no_means_correct; method=readout; col=verdict_auroc; mean over 14 cells
+Table 7 / No means correct / readout,held-out No means correct,0.6397432324971275,subspace/heldout.csv,condition=no_means_correct; method=readout; col=auroc; mean over 14 cells
+Table 7 / No means correct / pooled,held-out No means correct,0.789237781028233,subspace/heldout.csv,condition=no_means_correct; method=pooled; col=auroc; mean over 14 cells
+Table 7 / No means correct / isolated,held-out No means correct,0.7936019662757066,subspace/heldout.csv,condition=no_means_correct; method=isolated; col=auroc; mean over 14 cells
+Table 7 / No means correct / condition-fitted,held-out No means correct,0.8053529464085795,subspace/heldout.csv,condition=no_means_correct; method=fitted; col=auroc; mean over 14 cells
+Table 7 / False means correct / verdict,held-out False means correct,0.5934148562857973,subspace/heldout.csv,condition=false_means_correct; method=readout; col=verdict_auroc; mean over 14 cells
+Table 7 / False means correct / readout,held-out False means correct,0.6651136778103426,subspace/heldout.csv,condition=false_means_correct; method=readout; col=auroc; mean over 14 cells
+Table 7 / False means correct / pooled,held-out False means correct,0.770618721413049,subspace/heldout.csv,condition=false_means_correct; method=pooled; col=auroc; mean over 14 cells
+Table 7 / False means correct / isolated,held-out False means correct,0.7925115624069139,subspace/heldout.csv,condition=false_means_correct; method=isolated; col=auroc; mean over 14 cells
+Table 7 / False means correct / condition-fitted,held-out False means correct,0.8034081523503505,subspace/heldout.csv,condition=false_means_correct; method=fitted; col=auroc; mean over 14 cells
+Table 7 / 0 means correct / verdict,held-out 0 means correct,0.7686453823728814,subspace/heldout.csv,condition=zero_means_correct; method=readout; col=verdict_auroc; mean over 14 cells
+Table 7 / 0 means correct / readout,held-out 0 means correct,0.787222689619667,subspace/heldout.csv,condition=zero_means_correct; method=readout; col=auroc; mean over 14 cells
+Table 7 / 0 means correct / pooled,held-out 0 means correct,0.8044470596360318,subspace/heldout.csv,condition=zero_means_correct; method=pooled; col=auroc; mean over 14 cells
+Table 7 / 0 means correct / isolated,held-out 0 means correct,0.8100896822528971,subspace/heldout.csv,condition=zero_means_correct; method=isolated; col=auroc; mean over 14 cells
+Table 7 / 0 means correct / condition-fitted,held-out 0 means correct,0.8098931373520661,subspace/heldout.csv,condition=zero_means_correct; method=fitted; col=auroc; mean over 14 cells
+Table 7 / negated question / verdict,held-out negated question,0.6648874973481311,subspace/heldout.csv,condition=negated; method=readout; col=verdict_auroc; mean over 14 cells
+Table 7 / negated question / readout,held-out negated question,0.6498912083896956,subspace/heldout.csv,condition=negated; method=readout; col=auroc; mean over 14 cells
+Table 7 / negated question / pooled,held-out negated question,0.7939187930018994,subspace/heldout.csv,condition=negated; method=pooled; col=auroc; mean over 14 cells
+Table 7 / negated question / isolated,held-out negated question,0.8077303969893447,subspace/heldout.csv,condition=negated; method=isolated; col=auroc; mean over 14 cells
+Table 7 / negated question / condition-fitted,held-out negated question,0.8054377686843431,subspace/heldout.csv,condition=negated; method=fitted; col=auroc; mean over 14 cells
+Table 7 caption,"cell-bootstrap interval of isolated-minus-fitted gap, negated","[-0.004, +0.009]",subspace/heldout_intervals.csv,condition=negated; col=interval
+Table 7 caption,"cell-bootstrap interval of isolated-minus-fitted gap, no_means_correct","[-0.022, -0.002]",subspace/heldout_intervals.csv,condition=no_means_correct; col=interval
+Table 7 caption,"cell-bootstrap interval of isolated-minus-fitted gap, false_means_correct","[-0.020, -0.002]",subspace/heldout_intervals.csv,condition=false_means_correct; col=interval
+Table 7 caption,"cell-bootstrap interval of isolated-minus-fitted gap, zero_means_correct","[-0.003, +0.004]",subspace/heldout_intervals.csv,condition=zero_means_correct; col=interval

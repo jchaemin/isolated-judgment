@@ -41,7 +41,7 @@ def _self_labeled_cell(cell):
             w_self = estimators.class_mean(X[ok], own[p][tr][ok])
             Bm, _ = estimators.expression_subspace(H, tr, p, q, cross)
             Bq = np.linalg.qr((Bm / ss.scale_).T)[0].T
-            W = {"readout": w_self, "isolated": w_self - Bq.T @ (Bq @ w_self)}
+            W = {"readout": w_self, "isolated": estimators.unit(w_self - Bq.T @ (Bq @ w_self))}
             for nm, w in W.items():
                 for t in have:
                     put((nm, t, p), te, ss.transform(H[(t, p)][te]) @ w)
@@ -64,7 +64,7 @@ def run_self_labeled():
 
 def _negation_cell(cell):
     S = data.load_cell(cell, wordings=config.FIVE, rows=400)
-    y, q, n, H, marg, comp, cross = (S[k] for k in ("y", "q", "n", "H", "marg", "comp", "cross"))
+    q, n, H, marg, comp, cross = (S[k] for k in ("q", "n", "H", "marg", "comp", "cross"))
     own = {p: np.where(comp[("yes_no", p)], (marg[("yes_no", p)] > 0).astype(int), -1) for p in config.FIVE}
     negv = {p: np.where(comp[("negated", p)], (marg[("negated", p)] > 0).astype(int), -1) for p in config.FIVE}
     SC = {}
@@ -79,7 +79,7 @@ def _negation_cell(cell):
             ws = estimators.class_mean(X[ok], own[p][tr][ok])
             Bm, _ = estimators.expression_subspace(H, tr, p, q, cross)
             Bq = np.linalg.qr((Bm / ss.scale_).T)[0].T
-            wsp = ws - Bq.T @ (Bq @ ws)
+            wsp = estimators.unit(ws - Bq.T @ (Bq @ ws))
             put(p, te, ss.transform(H[("negated", p)][te]) @ wsp)
     a_rows = []
     for p in config.FIVE:
@@ -89,14 +89,6 @@ def _negation_cell(cell):
                            vs_yes_no_verdict=estimators.auroc(own[p][both], s[both]),
                            vs_negated_verdict=estimators.auroc(negv[p][both], s[both]),
                            vs_yes_no_verdict_disagreeing=estimators.auroc(own[p][dis], s[dis]) if dis.sum() > 20 and len(np.unique(own[p][dis])) > 1 else np.nan))
-    b5_rows = []
-    for t in config.HELD_OUT:
-        ps = [p for p in config.FIVE if (t, p) in H and (t, p) in marg]
-        if not ps:
-            continue
-        rate = float(np.mean([(comp[(t, p)] & ((marg[(t, p)] > 0).astype(int) == y)).mean() for p in ps]))
-        b5_rows.append(dict(cell=cell["name"], condition=t, correct_token_rate=rate))
-
     Sall = data.load_cell(cell, wordings=config.THREE, rows=None)
     y3, n3, H3, marg3, comp3 = (Sall[k] for k in ("y", "n", "H", "marg", "comp"))
     SC3 = {}
@@ -121,7 +113,7 @@ def _negation_cell(cell):
         rate = float(np.mean([(comp3[(t, p)] & ((marg3[(t, p)] > 0).astype(int) == y3)).mean() for p in ps]))
         b3_rows.append(dict(cell=cell["name"], condition=t, readout_drop=yn_auc - auc, correct_token_rate=rate))
     print(f"[negation] {cell['name']}", flush=True)
-    return a_rows, b5_rows, b3_rows
+    return a_rows, b3_rows
 
 
 def run_negation():
@@ -130,8 +122,7 @@ def run_negation():
     os.makedirs(OUT, exist_ok=True)
     A = pd.DataFrame([r for o in out for r in o[0]]); A = A[A.cell != MISTRAL_ARC]
     A.to_csv(f"{OUT}/negated_verdicts.csv", index=False)
-    pd.DataFrame([r for o in out for r in o[1]]).to_csv(f"{OUT}/correct_token_rate.csv", index=False)
-    pd.DataFrame([r for o in out for r in o[2]]).to_csv(f"{OUT}/drop_vs_rate.csv", index=False)
+    pd.DataFrame([r for o in out for r in o[1]]).to_csv(f"{OUT}/drop_vs_rate.csv", index=False)
 
 
 COMMANDS = {"self-labeled": run_self_labeled, "negation": run_negation}

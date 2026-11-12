@@ -1,0 +1,17 @@
+cell,top1_in_response_tokens_yes_no,top1_in_response_tokens_a_b,top1_in_response_tokens_b_a,letters_ok,model,model_follows,primary,in_ten_cell_set
+Qwen2.5-7B GSM8K,0.9995,0.9594999999999999,0.9974999999999999,True,Qwen2.5-7B,True,True,True
+Qwen2.5-7B MMLU,0.9315000000000001,0.731,0.5780000000000001,True,Qwen2.5-7B,True,True,True
+Qwen2.5-7B ARC,0.9949999999999999,0.8375,0.649,True,Qwen2.5-7B,True,False,False
+Qwen2.5-7B TriviaQA,1.0,1.0,0.999,True,Qwen2.5-7B,True,True,True
+Llama-3.1-8B GSM8K,1.0,1.0,1.0,True,Llama-3.1-8B,True,True,True
+Llama-3.1-8B MMLU,0.8634999999999999,0.8945000000000001,0.9190000000000002,True,Llama-3.1-8B,True,True,True
+Llama-3.1-8B ARC,0.9955,0.9949999999999999,0.9970000000000001,True,Llama-3.1-8B,True,True,True
+Llama-3.1-8B TriviaQA,1.0,1.0,1.0,True,Llama-3.1-8B,True,True,True
+Mistral-7B GSM8K,0.93,0.08149999999999999,0.006,False,Mistral-7B,False,True,False
+Mistral-7B MMLU,0.8275,0.01,0.0045,False,Mistral-7B,False,True,False
+Mistral-7B ARC,0.9505000000000001,0.010499999999999999,0.0015,False,Mistral-7B,False,True,False
+Mistral-7B TriviaQA,0.9955,0.2505,0.27999999999999997,False,Mistral-7B,False,True,False
+Qwen2.5-14B GSM8K,0.9455,0.9984999999999999,0.9984999999999999,True,Qwen2.5-14B,True,True,True
+Qwen2.5-14B MMLU,0.7425,0.702,0.8504999999999999,True,Qwen2.5-14B,True,True,True
+Qwen2.5-14B ARC,0.8955,0.789,0.8545,True,Qwen2.5-14B,True,False,False
+Qwen2.5-14B TriviaQA,0.999,1.0,0.9984999999999999,True,Qwen2.5-14B,True,True,True

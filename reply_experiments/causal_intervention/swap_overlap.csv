@@ -1,0 +1,14 @@
+recipient,direction,quantity,intervention,subset,cells,value
+negated,ordinary->reversed,flip,component,full_changed,14,0.9803892049876316
+negated,ordinary->reversed,flip,component,full_unchanged,14,0.005055486640839135
+negated,ordinary->reversed,same_answer_as_full,component,all,14,0.9853571428571428
+negated,ordinary->reversed,same_answer_as_full,complement,all,14,0.33446428571428566
+negated,ordinary->reversed,same_answer_as_full,random,all,14,0.3363690476190476
+negated,ordinary->reversed,reading_rev_all,noop,component_changed,14,0.7147622747444023
+negated,ordinary->reversed,reading_rev_all,component,component_changed,14,0.7909761310140978
+negated,ordinary->reversed,reading_rev_all,noop,component_unchanged,14,0.6707702837930777
+negated,ordinary->reversed,reading_rev_all,component,component_unchanged,14,0.7453463933550083
+yes_no,reversed->ordinary,reading_rev_all,noop,component_changed,14,0.7405684102491993
+yes_no,reversed->ordinary,reading_rev_all,component,component_changed,14,0.779719171596229
+yes_no,reversed->ordinary,reading_rev_all,noop,component_unchanged,14,0.708018302468959
+yes_no,reversed->ordinary,reading_rev_all,component,component_unchanged,14,0.7407873862400385

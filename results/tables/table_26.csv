@@ -1,0 +1,25 @@
+location,context,value,source_file,source_key
+"Table 26 / Qwen2.5-7B reads Llama-3.1-8B, TriviaQA / negatives",another model's answers,115.0,generalization/other_model_answers.csv,cell=Qwen2.5-7B reads Llama-3.1-8B TriviaQA; col=negatives
+"Table 26 / Qwen2.5-7B reads Llama-3.1-8B, TriviaQA / own-fitted",another model's answers,0.8012204424103737,generalization/other_model_answers.csv,cell=Qwen2.5-7B reads Llama-3.1-8B TriviaQA; col=own_answer_readout
+"Table 26 / Qwen2.5-7B reads Llama-3.1-8B, TriviaQA / fitted here",another model's answers,0.8004576659038903,generalization/other_model_answers.csv,cell=Qwen2.5-7B reads Llama-3.1-8B TriviaQA; col=fitted_here
+"Table 26 / Qwen2.5-7B reads Llama-3.1-8B, MMLU / negatives",another model's answers,128.0,generalization/other_model_answers.csv,cell=Qwen2.5-7B reads Llama-3.1-8B MMLU; col=negatives
+"Table 26 / Qwen2.5-7B reads Llama-3.1-8B, MMLU / own-fitted",another model's answers,0.8101390165441178,generalization/other_model_answers.csv,cell=Qwen2.5-7B reads Llama-3.1-8B MMLU; col=own_answer_readout
+"Table 26 / Qwen2.5-7B reads Llama-3.1-8B, MMLU / fitted here",another model's answers,0.8100930606617647,generalization/other_model_answers.csv,cell=Qwen2.5-7B reads Llama-3.1-8B MMLU; col=fitted_here
+"Table 26 / Llama-3.1-8B reads Mistral-7B, TriviaQA / negatives",another model's answers,114.0,generalization/other_model_answers.csv,cell=Llama-3.1-8B reads Mistral-7B TriviaQA; col=negatives
+"Table 26 / Llama-3.1-8B reads Mistral-7B, TriviaQA / own-fitted",another model's answers,0.8281621886885044,generalization/other_model_answers.csv,cell=Llama-3.1-8B reads Mistral-7B TriviaQA; col=own_answer_readout
+"Table 26 / Llama-3.1-8B reads Mistral-7B, TriviaQA / fitted here",another model's answers,0.8249478591583855,generalization/other_model_answers.csv,cell=Llama-3.1-8B reads Mistral-7B TriviaQA; col=fitted_here
+"Table 26 / Llama-3.1-8B reads Mistral-7B, MMLU / negatives",another model's answers,160.0,generalization/other_model_answers.csv,cell=Llama-3.1-8B reads Mistral-7B MMLU; col=negatives
+"Table 26 / Llama-3.1-8B reads Mistral-7B, MMLU / own-fitted",another model's answers,0.7631041666666667,generalization/other_model_answers.csv,cell=Llama-3.1-8B reads Mistral-7B MMLU; col=own_answer_readout
+"Table 26 / Llama-3.1-8B reads Mistral-7B, MMLU / fitted here",another model's answers,0.7710156250000001,generalization/other_model_answers.csv,cell=Llama-3.1-8B reads Mistral-7B MMLU; col=fitted_here
+"Table 26 / Mistral-7B reads Qwen2.5-14B, TriviaQA / negatives",another model's answers,145.0,generalization/other_model_answers.csv,cell=Mistral-7B reads Qwen2.5-14B TriviaQA; col=negatives
+"Table 26 / Mistral-7B reads Qwen2.5-14B, TriviaQA / own-fitted",another model's answers,0.8217336037863422,generalization/other_model_answers.csv,cell=Mistral-7B reads Qwen2.5-14B TriviaQA; col=own_answer_readout
+"Table 26 / Mistral-7B reads Qwen2.5-14B, TriviaQA / fitted here",another model's answers,0.8218526031102096,generalization/other_model_answers.csv,cell=Mistral-7B reads Qwen2.5-14B TriviaQA; col=fitted_here
+"Table 26 / Mistral-7B reads Qwen2.5-14B, MMLU descr. / negatives",another model's answers,82.0,generalization/other_model_answers.csv,cell=Mistral-7B reads Qwen2.5-14B MMLU; col=negatives
+"Table 26 / Mistral-7B reads Qwen2.5-14B, MMLU descr. / own-fitted",another model's answers,0.7063890167203558,generalization/other_model_answers.csv,cell=Mistral-7B reads Qwen2.5-14B MMLU; col=own_answer_readout
+"Table 26 / Mistral-7B reads Qwen2.5-14B, MMLU descr. / fitted here",another model's answers,0.715799969320448,generalization/other_model_answers.csv,cell=Mistral-7B reads Qwen2.5-14B MMLU; col=fitted_here
+"Table 26 / Qwen2.5-14B reads Qwen2.5-7B, TriviaQA / negatives",another model's answers,181.0,generalization/other_model_answers.csv,cell=Qwen2.5-14B reads Qwen2.5-7B TriviaQA; col=negatives
+"Table 26 / Qwen2.5-14B reads Qwen2.5-7B, TriviaQA / own-fitted",another model's answers,0.903256893463508,generalization/other_model_answers.csv,cell=Qwen2.5-14B reads Qwen2.5-7B TriviaQA; col=own_answer_readout
+"Table 26 / Qwen2.5-14B reads Qwen2.5-7B, TriviaQA / fitted here",another model's answers,0.9022477862710966,generalization/other_model_answers.csv,cell=Qwen2.5-14B reads Qwen2.5-7B TriviaQA; col=fitted_here
+"Table 26 / Qwen2.5-14B reads Qwen2.5-7B, MMLU / negatives",another model's answers,116.0,generalization/other_model_answers.csv,cell=Qwen2.5-14B reads Qwen2.5-7B MMLU; col=negatives
+"Table 26 / Qwen2.5-14B reads Qwen2.5-7B, MMLU / own-fitted",another model's answers,0.8416646430305972,generalization/other_model_answers.csv,cell=Qwen2.5-14B reads Qwen2.5-7B MMLU; col=own_answer_readout
+"Table 26 / Qwen2.5-14B reads Qwen2.5-7B, MMLU / fitted here",another model's answers,0.8430791646430306,generalization/other_model_answers.csv,cell=Qwen2.5-14B reads Qwen2.5-7B MMLU; col=fitted_here

@@ -1,0 +1,38 @@
+location,context,value,source_file,source_key
+Table 4 / Llama-3.1-8B ARC / stem,format first,0.691489608730988,readout/format_first.csv,cell=Llama-3.1-8B ARC; col=stem
+Table 4 / Llama-3.1-8B ARC / response position,format first,0.7456248306823019,readout/format_first.csv,cell=Llama-3.1-8B ARC; col=response_position
+Table 4 / Llama-3.1-8B GSM8K / stem,format first,0.9670145928762734,readout/format_first.csv,cell=Llama-3.1-8B GSM8K; col=stem
+Table 4 / Llama-3.1-8B GSM8K / response position,format first,0.9709143701033766,readout/format_first.csv,cell=Llama-3.1-8B GSM8K; col=response_position
+Table 4 / Llama-3.1-8B MMLU / stem,format first,0.6832950367647059,readout/format_first.csv,cell=Llama-3.1-8B MMLU; col=stem
+Table 4 / Llama-3.1-8B MMLU / response position,format first,0.7098460477941176,readout/format_first.csv,cell=Llama-3.1-8B MMLU; col=response_position
+Table 4 / Llama-3.1-8B TriviaQA / stem,format first,0.8104774980930587,readout/format_first.csv,cell=Llama-3.1-8B TriviaQA; col=stem
+Table 4 / Llama-3.1-8B TriviaQA / response position,format first,0.8265873379099924,readout/format_first.csv,cell=Llama-3.1-8B TriviaQA; col=response_position
+Table 4 / Mistral-7B ARC / stem,format first,0.6940351891325554,readout/format_first.csv,cell=Mistral-7B ARC; col=stem
+Table 4 / Mistral-7B ARC / response position,format first,0.7172441200910438,readout/format_first.csv,cell=Mistral-7B ARC; col=response_position
+Table 4 / Mistral-7B GSM8K / stem,format first,0.7756645698051947,readout/format_first.csv,cell=Mistral-7B GSM8K; col=stem
+Table 4 / Mistral-7B GSM8K / response position,format first,0.7882964691558441,readout/format_first.csv,cell=Mistral-7B GSM8K; col=response_position
+Table 4 / Mistral-7B MMLU / stem,format first,0.71184375,readout/format_first.csv,cell=Mistral-7B MMLU; col=stem
+Table 4 / Mistral-7B MMLU / response position,format first,0.7047187500000001,readout/format_first.csv,cell=Mistral-7B MMLU; col=response_position
+Table 4 / Mistral-7B TriviaQA / stem,format first,0.7854925775978409,readout/format_first.csv,cell=Mistral-7B TriviaQA; col=stem
+Table 4 / Mistral-7B TriviaQA / response position,format first,0.7938044411728622,readout/format_first.csv,cell=Mistral-7B TriviaQA; col=response_position
+Table 4 / Qwen2.5-14B ARC / stem,format first,0.7663146666666667,readout/format_first.csv,cell=Qwen2.5-14B ARC; col=stem
+Table 4 / Qwen2.5-14B ARC / response position,format first,0.7904213333333333,readout/format_first.csv,cell=Qwen2.5-14B ARC; col=response_position
+Table 4 / Qwen2.5-14B GSM8K / stem,format first,0.9200342811050616,readout/format_first.csv,cell=Qwen2.5-14B GSM8K; col=stem
+Table 4 / Qwen2.5-14B GSM8K / response position,format first,0.9159810445654364,readout/format_first.csv,cell=Qwen2.5-14B GSM8K; col=response_position
+Table 4 / Qwen2.5-14B MMLU / stem,format first,0.7171115201718055,readout/format_first.csv,cell=Qwen2.5-14B MMLU; col=stem
+Table 4 / Qwen2.5-14B MMLU / response position,format first,0.7563276576161988,readout/format_first.csv,cell=Qwen2.5-14B MMLU; col=response_position
+Table 4 / Qwen2.5-14B TriviaQA / stem,format first,0.849341446923597,readout/format_first.csv,cell=Qwen2.5-14B TriviaQA; col=stem
+Table 4 / Qwen2.5-14B TriviaQA / response position,format first,0.8573901284651791,readout/format_first.csv,cell=Qwen2.5-14B TriviaQA; col=response_position
+Table 4 / Qwen2.5-7B ARC / stem,format first,0.7109820564366018,readout/format_first.csv,cell=Qwen2.5-7B ARC; col=stem
+Table 4 / Qwen2.5-7B ARC / response position,format first,0.7809098354552899,readout/format_first.csv,cell=Qwen2.5-7B ARC; col=response_position
+Table 4 / Qwen2.5-7B GSM8K / stem,format first,0.8653702564102564,readout/format_first.csv,cell=Qwen2.5-7B GSM8K; col=stem
+Table 4 / Qwen2.5-7B GSM8K / response position,format first,0.8298010256410256,readout/format_first.csv,cell=Qwen2.5-7B GSM8K; col=response_position
+Table 4 / Qwen2.5-7B MMLU / stem,format first,0.7400194269062652,readout/format_first.csv,cell=Qwen2.5-7B MMLU; col=stem
+Table 4 / Qwen2.5-7B MMLU / response position,format first,0.7740165128703254,readout/format_first.csv,cell=Qwen2.5-7B MMLU; col=response_position
+Table 4 / Qwen2.5-7B TriviaQA / stem,format first,0.8331643078786044,readout/format_first.csv,cell=Qwen2.5-7B TriviaQA; col=stem
+Table 4 / Qwen2.5-7B TriviaQA / response position,format first,0.8452786397235046,readout/format_first.csv,cell=Qwen2.5-7B TriviaQA; col=response_position
+Table 4 / ten-cell set,number of primary cells whose model follows the format-first prompts,10.0,states/*/format_first/*.npz,count over 16 cells of (primary and model_follows)
+Table 4 / ten-cell set,Qwen2.5-7B: lowest letter-format compliance over its cells,0.5780000000000001,states/*/format_first/*.npz,"min over cells of min(top1 A/B, top1 B/A)"
+Table 4 / ten-cell set,Llama-3.1-8B: lowest letter-format compliance over its cells,0.8945000000000001,states/*/format_first/*.npz,"min over cells of min(top1 A/B, top1 B/A)"
+Table 4 / ten-cell set,Mistral-7B: lowest letter-format compliance over its cells,0.0015,states/*/format_first/*.npz,"min over cells of min(top1 A/B, top1 B/A)"
+Table 4 / ten-cell set,Qwen2.5-14B: lowest letter-format compliance over its cells,0.702,states/*/format_first/*.npz,"min over cells of min(top1 A/B, top1 B/A)"

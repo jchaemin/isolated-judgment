@@ -1,0 +1,21 @@
+{
+ "POSITIVE": [
+  "correct",
+  "incorrect"
+ ],
+ "SUBJECT": [
+  "the proposed answer is correct",
+  "it is incorrect"
+ ],
+ "STATEMENTS": [
+  "The proposed answer is correct.",
+  "The proposed answer is incorrect."
+ ],
+ "CROSS_NEGATIONS": [
+  [
+   "\\bcorrect\\b",
+   "incorrect"
+  ]
+ ],
+ "template": "{q}\nProposed answer: {r}\n\n{instr}"
+}

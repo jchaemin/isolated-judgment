@@ -1,0 +1,6 @@
+Qwen/Qwen2.5-7B-Instruct gsm8k
+Qwen/Qwen2.5-7B-Instruct mmlu
+Qwen/Qwen2.5-7B-Instruct triviaqa
+meta-llama/Llama-3.1-8B-Instruct gsm8k
+meta-llama/Llama-3.1-8B-Instruct triviaqa
+mistralai/Mistral-7B-Instruct-v0.3 triviaqa

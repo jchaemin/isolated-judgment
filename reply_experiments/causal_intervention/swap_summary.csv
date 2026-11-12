@@ -1,0 +1,8 @@
+recipient,direction,intervention,cells,flip,reading_rev_all
+negated,ordinary->reversed,complement,14,0.03142857142857143,0.7496203482311394
+negated,ordinary->reversed,component,14,0.6592857142857144,0.8003402015724129
+negated,ordinary->reversed,full,14,0.6698214285714286,0.8042832444877774
+negated,ordinary->reversed,noop,14,0.0,0.7357824017121233
+negated,ordinary->reversed,random,14,0.019226190476190477,0.7425931237064399
+yes_no,reversed->ordinary,component,14,0.6369642857142858,0.796511996713168
+yes_no,reversed->ordinary,noop,14,0.0,0.7632730178242219

@@ -1,0 +1,17 @@
+cell,fold,wording,arm,n,draw,why
+Mistral-7B TriviaQA,0,P05,pooled_L,16,0,one class
+Mistral-7B TriviaQA,0,P05,pooled_L,16,8,one class
+Mistral-7B TriviaQA,0,P09,pooled_L,16,4,one class
+Mistral-7B TriviaQA,1,P05,pooled_L,16,0,one class
+Mistral-7B TriviaQA,1,P05,pooled_L,16,3,one class
+Mistral-7B TriviaQA,1,P07,pooled_L,16,0,one class
+Mistral-7B TriviaQA,2,P01,pooled_L,16,9,one class
+Mistral-7B TriviaQA,2,P03,pooled_L,16,4,one class
+Mistral-7B TriviaQA,2,P05,pooled_L,16,1,one class
+Mistral-7B TriviaQA,3,P01,iso_Ln,16,1,one class
+Mistral-7B TriviaQA,3,P01,pooled_L,16,4,one class
+Mistral-7B TriviaQA,3,P01,pooled_L,32,1,one class
+Mistral-7B TriviaQA,3,P03,pooled_L,16,8,one class
+Mistral-7B TriviaQA,4,P05,pooled_L,16,3,one class
+Mistral-7B TriviaQA,4,P05,pooled_L,16,6,one class
+Mistral-7B TriviaQA,4,P09,pooled_L,16,0,one class

@@ -1,0 +1,19 @@
+cell,form,method,auroc,n_wordings
+Qwen2.5-7B GSM8K,cot_negated,plain,0.4107158974358975,5
+Qwen2.5-7B GSM8K,cot_negated,rank8,0.848393846153846,5
+Qwen2.5-7B GSM8K,cot_negated,model,0.7014194871794872,5
+Qwen2.5-7B MMLU,cot_negated,plain,0.43690505099562904,5
+Qwen2.5-7B MMLU,cot_negated,rank8,0.6858547838756678,5
+Qwen2.5-7B MMLU,cot_negated,model,0.5688592763477417,5
+Qwen2.5-7B TriviaQA,cot_negated,plain,0.30530538106410354,5
+Qwen2.5-7B TriviaQA,cot_negated,rank8,0.6469537576629077,5
+Qwen2.5-7B TriviaQA,cot_negated,model,0.7139912712227856,5
+Llama-3.1-8B GSM8K,cot_negated,plain,0.44014918274886733,5
+Llama-3.1-8B GSM8K,cot_negated,rank8,0.7167029611273811,5
+Llama-3.1-8B GSM8K,cot_negated,model,0.6350379214537809,5
+Llama-3.1-8B TriviaQA,cot_negated,plain,0.41191151792524794,5
+Llama-3.1-8B TriviaQA,cot_negated,rank8,0.6423432494279175,5
+Llama-3.1-8B TriviaQA,cot_negated,model,0.6512402745995424,5
+Mistral-7B TriviaQA,cot_negated,plain,0.6679119126487547,5
+Mistral-7B TriviaQA,cot_negated,rank8,0.6727824806772175,5
+Mistral-7B TriviaQA,cot_negated,model,0.36375291375291374,5

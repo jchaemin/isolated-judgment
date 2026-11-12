@@ -1,0 +1,20 @@
+cell,fold,wording,arm,n,draw,why
+Llama-3.1-8B TriviaQA,0,P03,pooled_L,16,0,one class
+Llama-3.1-8B TriviaQA,0,P03,pooled_L,16,2,one class
+Llama-3.1-8B TriviaQA,0,P05,pooled_L,16,2,one class
+Llama-3.1-8B TriviaQA,0,P05,pooled_L,16,8,one class
+Llama-3.1-8B TriviaQA,0,P09,pooled_L,16,8,one class
+Llama-3.1-8B TriviaQA,1,P01,pooled_L,16,4,one class
+Llama-3.1-8B TriviaQA,1,P09,pooled_L,16,0,one class
+Llama-3.1-8B TriviaQA,2,P07,pooled_L,16,7,one class
+Llama-3.1-8B TriviaQA,2,P09,pooled_L,16,1,one class
+Llama-3.1-8B TriviaQA,3,P05,pooled_L,16,2,one class
+Llama-3.1-8B TriviaQA,3,P05,pooled_L,16,9,one class
+Llama-3.1-8B TriviaQA,3,P07,pooled_L,16,1,one class
+Llama-3.1-8B TriviaQA,3,P07,pooled_L,16,2,one class
+Llama-3.1-8B TriviaQA,3,P09,pooled_L,16,0,one class
+Llama-3.1-8B TriviaQA,4,P01,pooled_L,16,5,one class
+Llama-3.1-8B TriviaQA,4,P05,iso_Ln,16,7,one class
+Llama-3.1-8B TriviaQA,4,P05,pooled_L,32,7,one class
+Llama-3.1-8B TriviaQA,4,P07,iso_Ln,16,2,one class
+Llama-3.1-8B TriviaQA,4,P07,pooled_L,32,2,one class

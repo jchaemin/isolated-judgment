@@ -1,0 +1,17 @@
+cell,condition,rows,quantity,auroc
+Qwen3.5-9B ARC,negated,400,readout,0.5484368572603866
+Qwen3.5-9B ARC,negated,400,iso_k8,0.7723364870423695
+Qwen3.5-9B ARC,negated,400,fitted,0.8734265734265735
+Qwen3.5-9B ARC,negated,400,verdict,0.760222130810366
+Qwen3.5-9B GSM8K,negated,400,readout,0.8935532233883059
+Qwen3.5-9B GSM8K,negated,400,iso_k8,0.9216468688732556
+Qwen3.5-9B GSM8K,negated,400,fitted,0.9248990889170798
+Qwen3.5-9B GSM8K,negated,400,verdict,0.9071618037135278
+Qwen3.5-9B TriviaQA,negated,400,readout,0.6224358130348915
+Qwen3.5-9B TriviaQA,negated,400,iso_k8,0.8343910467412771
+Qwen3.5-9B TriviaQA,negated,400,fitted,0.8547202106649113
+Qwen3.5-9B TriviaQA,negated,400,verdict,0.7334957208689927
+Qwen3.5-9B MMLU,negated,400,readout,0.7327650677495879
+Qwen3.5-9B MMLU,negated,400,iso_k8,0.7662096417514374
+Qwen3.5-9B MMLU,negated,400,fitted,0.7731494511680269
+Qwen3.5-9B MMLU,negated,400,verdict,0.7035181536729525

@@ -30,8 +30,34 @@ def pool(scores, test_rows):
     scores[test_rows] = (v - m) / (s if s > 0 else 1.0)
 
 
+def unit(w):
+    return w / np.linalg.norm(w)
+
+
+def aurocs(y, s, folds, mask=None):
+    y = np.asarray(y); s = np.asarray(s, dtype=float); z = s.copy()
+    for _, te in folds:
+        pool(z, te)
+    m = np.ones(len(y), bool) if mask is None else np.asarray(mask, bool)
+    return auroc(y[m], z[m])
+
+
+def mean_in_order(values):
+    t = values[0]
+    for v in values[1:]:
+        t = t + v
+    return t / len(values)
+
+
+def aurocs_mean(y, scores, folds, mask=None):
+    if not len(scores):
+        return np.nan
+    return mean_in_order([aurocs(y, v, folds, mask) for v in scores])
+
+
 def class_mean(X, y):
-    return X[y == 1].mean(0) - X[y == 0].mean(0)
+    w = X[y == 1].mean(0) - X[y == 0].mean(0)
+    return w / np.linalg.norm(w)
 
 
 def top_directions(D, k):
@@ -73,24 +99,82 @@ def choose_k(pairs, q, kmax=None, seed=0):
     return max(k, 1), cs
 
 
+class Cross(np.ndarray):
+    def __new__(cls, X, task, qid, wording):
+        o = np.asarray(X).view(cls); o.task, o.qid, o.wording = np.asarray(task), np.asarray(qid), np.asarray(wording)
+        return o
+
+    def __array_finalize__(self, obj):
+        self.task = getattr(obj, "task", None); self.qid = getattr(obj, "qid", None); self.wording = getattr(obj, "wording", None)
+
+    def rows(self, idx):
+        return Cross(np.asarray(self)[idx], self.task[idx], self.qid[idx], self.wording[idx])
+
+
+def cross_block(parts):
+    return Cross(np.concatenate([p[0] for p in parts]), np.concatenate([np.full(len(p[0]), p[1]) for p in parts]),
+                 np.concatenate([np.asarray(p[2], dtype=np.int64) for p in parts]), np.concatenate([np.full(len(p[0]), p[3]) for p in parts]))
+
+
+def wording_number(p):
+    return int(str(p)[1:])
+
+
+def sub_cross(cross, n_train):
+    return cross.rows(np.random.default_rng(1).choice(len(cross), min(len(cross), 4 * n_train), replace=False))
+
+
+def _svd_top(M, k):
+    _, _, Vt = randomized_svd(M, n_components=min(k, min(M.shape) - 1), n_iter=4, random_state=0)
+    return Vt
+
+
+def _center(blocks, cr):
+    out = [b - b.mean(0) for b in blocks]
+    if cr is not None:
+        X = np.asarray(cr).copy(); sid = cr.task * 100 + cr.wording
+        for u in np.unique(sid):
+            m = sid == u; X[m] -= X[m].mean(0)
+        out.append(X)
+    return np.concatenate(out)
+
+
+def largest_stable_rank(V1, V2):
+    K = min(len(V1), len(V2)); ok = [1]
+    for j in range(1, K + 1):
+        if np.linalg.svd(V1[:j] @ V2[:j].T, compute_uv=False).min() >= 0.95:
+            ok.append(j)
+    return max(ok)
+
+
+def fit_blocks(fmt, groups, cr, k=None, seed=0):
+    if k is None:
+        rng = np.random.default_rng(seed); mf = []
+        if fmt:
+            uq = np.unique(np.concatenate(groups)); half = set(rng.permutation(uq)[: len(uq) // 2].tolist())
+            mf = [np.array([x in half for x in g], dtype=bool) for g in groups]
+        mc = None
+        if cr is not None:
+            gid = cr.task * 10 ** 8 + cr.qid; hc = set()
+            for t in np.unique(cr.task):
+                ug = np.unique(gid[cr.task == t]); hc |= set(rng.permutation(ug)[: len(ug) // 2].tolist())
+            mc = np.array([x in hc for x in gid], dtype=bool)
+        V1 = _svd_top(_center([b[m] for b, m in zip(fmt, mf)], None if cr is None else cr.rows(mc)), KMAX)
+        V2 = _svd_top(_center([b[~m] for b, m in zip(fmt, mf)], None if cr is None else cr.rows(~mc)), KMAX)
+        k = largest_stable_rank(V1, V2)
+    return _svd_top(_center(fmt, cr), k), int(k)
+
+
 def expression_subspace(H, train_rows, wording, q, cross, rule="split_half"):
     tr, p = train_rows, wording
-    pairs = [H[(g, p)][tr] - H[(f, p)][tr] for i, f in enumerate(config.FORMATS) for g in config.FORMATS[i + 1:] if (f, p) in H and (g, p) in H]
-    if cross is not None:
-        m = min(len(cross), 4 * len(tr)); pairs.append(cross[np.random.default_rng(1).choice(len(cross), m, replace=False)])
-    if rule == "split_half":
-        cr = pairs[-1] if cross is not None else None; fmt = pairs[:-1] if cross is not None else pairs
-        k = split_half_rank(fmt + ([cr] if cr is not None else []), [q[tr]] * len(fmt) + ([np.arange(len(cr))] if cr is not None else []))
-        B, _, _ = top_directions(np.concatenate(pairs), k); return B, int(k)
-    try:
-        k, _ = choose_k(pairs, q[tr])
-    except Exception:
-        k = 8
-    B, _, _ = top_directions(np.concatenate(pairs), k); return B, int(k)
+    fmt = [H[(g, p)][tr] - H[(f, p)][tr] for i, f in enumerate(config.FORMATS) for g in config.FORMATS[i + 1:] if (f, p) in H and (g, p) in H]
+    cr = sub_cross(cross, len(tr)) if cross is not None else None
+    return fit_blocks(fmt, [q[tr]] * len(fmt), cr, k=8 if rule == "fixed8" else None)
 
 
 def _lr(X, y, C):
-    return LogisticRegression(C=C, max_iter=3000).fit(X, y).coef_[0]
+    w = LogisticRegression(C=C, max_iter=3000).fit(X, y).coef_[0]
+    return w / np.linalg.norm(w)
 
 
 def _inner_splits(q, seed=0):

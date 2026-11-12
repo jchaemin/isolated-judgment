@@ -1,0 +1,17 @@
+condition,what,arm,n_cells,mean,cell_lo,cell_hi
+negated,delta_vs_submitted,z1,14,0.0061225067931473766,,
+negated,delta_vs_submitted,z2,14,0.004009390133258303,,
+negated,delta_vs_submitted,z3,14,-0.005082672281893257,,
+negated,delta_vs_submitted,all3,14,0.006010919939641027,0.002094564775636119,0.01102461988467672
+zero_means_correct,delta_vs_submitted,z1,14,0.0011023922683336248,,
+zero_means_correct,delta_vs_submitted,z2,14,0.0003036205079244688,,
+zero_means_correct,delta_vs_submitted,z3,14,0.00021330984264136425,,
+zero_means_correct,delta_vs_submitted,all3,14,0.0009947867213664443,-0.0009174618153079701,0.002776381805325619
+false_means_correct,delta_vs_submitted,z1,14,0.0077240711998299615,,
+false_means_correct,delta_vs_submitted,z2,14,0.0024294974258047275,,
+false_means_correct,delta_vs_submitted,z3,14,-0.004568145950413517,,
+false_means_correct,delta_vs_submitted,all3,14,0.00567939295755983,0.0015599549769735861,0.010733396492980406
+no_means_correct,delta_vs_submitted,z1,14,0.014379316000498688,,
+no_means_correct,delta_vs_submitted,z2,14,0.007100689508582114,,
+no_means_correct,delta_vs_submitted,z3,14,-0.007837232716567832,,
+no_means_correct,delta_vs_submitted,all3,14,0.012138372782456433,0.004290486918328054,0.021832464926587282

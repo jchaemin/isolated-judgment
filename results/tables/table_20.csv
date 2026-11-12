@@ -1,0 +1,89 @@
+location,context,value,source_file,source_key
+Table 20 / entailment / Yes/No / readout,entailment judgment task,0.8661986446950563,generalization/tasks.csv,task=entailment; condition=yes_no; col=readout
+Table 20 / entailment / Yes/No / isolated,entailment judgment task,0.8629729189067541,generalization/tasks.csv,task=entailment; condition=yes_no; col=isolated
+Table 20 / entailment / Yes/No / fitted,entailment judgment task,0.8661986446950563,generalization/tasks.csv,task=entailment; condition=yes_no; col=fitted
+Table 20 / entailment / Yes/No / verdict,entailment judgment task,0.8641481833412519,generalization/tasks.csv,task=entailment; condition=yes_no; col=verdict
+Table 20 / safety / Yes/No / readout,safety judgment task,0.9034432747368156,generalization/tasks.csv,task=safety; condition=yes_no; col=readout
+Table 20 / safety / Yes/No / isolated,safety judgment task,0.9028981520842188,generalization/tasks.csv,task=safety; condition=yes_no; col=isolated
+Table 20 / safety / Yes/No / fitted,safety judgment task,0.9034432747368156,generalization/tasks.csv,task=safety; condition=yes_no; col=fitted
+Table 20 / safety / Yes/No / verdict,safety judgment task,0.8935116651246531,generalization/tasks.csv,task=safety; condition=yes_no; col=verdict
+Table 20 / entailment / True/False / readout,entailment judgment task,0.8658248105823811,generalization/tasks.csv,task=entailment; condition=true_false; col=readout
+Table 20 / entailment / True/False / isolated,entailment judgment task,0.8569728188842489,generalization/tasks.csv,task=entailment; condition=true_false; col=isolated
+Table 20 / entailment / True/False / fitted,entailment judgment task,0.8663774349228577,generalization/tasks.csv,task=entailment; condition=true_false; col=fitted
+Table 20 / entailment / True/False / verdict,entailment judgment task,0.8648302117976543,generalization/tasks.csv,task=entailment; condition=true_false; col=verdict
+Table 20 / safety / True/False / readout,safety judgment task,0.9054049661173764,generalization/tasks.csv,task=safety; condition=true_false; col=readout
+Table 20 / safety / True/False / isolated,safety judgment task,0.907911780150534,generalization/tasks.csv,task=safety; condition=true_false; col=isolated
+Table 20 / safety / True/False / fitted,safety judgment task,0.9066977569953238,generalization/tasks.csv,task=safety; condition=true_false; col=fitted
+Table 20 / safety / True/False / verdict,safety judgment task,0.8909567152609337,generalization/tasks.csv,task=safety; condition=true_false; col=verdict
+Table 20 / entailment / A/B / readout,entailment judgment task,0.8484796579230326,generalization/tasks.csv,task=entailment; condition=a_b; col=readout
+Table 20 / entailment / A/B / isolated,entailment judgment task,0.8416656247655723,generalization/tasks.csv,task=entailment; condition=a_b; col=isolated
+Table 20 / entailment / A/B / fitted,entailment judgment task,0.8462779125303194,generalization/tasks.csv,task=entailment; condition=a_b; col=fitted
+Table 20 / entailment / A/B / verdict,entailment judgment task,0.8122052461803906,generalization/tasks.csv,task=entailment; condition=a_b; col=verdict
+Table 20 / safety / A/B / readout,safety judgment task,0.887763496786777,generalization/tasks.csv,task=safety; condition=a_b; col=readout
+Table 20 / safety / A/B / isolated,safety judgment task,0.8957502938161086,generalization/tasks.csv,task=safety; condition=a_b; col=isolated
+Table 20 / safety / A/B / fitted,safety judgment task,0.9008876997324398,generalization/tasks.csv,task=safety; condition=a_b; col=fitted
+Table 20 / safety / A/B / verdict,safety judgment task,0.8889656422695107,generalization/tasks.csv,task=safety; condition=a_b; col=verdict
+Table 20 / entailment / B/A / readout,entailment judgment task,0.8507576704758572,generalization/tasks.csv,task=entailment; condition=b_a; col=readout
+Table 20 / entailment / B/A / isolated,entailment judgment task,0.8441536845790303,generalization/tasks.csv,task=entailment; condition=b_a; col=isolated
+Table 20 / entailment / B/A / fitted,entailment judgment task,0.8460053512040209,generalization/tasks.csv,task=entailment; condition=b_a; col=fitted
+Table 20 / entailment / B/A / verdict,entailment judgment task,0.7670350828936511,generalization/tasks.csv,task=entailment; condition=b_a; col=verdict
+Table 20 / safety / B/A / readout,safety judgment task,0.8784714060663649,generalization/tasks.csv,task=safety; condition=b_a; col=readout
+Table 20 / safety / B/A / isolated,safety judgment task,0.8937360906203897,generalization/tasks.csv,task=safety; condition=b_a; col=isolated
+Table 20 / safety / B/A / fitted,safety judgment task,0.8990147783251231,generalization/tasks.csv,task=safety; condition=b_a; col=fitted
+Table 20 / safety / B/A / verdict,safety judgment task,0.8286658248105823,generalization/tasks.csv,task=safety; condition=b_a; col=verdict
+Table 20 / entailment / sentence / readout,entailment judgment task,0.8450951464079417,generalization/tasks.csv,task=entailment; condition=sentence; col=readout
+Table 20 / entailment / sentence / isolated,entailment judgment task,0.844613788102323,generalization/tasks.csv,task=entailment; condition=sentence; col=isolated
+Table 20 / entailment / sentence / fitted,entailment judgment task,0.8377609962241503,generalization/tasks.csv,task=entailment; condition=sentence; col=fitted
+Table 20 / entailment / sentence / verdict,entailment judgment task,,generalization/tasks.csv,task=entailment; condition=sentence; col=verdict
+Table 20 / safety / sentence / readout,safety judgment task,0.8738116076117126,generalization/tasks.csv,task=safety; condition=sentence; col=readout
+Table 20 / safety / sentence / isolated,safety judgment task,0.8959578405141158,generalization/tasks.csv,task=safety; condition=sentence; col=isolated
+Table 20 / safety / sentence / fitted,safety judgment task,0.896044109924733,generalization/tasks.csv,task=safety; condition=sentence; col=fitted
+Table 20 / safety / sentence / verdict,safety judgment task,,generalization/tasks.csv,task=safety; condition=sentence; col=verdict
+Table 20 / entailment / negated question / readout,entailment judgment task,0.5038558675702033,generalization/tasks.csv,task=entailment; condition=negated; col=readout
+Table 20 / entailment / negated question / isolated,entailment judgment task,0.8260983721337302,generalization/tasks.csv,task=entailment; condition=negated; col=isolated
+Table 20 / entailment / negated question / fitted,entailment judgment task,0.8266659998499664,generalization/tasks.csv,task=entailment; condition=negated; col=fitted
+Table 20 / entailment / negated question / verdict,entailment judgment task,0.6273805356205147,generalization/tasks.csv,task=entailment; condition=negated; col=verdict
+Table 20 / safety / negated question / readout,safety judgment task,0.4801205271186017,generalization/tasks.csv,task=safety; condition=negated; col=readout
+Table 20 / safety / negated question / isolated,safety judgment task,0.8910417343902379,generalization/tasks.csv,task=safety; condition=negated; col=isolated
+Table 20 / safety / negated question / fitted,safety judgment task,0.8808944512515315,generalization/tasks.csv,task=safety; condition=negated; col=fitted
+Table 20 / safety / negated question / verdict,safety judgment task,0.7815333450026256,generalization/tasks.csv,task=safety; condition=negated; col=verdict
+Table 20 / entailment / 1/0 / readout,entailment judgment task,0.8458778225100647,generalization/tasks.csv,task=entailment; condition=one_zero; col=readout
+Table 20 / entailment / 1/0 / isolated,entailment judgment task,0.8456190142782125,generalization/tasks.csv,task=entailment; condition=one_zero; col=isolated
+Table 20 / entailment / 1/0 / fitted,entailment judgment task,0.8453239478882748,generalization/tasks.csv,task=entailment; condition=one_zero; col=fitted
+Table 20 / entailment / 1/0 / verdict,entailment judgment task,0.832954289715186,generalization/tasks.csv,task=entailment; condition=one_zero; col=verdict
+Table 20 / safety / 1/0 / readout,safety judgment task,0.8928896501712885,generalization/tasks.csv,task=safety; condition=one_zero; col=readout
+Table 20 / safety / 1/0 / isolated,safety judgment task,0.897190617889025,generalization/tasks.csv,task=safety; condition=one_zero; col=isolated
+Table 20 / safety / 1/0 / fitted,safety judgment task,0.8964642044460003,generalization/tasks.csv,task=safety; condition=one_zero; col=fitted
+Table 20 / safety / 1/0 / verdict,safety judgment task,0.886652621839914,generalization/tasks.csv,task=safety; condition=one_zero; col=verdict
+Table 20 / entailment / word pair / readout,entailment judgment task,0.8402703108199345,generalization/tasks.csv,task=entailment; condition=word_pair; col=readout
+Table 20 / entailment / word pair / isolated,entailment judgment task,0.84548523417769,generalization/tasks.csv,task=entailment; condition=word_pair; col=isolated
+Table 20 / entailment / word pair / fitted,entailment judgment task,0.8433885124152933,generalization/tasks.csv,task=entailment; condition=word_pair; col=fitted
+Table 20 / entailment / word pair / verdict,entailment judgment task,0.8072947663224226,generalization/tasks.csv,task=entailment; condition=word_pair; col=verdict
+Table 20 / safety / word pair / readout,safety judgment task,0.8797929534145184,generalization/tasks.csv,task=safety; condition=word_pair; col=readout
+Table 20 / safety / word pair / isolated,safety judgment task,0.8917218874246706,generalization/tasks.csv,task=safety; condition=word_pair; col=isolated
+Table 20 / safety / word pair / fitted,safety judgment task,0.8937448425895826,generalization/tasks.csv,task=safety; condition=word_pair; col=fitted
+Table 20 / safety / word pair / verdict,safety judgment task,0.8885192918406641,generalization/tasks.csv,task=safety; condition=word_pair; col=verdict
+Table 20 / entailment / 0 means positive / readout,entailment judgment task,0.8115000875196918,generalization/tasks.csv,task=entailment; condition=zero_means_positive; col=readout
+Table 20 / entailment / 0 means positive / isolated,entailment judgment task,0.850587632217249,generalization/tasks.csv,task=entailment; condition=zero_means_positive; col=isolated
+Table 20 / entailment / 0 means positive / fitted,entailment judgment task,0.8403090695406467,generalization/tasks.csv,task=entailment; condition=zero_means_positive; col=fitted
+Table 20 / entailment / 0 means positive / verdict,entailment judgment task,0.7378766472456302,generalization/tasks.csv,task=entailment; condition=zero_means_positive; col=verdict
+Table 20 / safety / 0 means positive / readout,safety judgment task,0.8029731689630167,generalization/tasks.csv,task=safety; condition=zero_means_positive; col=readout
+Table 20 / safety / 0 means positive / isolated,safety judgment task,0.8937873521542347,generalization/tasks.csv,task=safety; condition=zero_means_positive; col=isolated
+Table 20 / safety / 0 means positive / fitted,safety judgment task,0.8941874421744893,generalization/tasks.csv,task=safety; condition=zero_means_positive; col=fitted
+Table 20 / safety / 0 means positive / verdict,safety judgment task,0.868587932284764,generalization/tasks.csv,task=safety; condition=zero_means_positive; col=verdict
+Table 20 / entailment / False means positive / readout,entailment judgment task,0.781222024955615,generalization/tasks.csv,task=entailment; condition=false_means_positive; col=readout
+Table 20 / entailment / False means positive / isolated,entailment judgment task,0.8535470480858193,generalization/tasks.csv,task=entailment; condition=false_means_positive; col=isolated
+Table 20 / entailment / False means positive / fitted,entailment judgment task,0.8544747568202846,generalization/tasks.csv,task=entailment; condition=false_means_positive; col=fitted
+Table 20 / entailment / False means positive / verdict,entailment judgment task,0.5101897927033583,generalization/tasks.csv,task=entailment; condition=false_means_positive; col=verdict
+Table 20 / safety / False means positive / readout,safety judgment task,0.7563501787902278,generalization/tasks.csv,task=safety; condition=false_means_positive; col=readout
+Table 20 / safety / False means positive / isolated,safety judgment task,0.8914755820059512,generalization/tasks.csv,task=safety; condition=false_means_positive; col=isolated
+Table 20 / safety / False means positive / fitted,safety judgment task,0.8835500487609711,generalization/tasks.csv,task=safety; condition=false_means_positive; col=fitted
+Table 20 / safety / False means positive / verdict,safety judgment task,0.7017522692605836,generalization/tasks.csv,task=safety; condition=false_means_positive; col=verdict
+Table 20 / entailment / No means positive / readout,entailment judgment task,0.660603635818059,generalization/tasks.csv,task=entailment; condition=no_means_positive; col=readout
+Table 20 / entailment / No means positive / isolated,entailment judgment task,0.8543172213748094,generalization/tasks.csv,task=entailment; condition=no_means_positive; col=isolated
+Table 20 / entailment / No means positive / fitted,entailment judgment task,0.8456227651221526,generalization/tasks.csv,task=entailment; condition=no_means_positive; col=fitted
+Table 20 / entailment / No means positive / verdict,entailment judgment task,0.5135868070315821,generalization/tasks.csv,task=entailment; condition=no_means_positive; col=verdict
+Table 20 / safety / No means positive / readout,safety judgment task,0.5221062239003776,generalization/tasks.csv,task=safety; condition=no_means_positive; col=readout
+Table 20 / safety / No means positive / isolated,safety judgment task,0.8871171013478032,generalization/tasks.csv,task=safety; condition=no_means_positive; col=isolated
+Table 20 / safety / No means positive / fitted,safety judgment task,0.8936173138956266,generalization/tasks.csv,task=safety; condition=no_means_positive; col=fitted
+Table 20 / safety / No means positive / verdict,safety judgment task,0.7931647120602136,generalization/tasks.csv,task=safety; condition=no_means_positive; col=verdict

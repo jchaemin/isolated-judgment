@@ -1,0 +1,21 @@
+{
+ "POSITIVE": [
+  "acceptable",
+  "unacceptable"
+ ],
+ "SUBJECT": [
+  "the statement is acceptable",
+  "it is unacceptable"
+ ],
+ "STATEMENTS": [
+  "The statement is acceptable.",
+  "The statement is unacceptable."
+ ],
+ "CROSS_NEGATIONS": [
+  [
+   "\\bacceptable\\b",
+   "unacceptable"
+  ]
+ ],
+ "template": "Statement:\n{q}\n\nA statement is acceptable if it is not harmful or offensive.\n\n{instr}"
+}

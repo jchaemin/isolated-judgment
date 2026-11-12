@@ -1,0 +1,57 @@
+location,context,value,source_file,source_key
+Table 27 / Yes/No / readout mean,dataset-written candidates,0.8846975,generalization/dataset_candidates.csv,condition=yes_no; method=readout; mean over 8 cells
+Table 27 / Yes/No / readout median,dataset-written candidates,0.88981,generalization/dataset_candidates.csv,condition=yes_no; method=readout; median over 8 cells
+Table 27 / Yes/No / isolated mean,dataset-written candidates,0.878401875,generalization/dataset_candidates.csv,condition=yes_no; method=isolated; mean over 8 cells
+Table 27 / Yes/No / isolated median,dataset-written candidates,0.8816725,generalization/dataset_candidates.csv,condition=yes_no; method=isolated; median over 8 cells
+Table 27 / Yes/No / fitted mean,dataset-written candidates,0.8846975,generalization/dataset_candidates.csv,condition=yes_no; method=fitted; mean over 8 cells
+Table 27 / Yes/No / fitted median,dataset-written candidates,0.88981,generalization/dataset_candidates.csv,condition=yes_no; method=fitted; median over 8 cells
+Table 27 / Yes/No / verdict mean,dataset-written candidates,0.881110625,generalization/dataset_candidates.csv,condition=yes_no; method=verdict; mean over 8 cells
+Table 27 / Yes/No / verdict median,dataset-written candidates,0.8884325,generalization/dataset_candidates.csv,condition=yes_no; method=verdict; median over 8 cells
+Table 27 / True/False / readout mean,dataset-written candidates,0.8813443750000001,generalization/dataset_candidates.csv,condition=true_false; method=readout; mean over 8 cells
+Table 27 / True/False / readout median,dataset-written candidates,0.8876649999999999,generalization/dataset_candidates.csv,condition=true_false; method=readout; median over 8 cells
+Table 27 / True/False / isolated mean,dataset-written candidates,0.865278125,generalization/dataset_candidates.csv,condition=true_false; method=isolated; mean over 8 cells
+Table 27 / True/False / isolated median,dataset-written candidates,0.8711725,generalization/dataset_candidates.csv,condition=true_false; method=isolated; median over 8 cells
+Table 27 / True/False / fitted mean,dataset-written candidates,0.881293125,generalization/dataset_candidates.csv,condition=true_false; method=fitted; mean over 8 cells
+Table 27 / True/False / fitted median,dataset-written candidates,0.8884224999999999,generalization/dataset_candidates.csv,condition=true_false; method=fitted; median over 8 cells
+Table 27 / True/False / verdict mean,dataset-written candidates,0.876296875,generalization/dataset_candidates.csv,condition=true_false; method=verdict; mean over 8 cells
+Table 27 / True/False / verdict median,dataset-written candidates,0.88655,generalization/dataset_candidates.csv,condition=true_false; method=verdict; median over 8 cells
+Table 27 / A/B / readout mean,dataset-written candidates,0.864790625,generalization/dataset_candidates.csv,condition=a_b; method=readout; mean over 8 cells
+Table 27 / A/B / readout median,dataset-written candidates,0.8833075,generalization/dataset_candidates.csv,condition=a_b; method=readout; median over 8 cells
+Table 27 / A/B / isolated mean,dataset-written candidates,0.8601300000000001,generalization/dataset_candidates.csv,condition=a_b; method=isolated; mean over 8 cells
+Table 27 / A/B / isolated median,dataset-written candidates,0.880285,generalization/dataset_candidates.csv,condition=a_b; method=isolated; median over 8 cells
+Table 27 / A/B / fitted mean,dataset-written candidates,0.8622725,generalization/dataset_candidates.csv,condition=a_b; method=fitted; mean over 8 cells
+Table 27 / A/B / fitted median,dataset-written candidates,0.876745,generalization/dataset_candidates.csv,condition=a_b; method=fitted; median over 8 cells
+Table 27 / A/B / verdict mean,dataset-written candidates,0.7930809375000001,generalization/dataset_candidates.csv,condition=a_b; method=verdict; mean over 8 cells
+Table 27 / A/B / verdict median,dataset-written candidates,0.80031,generalization/dataset_candidates.csv,condition=a_b; method=verdict; median over 8 cells
+Table 27 / B/A / readout mean,dataset-written candidates,0.847766875,generalization/dataset_candidates.csv,condition=b_a; method=readout; mean over 8 cells
+Table 27 / B/A / readout median,dataset-written candidates,0.8746875000000001,generalization/dataset_candidates.csv,condition=b_a; method=readout; median over 8 cells
+Table 27 / B/A / isolated mean,dataset-written candidates,0.85423,generalization/dataset_candidates.csv,condition=b_a; method=isolated; mean over 8 cells
+Table 27 / B/A / isolated median,dataset-written candidates,0.87885,generalization/dataset_candidates.csv,condition=b_a; method=isolated; median over 8 cells
+Table 27 / B/A / fitted mean,dataset-written candidates,0.85378,generalization/dataset_candidates.csv,condition=b_a; method=fitted; mean over 8 cells
+Table 27 / B/A / fitted median,dataset-written candidates,0.873135,generalization/dataset_candidates.csv,condition=b_a; method=fitted; median over 8 cells
+Table 27 / B/A / verdict mean,dataset-written candidates,0.752693125,generalization/dataset_candidates.csv,condition=b_a; method=verdict; mean over 8 cells
+Table 27 / B/A / verdict median,dataset-written candidates,0.7395674999999999,generalization/dataset_candidates.csv,condition=b_a; method=verdict; median over 8 cells
+Table 27 / negated question / readout mean,dataset-written candidates,0.517638125,generalization/dataset_candidates.csv,condition=negated; method=readout; mean over 8 cells
+Table 27 / negated question / readout median,dataset-written candidates,0.5020925,generalization/dataset_candidates.csv,condition=negated; method=readout; median over 8 cells
+Table 27 / negated question / isolated mean,dataset-written candidates,0.83211875,generalization/dataset_candidates.csv,condition=negated; method=isolated; mean over 8 cells
+Table 27 / negated question / isolated median,dataset-written candidates,0.8492925,generalization/dataset_candidates.csv,condition=negated; method=isolated; median over 8 cells
+Table 27 / negated question / fitted mean,dataset-written candidates,0.854459375,generalization/dataset_candidates.csv,condition=negated; method=fitted; mean over 8 cells
+Table 27 / negated question / fitted median,dataset-written candidates,0.8608425,generalization/dataset_candidates.csv,condition=negated; method=fitted; median over 8 cells
+Table 27 / negated question / verdict mean,dataset-written candidates,0.57365125,generalization/dataset_candidates.csv,condition=negated; method=verdict; mean over 8 cells
+Table 27 / negated question / verdict median,dataset-written candidates,0.6125799999999999,generalization/dataset_candidates.csv,condition=negated; method=verdict; median over 8 cells
+Table 27 / No means correct / readout mean,dataset-written candidates,0.6063856249999999,generalization/dataset_candidates.csv,condition=no_means_correct; method=readout; mean over 8 cells
+Table 27 / No means correct / readout median,dataset-written candidates,0.7144824999999999,generalization/dataset_candidates.csv,condition=no_means_correct; method=readout; median over 8 cells
+Table 27 / No means correct / isolated mean,dataset-written candidates,0.826194375,generalization/dataset_candidates.csv,condition=no_means_correct; method=isolated; mean over 8 cells
+Table 27 / No means correct / isolated median,dataset-written candidates,0.8369025,generalization/dataset_candidates.csv,condition=no_means_correct; method=isolated; median over 8 cells
+Table 27 / No means correct / fitted mean,dataset-written candidates,0.8562268749999999,generalization/dataset_candidates.csv,condition=no_means_correct; method=fitted; mean over 8 cells
+Table 27 / No means correct / fitted median,dataset-written candidates,0.85644,generalization/dataset_candidates.csv,condition=no_means_correct; method=fitted; median over 8 cells
+Table 27 / No means correct / verdict mean,dataset-written candidates,0.5384246874999999,generalization/dataset_candidates.csv,condition=no_means_correct; method=verdict; mean over 8 cells
+Table 27 / No means correct / verdict median,dataset-written candidates,0.48560499999999995,generalization/dataset_candidates.csv,condition=no_means_correct; method=verdict; median over 8 cells
+Table 27 / sentence / readout mean,dataset-written candidates,0.867294375,generalization/dataset_candidates.csv,condition=sentence; method=readout; mean over 8 cells
+Table 27 / sentence / readout median,dataset-written candidates,0.8734175,generalization/dataset_candidates.csv,condition=sentence; method=readout; median over 8 cells
+Table 27 / sentence / isolated mean,dataset-written candidates,0.8674499999999999,generalization/dataset_candidates.csv,condition=sentence; method=isolated; mean over 8 cells
+Table 27 / sentence / isolated median,dataset-written candidates,0.8807925,generalization/dataset_candidates.csv,condition=sentence; method=isolated; median over 8 cells
+Table 27 / sentence / fitted mean,dataset-written candidates,0.8750175,generalization/dataset_candidates.csv,condition=sentence; method=fitted; mean over 8 cells
+Table 27 / sentence / fitted median,dataset-written candidates,0.888015,generalization/dataset_candidates.csv,condition=sentence; method=fitted; median over 8 cells
+Table 27 / sentence / verdict mean,dataset-written candidates,,generalization/dataset_candidates.csv,condition=sentence; method=verdict; mean over 0 cells
+Table 27 / sentence / verdict median,dataset-written candidates,,generalization/dataset_candidates.csv,condition=sentence; method=verdict; median over 0 cells

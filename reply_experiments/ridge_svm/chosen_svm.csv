@@ -1,0 +1,15 @@
+fit,C,n
+raw,1e-06,71
+raw,1e-05,122
+raw,0.0001,118
+raw,0.001,29
+raw,0.01,3
+raw,0.1,5
+raw,1.0,2
+trainproj,1e-06,90
+trainproj,1e-05,131
+trainproj,0.0001,92
+trainproj,0.001,26
+trainproj,0.01,4
+trainproj,0.1,2
+trainproj,1.0,5

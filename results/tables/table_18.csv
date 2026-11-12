@@ -1,0 +1,43 @@
+location,context,value,source_file,source_key
+Table 18 / Yes/No / readout mean,new instruction family,0.810363348938124,generalization/instruction_family.csv,condition=yes_no; method=readout; mean over 14 cells
+Table 18 / Yes/No / readout median,new instruction family,0.818836881320434,generalization/instruction_family.csv,condition=yes_no; method=readout; median over 14 cells
+Table 18 / Yes/No / isolated mean,new instruction family,0.8135640229739955,generalization/instruction_family.csv,condition=yes_no; method=isolated; mean over 14 cells
+Table 18 / Yes/No / isolated median,new instruction family,0.8167724374036052,generalization/instruction_family.csv,condition=yes_no; method=isolated; median over 14 cells
+Table 18 / Yes/No / fitted on new family mean,new instruction family,0.8136428719708559,generalization/instruction_family.csv,condition=yes_no; method=fitted_new_family; mean over 14 cells
+Table 18 / Yes/No / fitted on new family median,new instruction family,0.8198705557052597,generalization/instruction_family.csv,condition=yes_no; method=fitted_new_family; median over 14 cells
+Table 18 / True/False / readout mean,new instruction family,0.8095129109377251,generalization/instruction_family.csv,condition=true_false; method=readout; mean over 14 cells
+Table 18 / True/False / readout median,new instruction family,0.8149728287063813,generalization/instruction_family.csv,condition=true_false; method=readout; median over 14 cells
+Table 18 / True/False / isolated mean,new instruction family,0.8101682163135875,generalization/instruction_family.csv,condition=true_false; method=isolated; mean over 14 cells
+Table 18 / True/False / isolated median,new instruction family,0.8161506578673519,generalization/instruction_family.csv,condition=true_false; method=isolated; median over 14 cells
+Table 18 / True/False / fitted on new family mean,new instruction family,0.8118847341145626,generalization/instruction_family.csv,condition=true_false; method=fitted_new_family; mean over 14 cells
+Table 18 / True/False / fitted on new family median,new instruction family,0.8175308723622869,generalization/instruction_family.csv,condition=true_false; method=fitted_new_family; median over 14 cells
+Table 18 / A/B / readout mean,new instruction family,0.7950621626762218,generalization/instruction_family.csv,condition=a_b; method=readout; mean over 14 cells
+Table 18 / A/B / readout median,new instruction family,0.8141695372883695,generalization/instruction_family.csv,condition=a_b; method=readout; median over 14 cells
+Table 18 / A/B / isolated mean,new instruction family,0.8012978512800367,generalization/instruction_family.csv,condition=a_b; method=isolated; mean over 14 cells
+Table 18 / A/B / isolated median,new instruction family,0.8171199469390259,generalization/instruction_family.csv,condition=a_b; method=isolated; median over 14 cells
+Table 18 / A/B / fitted on new family mean,new instruction family,0.7997197333967971,generalization/instruction_family.csv,condition=a_b; method=fitted_new_family; mean over 14 cells
+Table 18 / A/B / fitted on new family median,new instruction family,0.8125859817266068,generalization/instruction_family.csv,condition=a_b; method=fitted_new_family; median over 14 cells
+Table 18 / B/A / readout mean,new instruction family,0.7779761692676284,generalization/instruction_family.csv,condition=b_a; method=readout; mean over 14 cells
+Table 18 / B/A / readout median,new instruction family,0.7791909219224151,generalization/instruction_family.csv,condition=b_a; method=readout; median over 14 cells
+Table 18 / B/A / isolated mean,new instruction family,0.795570834685619,generalization/instruction_family.csv,condition=b_a; method=isolated; mean over 14 cells
+Table 18 / B/A / isolated median,new instruction family,0.8126440828907935,generalization/instruction_family.csv,condition=b_a; method=isolated; median over 14 cells
+Table 18 / B/A / fitted on new family mean,new instruction family,0.7967775064896944,generalization/instruction_family.csv,condition=b_a; method=fitted_new_family; mean over 14 cells
+Table 18 / B/A / fitted on new family median,new instruction family,0.8116367116983894,generalization/instruction_family.csv,condition=b_a; method=fitted_new_family; median over 14 cells
+Table 18 / sentence / readout mean,new instruction family,0.8055905148651069,generalization/instruction_family.csv,condition=sentence; method=readout; mean over 14 cells
+Table 18 / sentence / readout median,new instruction family,0.8168563084393674,generalization/instruction_family.csv,condition=sentence; method=readout; median over 14 cells
+Table 18 / sentence / isolated mean,new instruction family,0.8069801289298904,generalization/instruction_family.csv,condition=sentence; method=isolated; mean over 14 cells
+Table 18 / sentence / isolated median,new instruction family,0.8163056235157387,generalization/instruction_family.csv,condition=sentence; method=isolated; median over 14 cells
+Table 18 / sentence / fitted on new family mean,new instruction family,0.8041555984540251,generalization/instruction_family.csv,condition=sentence; method=fitted_new_family; mean over 14 cells
+Table 18 / sentence / fitted on new family median,new instruction family,0.8146065112245211,generalization/instruction_family.csv,condition=sentence; method=fitted_new_family; median over 14 cells
+Table 18 / negated question / readout mean,new instruction family,0.6518009221656378,generalization/instruction_family.csv,condition=negated; method=readout; mean over 14 cells
+Table 18 / negated question / readout median,new instruction family,0.694606661237487,generalization/instruction_family.csv,condition=negated; method=readout; median over 14 cells
+Table 18 / negated question / isolated mean,new instruction family,0.79909466020596,generalization/instruction_family.csv,condition=negated; method=isolated; mean over 14 cells
+Table 18 / negated question / isolated median,new instruction family,0.8009793201590077,generalization/instruction_family.csv,condition=negated; method=isolated; median over 14 cells
+Table 18 / negated question / fitted on new family mean,new instruction family,0.804148202863067,generalization/instruction_family.csv,condition=negated; method=fitted_new_family; mean over 14 cells
+Table 18 / negated question / fitted on new family median,new instruction family,0.8009101404352226,generalization/instruction_family.csv,condition=negated; method=fitted_new_family; median over 14 cells
+Table 18 / No means correct / readout mean,new instruction family,0.5945816570433088,generalization/instruction_family.csv,condition=no_means_correct; method=readout; mean over 14 cells
+Table 18 / No means correct / readout median,new instruction family,0.6168256493886888,generalization/instruction_family.csv,condition=no_means_correct; method=readout; median over 14 cells
+Table 18 / No means correct / isolated mean,new instruction family,0.7793457821860377,generalization/instruction_family.csv,condition=no_means_correct; method=isolated; mean over 14 cells
+Table 18 / No means correct / isolated median,new instruction family,0.7700109736637433,generalization/instruction_family.csv,condition=no_means_correct; method=isolated; median over 14 cells
+Table 18 / No means correct / fitted on new family mean,new instruction family,0.798473833220972,generalization/instruction_family.csv,condition=no_means_correct; method=fitted_new_family; mean over 14 cells
+Table 18 / No means correct / fitted on new family median,new instruction family,0.8049160851484042,generalization/instruction_family.csv,condition=no_means_correct; method=fitted_new_family; median over 14 cells

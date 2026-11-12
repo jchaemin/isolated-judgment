@@ -1,0 +1,26 @@
+{
+ "dataset": "toxigen/toxigen-data (annotated)",
+ "url": "https://huggingface.co/datasets/toxigen/toxigen-data",
+ "revision": "ea082a8973a287097b17973343576e0c8da8eb3b",
+ "files": {
+  "annotated/test-00000-of-00001.parquet": "c372fb0c883f05c8410562816dec046fd21c3b471e631c3f0b5c5ab0f2a2aacc",
+  "annotated/train-00000-of-00001.parquet": "79e838cbf4a34d88307d760451d8adc3fc1b83cba108981861f9611a9eaab60d"
+ },
+ "added_train": {
+  "1": 66,
+  "0": 198
+ },
+ "n_items": 1204,
+ "n_first": 400,
+ "y_counts": {
+  "-1": 204,
+  "0": 500,
+  "1": 500
+ },
+ "y_counts_first400": {
+  "-1": 68,
+  "0": 166,
+  "1": 166
+ },
+ "seed": 0
+}

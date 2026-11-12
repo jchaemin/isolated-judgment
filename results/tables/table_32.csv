@@ -1,0 +1,7 @@
+location,context,value,source_file,source_key
+Table 32 / Ordinary Yes/No verdict / median AUROC,negated vs Yes/No verdicts,0.9388890229244969,verdicts/negated_verdicts.csv,col=vs_yes_no_verdict; median over cells of the cell mean over wordings
+Table 32 / Ordinary Yes/No verdict / cells,negated vs Yes/No verdicts,13.0,verdicts/negated_verdicts.csv,col=vs_yes_no_verdict; cells with a defined value
+Table 32 / Negated-prompt verdict / median AUROC,negated vs Yes/No verdicts,0.6671874452048836,verdicts/negated_verdicts.csv,col=vs_negated_verdict; median over cells of the cell mean over wordings
+Table 32 / Negated-prompt verdict / cells,negated vs Yes/No verdicts,13.0,verdicts/negated_verdicts.csv,col=vs_negated_verdict; cells with a defined value
+"Table 32 / Ordinary verdict, disagreement only / median AUROC",negated vs Yes/No verdicts,0.9297664852715806,verdicts/negated_verdicts.csv,col=vs_yes_no_verdict_disagreeing; median over cells of the cell mean over wordings
+"Table 32 / Ordinary verdict, disagreement only / cells",negated vs Yes/No verdicts,12.0,verdicts/negated_verdicts.csv,col=vs_yes_no_verdict_disagreeing; cells with a defined value

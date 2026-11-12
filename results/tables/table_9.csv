@@ -1,0 +1,67 @@
+location,context,value,source_file,source_key
+Table 9 / Yes/No / verdict,Gemma-2-9B-IT,0.8008372724962607,generalization/models/gemma-2-9b.csv,condition=yes_no; method=readout; col=verdict_auroc; mean over 4 cells
+Table 9 / Yes/No / readout,Gemma-2-9B-IT,0.8116058565880562,generalization/models/gemma-2-9b.csv,condition=yes_no; method=readout; col=auroc; mean over 4 cells
+Table 9 / Yes/No / pooled,Gemma-2-9B-IT,0.8021026323599619,generalization/models/gemma-2-9b.csv,condition=yes_no; method=pooled; col=auroc; mean over 4 cells
+Table 9 / Yes/No / tuned probe,Gemma-2-9B-IT,0.8121017674495318,generalization/models/gemma-2-9b.csv,condition=yes_no; method=tuned_probe; col=auroc; mean over 4 cells
+Table 9 / Yes/No / isolated,Gemma-2-9B-IT,0.813801034289177,generalization/models/gemma-2-9b.csv,condition=yes_no; method=isolated; col=auroc; mean over 4 cells
+Table 9 / Yes/No / condition-fitted,Gemma-2-9B-IT,0.8116058565880562,generalization/models/gemma-2-9b.csv,condition=yes_no; method=fitted; col=auroc; mean over 4 cells
+Table 9 / True/False / verdict,Gemma-2-9B-IT,0.8002919952586339,generalization/models/gemma-2-9b.csv,condition=true_false; method=readout; col=verdict_auroc; mean over 4 cells
+Table 9 / True/False / readout,Gemma-2-9B-IT,0.811864393379431,generalization/models/gemma-2-9b.csv,condition=true_false; method=readout; col=auroc; mean over 4 cells
+Table 9 / True/False / pooled,Gemma-2-9B-IT,0.8089658736401831,generalization/models/gemma-2-9b.csv,condition=true_false; method=pooled; col=auroc; mean over 4 cells
+Table 9 / True/False / tuned probe,Gemma-2-9B-IT,0.7942385458579023,generalization/models/gemma-2-9b.csv,condition=true_false; method=tuned_probe; col=auroc; mean over 4 cells
+Table 9 / True/False / isolated,Gemma-2-9B-IT,0.8074391007968122,generalization/models/gemma-2-9b.csv,condition=true_false; method=isolated; col=auroc; mean over 4 cells
+Table 9 / True/False / condition-fitted,Gemma-2-9B-IT,0.8115304803476513,generalization/models/gemma-2-9b.csv,condition=true_false; method=fitted; col=auroc; mean over 4 cells
+Table 9 / A/B / verdict,Gemma-2-9B-IT,0.7791564233392443,generalization/models/gemma-2-9b.csv,condition=a_b; method=readout; col=verdict_auroc; mean over 4 cells
+Table 9 / A/B / readout,Gemma-2-9B-IT,0.811545512722335,generalization/models/gemma-2-9b.csv,condition=a_b; method=readout; col=auroc; mean over 4 cells
+Table 9 / A/B / pooled,Gemma-2-9B-IT,0.8067013392587785,generalization/models/gemma-2-9b.csv,condition=a_b; method=pooled; col=auroc; mean over 4 cells
+Table 9 / A/B / tuned probe,Gemma-2-9B-IT,0.7870900723466455,generalization/models/gemma-2-9b.csv,condition=a_b; method=tuned_probe; col=auroc; mean over 4 cells
+Table 9 / A/B / isolated,Gemma-2-9B-IT,0.8123629759235491,generalization/models/gemma-2-9b.csv,condition=a_b; method=isolated; col=auroc; mean over 4 cells
+Table 9 / A/B / condition-fitted,Gemma-2-9B-IT,0.8109826160363859,generalization/models/gemma-2-9b.csv,condition=a_b; method=fitted; col=auroc; mean over 4 cells
+Table 9 / sentence / verdict,Gemma-2-9B-IT,,generalization/models/gemma-2-9b.csv,condition=sentence; method=readout; col=verdict_auroc; mean over 4 cells
+Table 9 / sentence / readout,Gemma-2-9B-IT,0.8021699944809455,generalization/models/gemma-2-9b.csv,condition=sentence; method=readout; col=auroc; mean over 4 cells
+Table 9 / sentence / pooled,Gemma-2-9B-IT,0.7931844240510232,generalization/models/gemma-2-9b.csv,condition=sentence; method=pooled; col=auroc; mean over 4 cells
+Table 9 / sentence / tuned probe,Gemma-2-9B-IT,0.7618671812587738,generalization/models/gemma-2-9b.csv,condition=sentence; method=tuned_probe; col=auroc; mean over 4 cells
+Table 9 / sentence / isolated,Gemma-2-9B-IT,0.8052657723144252,generalization/models/gemma-2-9b.csv,condition=sentence; method=isolated; col=auroc; mean over 4 cells
+Table 9 / sentence / condition-fitted,Gemma-2-9B-IT,0.8067087306847445,generalization/models/gemma-2-9b.csv,condition=sentence; method=fitted; col=auroc; mean over 4 cells
+Table 9 / 1/0 / verdict,Gemma-2-9B-IT,0.8087316567460532,generalization/models/gemma-2-9b.csv,condition=one_zero; method=readout; col=verdict_auroc; mean over 4 cells
+Table 9 / 1/0 / readout,Gemma-2-9B-IT,0.8038063233346,generalization/models/gemma-2-9b.csv,condition=one_zero; method=readout; col=auroc; mean over 4 cells
+Table 9 / 1/0 / pooled,Gemma-2-9B-IT,0.8046880420028025,generalization/models/gemma-2-9b.csv,condition=one_zero; method=pooled; col=auroc; mean over 4 cells
+Table 9 / 1/0 / tuned probe,Gemma-2-9B-IT,0.7891489089764968,generalization/models/gemma-2-9b.csv,condition=one_zero; method=tuned_probe; col=auroc; mean over 4 cells
+Table 9 / 1/0 / isolated,Gemma-2-9B-IT,0.805861398771838,generalization/models/gemma-2-9b.csv,condition=one_zero; method=isolated; col=auroc; mean over 4 cells
+Table 9 / 1/0 / condition-fitted,Gemma-2-9B-IT,0.812581878365473,generalization/models/gemma-2-9b.csv,condition=one_zero; method=fitted; col=auroc; mean over 4 cells
+Table 9 / correct/incorrect / verdict,Gemma-2-9B-IT,0.7937149018636847,generalization/models/gemma-2-9b.csv,condition=correct_incorrect; method=readout; col=verdict_auroc; mean over 4 cells
+Table 9 / correct/incorrect / readout,Gemma-2-9B-IT,0.8074201357247762,generalization/models/gemma-2-9b.csv,condition=correct_incorrect; method=readout; col=auroc; mean over 4 cells
+Table 9 / correct/incorrect / pooled,Gemma-2-9B-IT,0.8026789388253395,generalization/models/gemma-2-9b.csv,condition=correct_incorrect; method=pooled; col=auroc; mean over 4 cells
+Table 9 / correct/incorrect / tuned probe,Gemma-2-9B-IT,0.8020010251230868,generalization/models/gemma-2-9b.csv,condition=correct_incorrect; method=tuned_probe; col=auroc; mean over 4 cells
+Table 9 / correct/incorrect / isolated,Gemma-2-9B-IT,0.8081496822014314,generalization/models/gemma-2-9b.csv,condition=correct_incorrect; method=isolated; col=auroc; mean over 4 cells
+Table 9 / correct/incorrect / condition-fitted,Gemma-2-9B-IT,0.8072982288770632,generalization/models/gemma-2-9b.csv,condition=correct_incorrect; method=fitted; col=auroc; mean over 4 cells
+Table 9 / B/A / verdict,Gemma-2-9B-IT,0.7271554588793486,generalization/models/gemma-2-9b.csv,condition=b_a; method=readout; col=verdict_auroc; mean over 4 cells
+Table 9 / B/A / readout,Gemma-2-9B-IT,0.7983966648503371,generalization/models/gemma-2-9b.csv,condition=b_a; method=readout; col=auroc; mean over 4 cells
+Table 9 / B/A / pooled,Gemma-2-9B-IT,0.7951428293591087,generalization/models/gemma-2-9b.csv,condition=b_a; method=pooled; col=auroc; mean over 4 cells
+Table 9 / B/A / tuned probe,Gemma-2-9B-IT,0.7756640315501502,generalization/models/gemma-2-9b.csv,condition=b_a; method=tuned_probe; col=auroc; mean over 4 cells
+Table 9 / B/A / isolated,Gemma-2-9B-IT,0.8107134496351179,generalization/models/gemma-2-9b.csv,condition=b_a; method=isolated; col=auroc; mean over 4 cells
+Table 9 / B/A / condition-fitted,Gemma-2-9B-IT,0.7972020631391142,generalization/models/gemma-2-9b.csv,condition=b_a; method=fitted; col=auroc; mean over 4 cells
+Table 9 / negated question / verdict,Gemma-2-9B-IT,0.7528880050208133,generalization/models/gemma-2-9b.csv,condition=negated; method=readout; col=verdict_auroc; mean over 4 cells
+Table 9 / negated question / readout,Gemma-2-9B-IT,0.5451972774166949,generalization/models/gemma-2-9b.csv,condition=negated; method=readout; col=auroc; mean over 4 cells
+Table 9 / negated question / pooled,Gemma-2-9B-IT,0.7841546408346995,generalization/models/gemma-2-9b.csv,condition=negated; method=pooled; col=auroc; mean over 4 cells
+Table 9 / negated question / tuned probe,Gemma-2-9B-IT,0.6095740846335627,generalization/models/gemma-2-9b.csv,condition=negated; method=tuned_probe; col=auroc; mean over 4 cells
+Table 9 / negated question / isolated,Gemma-2-9B-IT,0.7989348500490764,generalization/models/gemma-2-9b.csv,condition=negated; method=isolated; col=auroc; mean over 4 cells
+Table 9 / negated question / condition-fitted,Gemma-2-9B-IT,0.7884125207272122,generalization/models/gemma-2-9b.csv,condition=negated; method=fitted; col=auroc; mean over 4 cells
+Table 9 / 0 means correct / verdict,Gemma-2-9B-IT,0.8026129938317224,generalization/models/gemma-2-9b.csv,condition=zero_means_correct; method=readout; col=verdict_auroc; mean over 4 cells
+Table 9 / 0 means correct / readout,Gemma-2-9B-IT,0.7781242464789728,generalization/models/gemma-2-9b.csv,condition=zero_means_correct; method=readout; col=auroc; mean over 4 cells
+Table 9 / 0 means correct / pooled,Gemma-2-9B-IT,0.7976678819285703,generalization/models/gemma-2-9b.csv,condition=zero_means_correct; method=pooled; col=auroc; mean over 4 cells
+Table 9 / 0 means correct / tuned probe,Gemma-2-9B-IT,0.7737327094260967,generalization/models/gemma-2-9b.csv,condition=zero_means_correct; method=tuned_probe; col=auroc; mean over 4 cells
+Table 9 / 0 means correct / isolated,Gemma-2-9B-IT,0.8005838774394898,generalization/models/gemma-2-9b.csv,condition=zero_means_correct; method=isolated; col=auroc; mean over 4 cells
+Table 9 / 0 means correct / condition-fitted,Gemma-2-9B-IT,0.8090103071751925,generalization/models/gemma-2-9b.csv,condition=zero_means_correct; method=fitted; col=auroc; mean over 4 cells
+Table 9 / False means correct / verdict,Gemma-2-9B-IT,0.7086616201245697,generalization/models/gemma-2-9b.csv,condition=false_means_correct; method=readout; col=verdict_auroc; mean over 4 cells
+Table 9 / False means correct / readout,Gemma-2-9B-IT,0.7763269177734289,generalization/models/gemma-2-9b.csv,condition=false_means_correct; method=readout; col=auroc; mean over 4 cells
+Table 9 / False means correct / pooled,Gemma-2-9B-IT,0.7936010706209494,generalization/models/gemma-2-9b.csv,condition=false_means_correct; method=pooled; col=auroc; mean over 4 cells
+Table 9 / False means correct / tuned probe,Gemma-2-9B-IT,0.767940286122371,generalization/models/gemma-2-9b.csv,condition=false_means_correct; method=tuned_probe; col=auroc; mean over 4 cells
+Table 9 / False means correct / isolated,Gemma-2-9B-IT,0.777276146690538,generalization/models/gemma-2-9b.csv,condition=false_means_correct; method=isolated; col=auroc; mean over 4 cells
+Table 9 / False means correct / condition-fitted,Gemma-2-9B-IT,0.7977453022545962,generalization/models/gemma-2-9b.csv,condition=false_means_correct; method=fitted; col=auroc; mean over 4 cells
+Table 9 / No means correct / verdict,Gemma-2-9B-IT,0.739901821000517,generalization/models/gemma-2-9b.csv,condition=no_means_correct; method=readout; col=verdict_auroc; mean over 4 cells
+Table 9 / No means correct / readout,Gemma-2-9B-IT,0.6302352274918301,generalization/models/gemma-2-9b.csv,condition=no_means_correct; method=readout; col=auroc; mean over 4 cells
+Table 9 / No means correct / pooled,Gemma-2-9B-IT,0.7981032422911115,generalization/models/gemma-2-9b.csv,condition=no_means_correct; method=pooled; col=auroc; mean over 4 cells
+Table 9 / No means correct / tuned probe,Gemma-2-9B-IT,0.6482032598941941,generalization/models/gemma-2-9b.csv,condition=no_means_correct; method=tuned_probe; col=auroc; mean over 4 cells
+Table 9 / No means correct / isolated,Gemma-2-9B-IT,0.7972829136724804,generalization/models/gemma-2-9b.csv,condition=no_means_correct; method=isolated; col=auroc; mean over 4 cells
+Table 9 / No means correct / condition-fitted,Gemma-2-9B-IT,0.7983020859490573,generalization/models/gemma-2-9b.csv,condition=no_means_correct; method=fitted; col=auroc; mean over 4 cells

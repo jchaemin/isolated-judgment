@@ -6,7 +6,7 @@ import numpy as np
 import pandas as pd
 from sklearn.model_selection import GroupKFold
 
-from readout import config, storage
+from readout import config, estimators, storage
 from readout.storage import key
 
 FORMATS4 = ["yes_no", "true_false", "a_b", "b_a"]
@@ -129,14 +129,15 @@ def load_cell(cell, wordings, rows=None):
             marg[("no_means_correct", p)] = Zz[:, nm.index(sem[0])] - Zz[:, nm.index(sem[1])]
             idr = Zr["token_ids"]; comp[("no_means_correct", p)] = np.isin(Zr["t20i"][:, 0], [int(idr[nm.index(sem[0])]), int(idr[nm.index(sem[1])])])
     X = []
-    for tk in config.CROSS_TASKS:
+    for ti, tk in enumerate(config.CROSS_TASKS):
         f1 = storage.path("states", model=model, task=tk, condition="negated"); f0 = storage.path("states", model=model, task=tk, condition="yes_no")
         if os.path.exists(f1) and os.path.exists(f0):
             Za = np.load(f1, allow_pickle=True); Zb = np.load(f0, allow_pickle=True)
             for p in [str(x) for x in Za["prompt_ids"]]:
                 if f"G_{p}" in Zb:
-                    X.append(Za[f"G_{p}"].astype(np.float64) - Zb[f"G_{p}"].astype(np.float64))
-    cross = np.concatenate(X) if X else None
+                    assert np.array_equal(Za["qid"], Zb["qid"]), f"cross qid misaligned {model} {tk}"
+                    X.append((Za[f"G_{p}"].astype(np.float64) - Zb[f"G_{p}"].astype(np.float64), ti, Za["qid"], estimators.wording_number(p)))
+    cross = estimators.cross_block(X) if X else None
     b_yn = np.where(comp[("yes_no", wordings[0])], (marg[("yes_no", wordings[0])] > 0).astype(int), -1)
     S = dict(y=y, q=q, n=n, H=H, marg=marg, comp=comp, cross=cross, b_yn=b_yn, task=task)
     return _restrict(S, rows)

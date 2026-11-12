@@ -1,0 +1,9 @@
+location,context,value,source_file,source_key
+Table 22 / Qwen2.5-32B-Instruct / Yes/No readout,larger models,0.804395569024895,generalization/models/qwen2.5-32b.csv,method=readout; condition=yes_no; mean over the TriviaQA and MMLU cells
+Table 22 / Qwen2.5-32B-Instruct / frozen vs fitted,larger models,0.01691456600241492,generalization/models/qwen2.5-32b.csv,"max over a_b, b_a, true_false of |mean readout - mean fitted| (means over the TriviaQA and MMLU cells)"
+Table 22 / Qwen2.5-32B-Instruct / fall under negation,larger models,0.38011815611025945,generalization/models/qwen2.5-32b.csv,mean over the TriviaQA and MMLU cells of (readout yes_no - readout negated)
+Table 22 / Qwen2.5-32B-Instruct / isolated vs fitted,larger models,0.0040179648138501944,generalization/models/qwen2.5-32b.csv,"max over negated, no_means_correct of |mean isolated - mean fitted| (means over the TriviaQA and MMLU cells)"
+Table 22 / Gemma-2-27B-IT / Yes/No readout,larger models,0.7502178125915832,generalization/models/gemma-2-27b.csv,method=readout; condition=yes_no; mean over the TriviaQA and MMLU cells
+Table 22 / Gemma-2-27B-IT / frozen vs fitted,larger models,0.016899239325496307,generalization/models/gemma-2-27b.csv,"max over a_b, b_a, true_false of |mean readout - mean fitted| (means over the TriviaQA and MMLU cells)"
+Table 22 / Gemma-2-27B-IT / fall under negation,larger models,0.14017254207909985,generalization/models/gemma-2-27b.csv,mean over the TriviaQA and MMLU cells of (readout yes_no - readout negated)
+Table 22 / Gemma-2-27B-IT / isolated vs fitted,larger models,0.009221193072644573,generalization/models/gemma-2-27b.csv,"max over negated, no_means_correct of |mean isolated - mean fitted| (means over the TriviaQA and MMLU cells)"

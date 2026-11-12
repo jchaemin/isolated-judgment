@@ -1,0 +1,17 @@
+cell,rows,negatives,positives,primary
+Qwen2.5-7B GSM8K,800,167,633,True
+Qwen2.5-7B MMLU,817,252,565,True
+Qwen2.5-7B ARC,800,84,716,False
+Qwen2.5-7B TriviaQA,800,347,453,True
+Llama-3.1-8B GSM8K,800,401,399,True
+Llama-3.1-8B MMLU,817,301,516,True
+Llama-3.1-8B ARC,800,176,624,True
+Llama-3.1-8B TriviaQA,800,223,577,True
+Mistral-7B GSM8K,800,337,463,True
+Mistral-7B MMLU,817,330,487,True
+Mistral-7B ARC,800,197,603,True
+Mistral-7B TriviaQA,800,214,586,True
+Qwen2.5-14B GSM8K,800,128,672,True
+Qwen2.5-14B MMLU,817,196,621,True
+Qwen2.5-14B ARC,800,53,747,False
+Qwen2.5-14B TriviaQA,800,266,534,True

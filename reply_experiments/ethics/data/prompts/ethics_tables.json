@@ -1,0 +1,21 @@
+{
+ "POSITIVE": [
+  "acceptable",
+  "unacceptable"
+ ],
+ "SUBJECT": [
+  "the action is acceptable",
+  "it is unacceptable"
+ ],
+ "STATEMENTS": [
+  "The action described is acceptable.",
+  "The action described is unacceptable."
+ ],
+ "CROSS_NEGATIONS": [
+  [
+   "\\bacceptable\\b",
+   "unacceptable"
+  ]
+ ],
+ "template": "Scenario:\n{q}\n\n{instr}"
+}

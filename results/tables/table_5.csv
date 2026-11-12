@@ -1,0 +1,85 @@
+location,context,value,source_file,source_key
+Table 5 / Llama-3.1-8B ARC / rank,"split-half rank, median over folds x wordings",4.0,subspace/ranks.csv,cell=Llama-3.1-8B ARC; median(rank) over 25 fold-wording rows
+Table 5 / Llama-3.1-8B ARC / norm in subspace,share of readout sq. norm in subspace (median),0.4158445487103027,subspace/readout_share.csv,cell=Llama-3.1-8B ARC; median(share) over fold x wording
+"Table 5 / Llama-3.1-8B ARC / readout, B/A",per cell,0.7137118309532102,subspace/heldout.csv,cell=Llama-3.1-8B ARC; method=readout; condition=b_a
+"Table 5 / Llama-3.1-8B ARC / isolated, B/A",per cell,0.7219474437865242,subspace/heldout.csv,cell=Llama-3.1-8B ARC; method=isolated; condition=b_a
+"Table 5 / Llama-3.1-8B ARC / readout, negated",per cell,0.7176206509539844,subspace/heldout.csv,cell=Llama-3.1-8B ARC; method=readout; condition=negated
+"Table 5 / Llama-3.1-8B ARC / isolated, negated",per cell,0.7407407407407408,subspace/heldout.csv,cell=Llama-3.1-8B ARC; method=isolated; condition=negated
+Table 5 / Llama-3.1-8B GSM8K / rank,"split-half rank, median over folds x wordings",4.0,subspace/ranks.csv,cell=Llama-3.1-8B GSM8K; median(rank) over 25 fold-wording rows
+Table 5 / Llama-3.1-8B GSM8K / norm in subspace,share of readout sq. norm in subspace (median),0.4590212332806303,subspace/readout_share.csv,cell=Llama-3.1-8B GSM8K; median(share) over fold x wording
+"Table 5 / Llama-3.1-8B GSM8K / readout, B/A",per cell,0.9723561362669269,subspace/heldout.csv,cell=Llama-3.1-8B GSM8K; method=readout; condition=b_a
+"Table 5 / Llama-3.1-8B GSM8K / isolated, B/A",per cell,0.9729268353733322,subspace/heldout.csv,cell=Llama-3.1-8B GSM8K; method=isolated; condition=b_a
+"Table 5 / Llama-3.1-8B GSM8K / readout, negated",per cell,0.9438662361392705,subspace/heldout.csv,cell=Llama-3.1-8B GSM8K; method=readout; condition=negated
+"Table 5 / Llama-3.1-8B GSM8K / isolated, negated",per cell,0.9662186178068132,subspace/heldout.csv,cell=Llama-3.1-8B GSM8K; method=isolated; condition=negated
+Table 5 / Llama-3.1-8B MMLU / rank,"split-half rank, median over folds x wordings",2.0,subspace/ranks.csv,cell=Llama-3.1-8B MMLU; median(rank) over 25 fold-wording rows
+Table 5 / Llama-3.1-8B MMLU / norm in subspace,share of readout sq. norm in subspace (median),0.1196032393348933,subspace/readout_share.csv,cell=Llama-3.1-8B MMLU; median(share) over fold x wording
+"Table 5 / Llama-3.1-8B MMLU / readout, B/A",per cell,0.6875057444852941,subspace/heldout.csv,cell=Llama-3.1-8B MMLU; method=readout; condition=b_a
+"Table 5 / Llama-3.1-8B MMLU / isolated, B/A",per cell,0.6767290900735294,subspace/heldout.csv,cell=Llama-3.1-8B MMLU; method=isolated; condition=b_a
+"Table 5 / Llama-3.1-8B MMLU / readout, negated",per cell,0.6640854779411764,subspace/heldout.csv,cell=Llama-3.1-8B MMLU; method=readout; condition=negated
+"Table 5 / Llama-3.1-8B MMLU / isolated, negated",per cell,0.7102653952205882,subspace/heldout.csv,cell=Llama-3.1-8B MMLU; method=isolated; condition=negated
+Table 5 / Llama-3.1-8B TriviaQA / rank,"split-half rank, median over folds x wordings",5.0,subspace/ranks.csv,cell=Llama-3.1-8B TriviaQA; median(rank) over 25 fold-wording rows
+Table 5 / Llama-3.1-8B TriviaQA / norm in subspace,share of readout sq. norm in subspace (median),0.5142984519971043,subspace/readout_share.csv,cell=Llama-3.1-8B TriviaQA; median(share) over fold x wording
+"Table 5 / Llama-3.1-8B TriviaQA / readout, B/A",per cell,0.8449427917620136,subspace/heldout.csv,cell=Llama-3.1-8B TriviaQA; method=readout; condition=b_a
+"Table 5 / Llama-3.1-8B TriviaQA / isolated, B/A",per cell,0.8470419527078565,subspace/heldout.csv,cell=Llama-3.1-8B TriviaQA; method=isolated; condition=b_a
+"Table 5 / Llama-3.1-8B TriviaQA / readout, negated",per cell,0.726462242562929,subspace/heldout.csv,cell=Llama-3.1-8B TriviaQA; method=readout; condition=negated
+"Table 5 / Llama-3.1-8B TriviaQA / isolated, negated",per cell,0.8423066361556064,subspace/heldout.csv,cell=Llama-3.1-8B TriviaQA; method=isolated; condition=negated
+Table 5 / Mistral-7B ARC / rank,"split-half rank, median over folds x wordings",4.0,subspace/ranks.csv,cell=Mistral-7B ARC; median(rank) over 25 fold-wording rows
+Table 5 / Mistral-7B ARC / norm in subspace,share of readout sq. norm in subspace (median),0.6008717328965524,subspace/readout_share.csv,cell=Mistral-7B ARC; median(share) over fold x wording
+"Table 5 / Mistral-7B ARC / readout, B/A",per cell,0.648708407095632,subspace/heldout.csv,cell=Mistral-7B ARC; method=readout; condition=b_a
+"Table 5 / Mistral-7B ARC / isolated, B/A",per cell,0.6960728350012644,subspace/heldout.csv,cell=Mistral-7B ARC; method=isolated; condition=b_a
+"Table 5 / Mistral-7B ARC / readout, negated",per cell,0.6461505112178909,subspace/heldout.csv,cell=Mistral-7B ARC; method=readout; condition=negated
+"Table 5 / Mistral-7B ARC / isolated, negated",per cell,0.6940857689945445,subspace/heldout.csv,cell=Mistral-7B ARC; method=isolated; condition=negated
+Table 5 / Mistral-7B GSM8K / rank,"split-half rank, median over folds x wordings",5.0,subspace/ranks.csv,cell=Mistral-7B GSM8K; median(rank) over 25 fold-wording rows
+Table 5 / Mistral-7B GSM8K / norm in subspace,share of readout sq. norm in subspace (median),0.4476918055864119,subspace/readout_share.csv,cell=Mistral-7B GSM8K; median(share) over fold x wording
+"Table 5 / Mistral-7B GSM8K / readout, B/A",per cell,0.8119419642857142,subspace/heldout.csv,cell=Mistral-7B GSM8K; method=readout; condition=b_a
+"Table 5 / Mistral-7B GSM8K / isolated, B/A",per cell,0.8272524350649352,subspace/heldout.csv,cell=Mistral-7B GSM8K; method=isolated; condition=b_a
+"Table 5 / Mistral-7B GSM8K / readout, negated",per cell,0.7443029626623378,subspace/heldout.csv,cell=Mistral-7B GSM8K; method=readout; condition=negated
+"Table 5 / Mistral-7B GSM8K / isolated, negated",per cell,0.8236404220779221,subspace/heldout.csv,cell=Mistral-7B GSM8K; method=isolated; condition=negated
+Table 5 / Mistral-7B MMLU / rank,"split-half rank, median over folds x wordings",3.0,subspace/ranks.csv,cell=Mistral-7B MMLU; median(rank) over 25 fold-wording rows
+Table 5 / Mistral-7B MMLU / norm in subspace,share of readout sq. norm in subspace (median),0.4922477238865822,subspace/readout_share.csv,cell=Mistral-7B MMLU; median(share) over fold x wording
+"Table 5 / Mistral-7B MMLU / readout, B/A",per cell,0.6549270833333333,subspace/heldout.csv,cell=Mistral-7B MMLU; method=readout; condition=b_a
+"Table 5 / Mistral-7B MMLU / isolated, B/A",per cell,0.7027656250000001,subspace/heldout.csv,cell=Mistral-7B MMLU; method=isolated; condition=b_a
+"Table 5 / Mistral-7B MMLU / readout, negated",per cell,0.7048802083333334,subspace/heldout.csv,cell=Mistral-7B MMLU; method=readout; condition=negated
+"Table 5 / Mistral-7B MMLU / isolated, negated",per cell,0.735765625,subspace/heldout.csv,cell=Mistral-7B MMLU; method=isolated; condition=negated
+Table 5 / Mistral-7B TriviaQA / rank,"split-half rank, median over folds x wordings",6.0,subspace/ranks.csv,cell=Mistral-7B TriviaQA; median(rank) over 25 fold-wording rows
+Table 5 / Mistral-7B TriviaQA / norm in subspace,share of readout sq. norm in subspace (median),0.6276273470776906,subspace/readout_share.csv,cell=Mistral-7B TriviaQA; median(share) over fold x wording
+"Table 5 / Mistral-7B TriviaQA / readout, B/A",per cell,0.7920439209912894,subspace/heldout.csv,cell=Mistral-7B TriviaQA; method=readout; condition=b_a
+"Table 5 / Mistral-7B TriviaQA / isolated, B/A",per cell,0.8015151515151515,subspace/heldout.csv,cell=Mistral-7B TriviaQA; method=isolated; condition=b_a
+"Table 5 / Mistral-7B TriviaQA / readout, negated",per cell,0.622500306710833,subspace/heldout.csv,cell=Mistral-7B TriviaQA; method=readout; condition=negated
+"Table 5 / Mistral-7B TriviaQA / isolated, negated",per cell,0.794147957305852,subspace/heldout.csv,cell=Mistral-7B TriviaQA; method=isolated; condition=negated
+Table 5 / Qwen2.5-14B GSM8K / rank,"split-half rank, median over folds x wordings",7.0,subspace/ranks.csv,cell=Qwen2.5-14B GSM8K; median(rank) over 25 fold-wording rows
+Table 5 / Qwen2.5-14B GSM8K / norm in subspace,share of readout sq. norm in subspace (median),0.3715006896482371,subspace/readout_share.csv,cell=Qwen2.5-14B GSM8K; median(share) over fold x wording
+"Table 5 / Qwen2.5-14B GSM8K / readout, B/A",per cell,0.9382435974994958,subspace/heldout.csv,cell=Qwen2.5-14B GSM8K; method=readout; condition=b_a
+"Table 5 / Qwen2.5-14B GSM8K / isolated, B/A",per cell,0.9383343416011292,subspace/heldout.csv,cell=Qwen2.5-14B GSM8K; method=isolated; condition=b_a
+"Table 5 / Qwen2.5-14B GSM8K / readout, negated",per cell,0.8177152651744304,subspace/heldout.csv,cell=Qwen2.5-14B GSM8K; method=readout; condition=negated
+"Table 5 / Qwen2.5-14B GSM8K / isolated, negated",per cell,0.936277475297439,subspace/heldout.csv,cell=Qwen2.5-14B GSM8K; method=isolated; condition=negated
+Table 5 / Qwen2.5-14B MMLU / rank,"split-half rank, median over folds x wordings",6.0,subspace/ranks.csv,cell=Qwen2.5-14B MMLU; median(rank) over 25 fold-wording rows
+Table 5 / Qwen2.5-14B MMLU / norm in subspace,share of readout sq. norm in subspace (median),0.586926545011377,subspace/readout_share.csv,cell=Qwen2.5-14B MMLU; median(share) over fold x wording
+"Table 5 / Qwen2.5-14B MMLU / readout, B/A",per cell,0.7172265684921,subspace/heldout.csv,cell=Qwen2.5-14B MMLU; method=readout; condition=b_a
+"Table 5 / Qwen2.5-14B MMLU / isolated, B/A",per cell,0.7244822825586746,subspace/heldout.csv,cell=Qwen2.5-14B MMLU; method=isolated; condition=b_a
+"Table 5 / Qwen2.5-14B MMLU / readout, negated",per cell,0.4414404049700874,subspace/heldout.csv,cell=Qwen2.5-14B MMLU; method=readout; condition=negated
+"Table 5 / Qwen2.5-14B MMLU / isolated, negated",per cell,0.7145190980211689,subspace/heldout.csv,cell=Qwen2.5-14B MMLU; method=isolated; condition=negated
+Table 5 / Qwen2.5-14B TriviaQA / rank,"split-half rank, median over folds x wordings",6.0,subspace/ranks.csv,cell=Qwen2.5-14B TriviaQA; median(rank) over 25 fold-wording rows
+Table 5 / Qwen2.5-14B TriviaQA / norm in subspace,share of readout sq. norm in subspace (median),0.6523093124469732,subspace/readout_share.csv,cell=Qwen2.5-14B TriviaQA; median(share) over fold x wording
+"Table 5 / Qwen2.5-14B TriviaQA / readout, B/A",per cell,0.8384638269100744,subspace/heldout.csv,cell=Qwen2.5-14B TriviaQA; method=readout; condition=b_a
+"Table 5 / Qwen2.5-14B TriviaQA / isolated, B/A",per cell,0.861814739688979,subspace/heldout.csv,cell=Qwen2.5-14B TriviaQA; method=isolated; condition=b_a
+"Table 5 / Qwen2.5-14B TriviaQA / readout, negated",per cell,0.1741122379986477,subspace/heldout.csv,cell=Qwen2.5-14B TriviaQA; method=readout; condition=negated
+"Table 5 / Qwen2.5-14B TriviaQA / isolated, negated",per cell,0.8571791751183232,subspace/heldout.csv,cell=Qwen2.5-14B TriviaQA; method=isolated; condition=negated
+Table 5 / Qwen2.5-7B GSM8K / rank,"split-half rank, median over folds x wordings",5.0,subspace/ranks.csv,cell=Qwen2.5-7B GSM8K; median(rank) over 25 fold-wording rows
+Table 5 / Qwen2.5-7B GSM8K / norm in subspace,share of readout sq. norm in subspace (median),0.6042140391118842,subspace/readout_share.csv,cell=Qwen2.5-7B GSM8K; median(share) over fold x wording
+"Table 5 / Qwen2.5-7B GSM8K / readout, B/A",per cell,0.8729846153846154,subspace/heldout.csv,cell=Qwen2.5-7B GSM8K; method=readout; condition=b_a
+"Table 5 / Qwen2.5-7B GSM8K / isolated, B/A",per cell,0.8811323076923078,subspace/heldout.csv,cell=Qwen2.5-7B GSM8K; method=isolated; condition=b_a
+"Table 5 / Qwen2.5-7B GSM8K / readout, negated",per cell,0.4782851282051282,subspace/heldout.csv,cell=Qwen2.5-7B GSM8K; method=readout; condition=negated
+"Table 5 / Qwen2.5-7B GSM8K / isolated, negated",per cell,0.8663220512820512,subspace/heldout.csv,cell=Qwen2.5-7B GSM8K; method=isolated; condition=negated
+Table 5 / Qwen2.5-7B MMLU / rank,"split-half rank, median over folds x wordings",6.0,subspace/ranks.csv,cell=Qwen2.5-7B MMLU; median(rank) over 25 fold-wording rows
+Table 5 / Qwen2.5-7B MMLU / norm in subspace,share of readout sq. norm in subspace (median),0.6564117116102912,subspace/readout_share.csv,cell=Qwen2.5-7B MMLU; median(share) over fold x wording
+"Table 5 / Qwen2.5-7B MMLU / readout, B/A",per cell,0.7674052938319573,subspace/heldout.csv,cell=Qwen2.5-7B MMLU; method=readout; condition=b_a
+"Table 5 / Qwen2.5-7B MMLU / isolated, B/A",per cell,0.7721648858669258,subspace/heldout.csv,cell=Qwen2.5-7B MMLU; method=isolated; condition=b_a
+"Table 5 / Qwen2.5-7B MMLU / readout, negated",per cell,0.7330925206410879,subspace/heldout.csv,cell=Qwen2.5-7B MMLU; method=readout; condition=negated
+"Table 5 / Qwen2.5-7B MMLU / isolated, negated",per cell,0.7706653715395824,subspace/heldout.csv,cell=Qwen2.5-7B MMLU; method=isolated; condition=negated
+Table 5 / Qwen2.5-7B TriviaQA / rank,"split-half rank, median over folds x wordings",7.0,subspace/ranks.csv,cell=Qwen2.5-7B TriviaQA; median(rank) over 25 fold-wording rows
+Table 5 / Qwen2.5-7B TriviaQA / norm in subspace,share of readout sq. norm in subspace (median),0.6750472460015807,subspace/readout_share.csv,cell=Qwen2.5-7B TriviaQA; median(share) over fold x wording
+"Table 5 / Qwen2.5-7B TriviaQA / readout, B/A",per cell,0.83452660258836,subspace/heldout.csv,cell=Qwen2.5-7B TriviaQA; method=readout; condition=b_a
+"Table 5 / Qwen2.5-7B TriviaQA / isolated, B/A",per cell,0.8403541966245364,subspace/heldout.csv,cell=Qwen2.5-7B TriviaQA; method=isolated; condition=b_a
+"Table 5 / Qwen2.5-7B TriviaQA / readout, negated",per cell,0.6839627639446,subspace/heldout.csv,cell=Qwen2.5-7B TriviaQA; method=readout; condition=negated
+"Table 5 / Qwen2.5-7B TriviaQA / isolated, negated",per cell,0.8560912232901939,subspace/heldout.csv,cell=Qwen2.5-7B TriviaQA; method=isolated; condition=negated

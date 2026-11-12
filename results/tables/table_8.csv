@@ -1,0 +1,67 @@
+location,context,value,source_file,source_key
+Table 8 / Yes/No / verdict,"every readout, target Yes/No",0.788275020726365,subspace/heldout.csv,condition=yes_no; method=readout; col=verdict_auroc; mean over 14 cells
+Table 8 / Yes/No / readout,"every readout, target Yes/No",0.8148860011422042,subspace/heldout.csv,condition=yes_no; method=readout; col=auroc; mean over 14 cells
+Table 8 / Yes/No / pooled,"every readout, target Yes/No",0.8094986091974288,subspace/heldout.csv,condition=yes_no; method=pooled; col=auroc; mean over 14 cells
+Table 8 / Yes/No / tuned probe,"every readout, target Yes/No",0.8243147118895722,subspace/heldout.csv,condition=yes_no; method=tuned_probe; col=auroc; mean over 14 cells
+Table 8 / Yes/No / isolated,"every readout, target Yes/No",0.8203240529672561,subspace/heldout.csv,condition=yes_no; method=isolated; col=auroc; mean over 14 cells
+Table 8 / Yes/No / condition-fitted,"every readout, target Yes/No",0.8148860011422042,subspace/heldout.csv,condition=yes_no; method=fitted; col=auroc; mean over 14 cells
+Table 8 / True/False / verdict,"every readout, target True/False",0.7792679775510608,subspace/heldout.csv,condition=true_false; method=readout; col=verdict_auroc; mean over 14 cells
+Table 8 / True/False / readout,"every readout, target True/False",0.8149861280160513,subspace/heldout.csv,condition=true_false; method=readout; col=auroc; mean over 14 cells
+Table 8 / True/False / pooled,"every readout, target True/False",0.8120729959595164,subspace/heldout.csv,condition=true_false; method=pooled; col=auroc; mean over 14 cells
+Table 8 / True/False / tuned probe,"every readout, target True/False",0.8105534330854588,subspace/heldout.csv,condition=true_false; method=tuned_probe; col=auroc; mean over 14 cells
+Table 8 / True/False / isolated,"every readout, target True/False",0.8166806362514103,subspace/heldout.csv,condition=true_false; method=isolated; col=auroc; mean over 14 cells
+Table 8 / True/False / condition-fitted,"every readout, target True/False",0.8143617275983841,subspace/heldout.csv,condition=true_false; method=fitted; col=auroc; mean over 14 cells
+Table 8 / A/B / verdict,"every readout, target A/B",0.7442801139144191,subspace/heldout.csv,condition=a_b; method=readout; col=verdict_auroc; mean over 14 cells
+Table 8 / A/B / readout,"every readout, target A/B",0.7976290921852007,subspace/heldout.csv,condition=a_b; method=readout; col=auroc; mean over 14 cells
+Table 8 / A/B / pooled,"every readout, target A/B",0.8031605882724632,subspace/heldout.csv,condition=a_b; method=pooled; col=auroc; mean over 14 cells
+Table 8 / A/B / tuned probe,"every readout, target A/B",0.7740871088423177,subspace/heldout.csv,condition=a_b; method=tuned_probe; col=auroc; mean over 14 cells
+Table 8 / A/B / isolated,"every readout, target A/B",0.8072969895902229,subspace/heldout.csv,condition=a_b; method=isolated; col=auroc; mean over 14 cells
+Table 8 / A/B / condition-fitted,"every readout, target A/B",0.8037567516175755,subspace/heldout.csv,condition=a_b; method=fitted; col=auroc; mean over 14 cells
+Table 8 / sentence / verdict,"every readout, target sentence",,subspace/heldout.csv,condition=sentence; method=readout; col=verdict_auroc; mean over 14 cells
+Table 8 / sentence / readout,"every readout, target sentence",0.8073773447634593,subspace/heldout.csv,condition=sentence; method=readout; col=auroc; mean over 14 cells
+Table 8 / sentence / pooled,"every readout, target sentence",0.8014164541516103,subspace/heldout.csv,condition=sentence; method=pooled; col=auroc; mean over 14 cells
+Table 8 / sentence / tuned probe,"every readout, target sentence",0.7758748816542609,subspace/heldout.csv,condition=sentence; method=tuned_probe; col=auroc; mean over 14 cells
+Table 8 / sentence / isolated,"every readout, target sentence",0.8085180214791314,subspace/heldout.csv,condition=sentence; method=isolated; col=auroc; mean over 14 cells
+Table 8 / sentence / condition-fitted,"every readout, target sentence",0.8092329715792496,subspace/heldout.csv,condition=sentence; method=fitted; col=auroc; mean over 14 cells
+Table 8 / 1/0 / verdict,"every readout, target 1/0",0.7942427408722313,subspace/heldout.csv,condition=one_zero; method=readout; col=verdict_auroc; mean over 14 cells
+Table 8 / 1/0 / readout,"every readout, target 1/0",0.8149934567387941,subspace/heldout.csv,condition=one_zero; method=readout; col=auroc; mean over 14 cells
+Table 8 / 1/0 / pooled,"every readout, target 1/0",0.8055833008085226,subspace/heldout.csv,condition=one_zero; method=pooled; col=auroc; mean over 14 cells
+Table 8 / 1/0 / tuned probe,"every readout, target 1/0",0.784121463785264,subspace/heldout.csv,condition=one_zero; method=tuned_probe; col=auroc; mean over 14 cells
+Table 8 / 1/0 / isolated,"every readout, target 1/0",0.8102937069675153,subspace/heldout.csv,condition=one_zero; method=isolated; col=auroc; mean over 14 cells
+Table 8 / 1/0 / condition-fitted,"every readout, target 1/0",0.8140387697836377,subspace/heldout.csv,condition=one_zero; method=fitted; col=auroc; mean over 14 cells
+Table 8 / correct/incorrect / verdict,"every readout, target correct/incorrect",0.7792771572496988,subspace/heldout.csv,condition=correct_incorrect; method=readout; col=verdict_auroc; mean over 14 cells
+Table 8 / correct/incorrect / readout,"every readout, target correct/incorrect",0.8161117701633458,subspace/heldout.csv,condition=correct_incorrect; method=readout; col=auroc; mean over 14 cells
+Table 8 / correct/incorrect / pooled,"every readout, target correct/incorrect",0.8099242660140968,subspace/heldout.csv,condition=correct_incorrect; method=pooled; col=auroc; mean over 14 cells
+Table 8 / correct/incorrect / tuned probe,"every readout, target correct/incorrect",0.7998274110189396,subspace/heldout.csv,condition=correct_incorrect; method=tuned_probe; col=auroc; mean over 14 cells
+Table 8 / correct/incorrect / isolated,"every readout, target correct/incorrect",0.8159801392051277,subspace/heldout.csv,condition=correct_incorrect; method=isolated; col=auroc; mean over 14 cells
+Table 8 / correct/incorrect / condition-fitted,"every readout, target correct/incorrect",0.8101604308919544,subspace/heldout.csv,condition=correct_incorrect; method=fitted; col=auroc; mean over 14 cells
+Table 8 / B/A / verdict,"every readout, target B/A",0.7261430588095258,subspace/heldout.csv,condition=b_a; method=readout; col=verdict_auroc; mean over 14 cells
+Table 8 / B/A / readout,"every readout, target B/A",0.7924991702771439,subspace/heldout.csv,condition=b_a; method=readout; col=auroc; mean over 14 cells
+Table 8 / B/A / pooled,"every readout, target B/A",0.7987910153817356,subspace/heldout.csv,condition=b_a; method=pooled; col=auroc; mean over 14 cells
+Table 8 / B/A / tuned probe,"every readout, target B/A",0.7564501684334836,subspace/heldout.csv,condition=b_a; method=tuned_probe; col=auroc; mean over 14 cells
+Table 8 / B/A / isolated,"every readout, target B/A",0.8046095801825105,subspace/heldout.csv,condition=b_a; method=isolated; col=auroc; mean over 14 cells
+Table 8 / B/A / condition-fitted,"every readout, target B/A",0.8005385866447421,subspace/heldout.csv,condition=b_a; method=fitted; col=auroc; mean over 14 cells
+Table 8 / negated question / verdict,"every readout, target negated question",0.6648874973481311,subspace/heldout.csv,condition=negated; method=readout; col=verdict_auroc; mean over 14 cells
+Table 8 / negated question / readout,"every readout, target negated question",0.6498912083896956,subspace/heldout.csv,condition=negated; method=readout; col=auroc; mean over 14 cells
+Table 8 / negated question / pooled,"every readout, target negated question",0.7939187930018994,subspace/heldout.csv,condition=negated; method=pooled; col=auroc; mean over 14 cells
+Table 8 / negated question / tuned probe,"every readout, target negated question",0.7316420940960392,subspace/heldout.csv,condition=negated; method=tuned_probe; col=auroc; mean over 14 cells
+Table 8 / negated question / isolated,"every readout, target negated question",0.8077303969893447,subspace/heldout.csv,condition=negated; method=isolated; col=auroc; mean over 14 cells
+Table 8 / negated question / condition-fitted,"every readout, target negated question",0.8054377686843431,subspace/heldout.csv,condition=negated; method=fitted; col=auroc; mean over 14 cells
+Table 8 / 0 means correct / verdict,"every readout, target 0 means correct",0.7686453823728814,subspace/heldout.csv,condition=zero_means_correct; method=readout; col=verdict_auroc; mean over 14 cells
+Table 8 / 0 means correct / readout,"every readout, target 0 means correct",0.787222689619667,subspace/heldout.csv,condition=zero_means_correct; method=readout; col=auroc; mean over 14 cells
+Table 8 / 0 means correct / pooled,"every readout, target 0 means correct",0.8044470596360318,subspace/heldout.csv,condition=zero_means_correct; method=pooled; col=auroc; mean over 14 cells
+Table 8 / 0 means correct / tuned probe,"every readout, target 0 means correct",0.7686441658859211,subspace/heldout.csv,condition=zero_means_correct; method=tuned_probe; col=auroc; mean over 14 cells
+Table 8 / 0 means correct / isolated,"every readout, target 0 means correct",0.8100896822528971,subspace/heldout.csv,condition=zero_means_correct; method=isolated; col=auroc; mean over 14 cells
+Table 8 / 0 means correct / condition-fitted,"every readout, target 0 means correct",0.8098931373520661,subspace/heldout.csv,condition=zero_means_correct; method=fitted; col=auroc; mean over 14 cells
+Table 8 / False means correct / verdict,"every readout, target False means correct",0.5934148562857973,subspace/heldout.csv,condition=false_means_correct; method=readout; col=verdict_auroc; mean over 14 cells
+Table 8 / False means correct / readout,"every readout, target False means correct",0.6651136778103426,subspace/heldout.csv,condition=false_means_correct; method=readout; col=auroc; mean over 14 cells
+Table 8 / False means correct / pooled,"every readout, target False means correct",0.770618721413049,subspace/heldout.csv,condition=false_means_correct; method=pooled; col=auroc; mean over 14 cells
+Table 8 / False means correct / tuned probe,"every readout, target False means correct",0.7322896407842242,subspace/heldout.csv,condition=false_means_correct; method=tuned_probe; col=auroc; mean over 14 cells
+Table 8 / False means correct / isolated,"every readout, target False means correct",0.7925115624069139,subspace/heldout.csv,condition=false_means_correct; method=isolated; col=auroc; mean over 14 cells
+Table 8 / False means correct / condition-fitted,"every readout, target False means correct",0.8034081523503505,subspace/heldout.csv,condition=false_means_correct; method=fitted; col=auroc; mean over 14 cells
+Table 8 / No means correct / verdict,"every readout, target No means correct",0.616903714511355,subspace/heldout.csv,condition=no_means_correct; method=readout; col=verdict_auroc; mean over 14 cells
+Table 8 / No means correct / readout,"every readout, target No means correct",0.6397432324971275,subspace/heldout.csv,condition=no_means_correct; method=readout; col=auroc; mean over 14 cells
+Table 8 / No means correct / pooled,"every readout, target No means correct",0.789237781028233,subspace/heldout.csv,condition=no_means_correct; method=pooled; col=auroc; mean over 14 cells
+Table 8 / No means correct / tuned probe,"every readout, target No means correct",0.7060275354618621,subspace/heldout.csv,condition=no_means_correct; method=tuned_probe; col=auroc; mean over 14 cells
+Table 8 / No means correct / isolated,"every readout, target No means correct",0.7936019662757066,subspace/heldout.csv,condition=no_means_correct; method=isolated; col=auroc; mean over 14 cells
+Table 8 / No means correct / condition-fitted,"every readout, target No means correct",0.8053529464085795,subspace/heldout.csv,condition=no_means_correct; method=fitted; col=auroc; mean over 14 cells

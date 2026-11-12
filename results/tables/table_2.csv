@@ -1,0 +1,10 @@
+location,context,value,source_file,source_key
+Table 2 / Before judgment question,readout by prompt position,0.7407524146492446,readout/position.csv,col=pre; mean over 14 cells
+Table 2 / After judgment question,readout by prompt position,0.811891055199036,readout/position.csv,col=stem; mean over 14 cells
+Table 2 / Before verdict,readout by prompt position,0.8184184835799001,readout/position.csv,col=post; mean over 14 cells
+Table 2 / logit change / Yes/No,steering slope per unit,2.3894810090702947,readout/steering.csv,depth=0.75; format=yes_no
+Table 2 / logit change / A/B,steering slope per unit,1.2955289115646258,readout/steering.csv,depth=0.75; format=a_b
+Table 2 / logit change / B/A,steering slope per unit,0.4553064058956916,readout/steering.csv,depth=0.75; format=b_a
+Table 2 / positive cells / Yes/No,positive cells,14.0,readout/steering.csv,format=yes_no; cells_positive (of 14)
+Table 2 / positive cells / A/B,positive cells,14.0,readout/steering.csv,format=a_b; cells_positive (of 14)
+Table 2 / positive cells / B/A,positive cells,13.0,readout/steering.csv,format=b_a; cells_positive (of 14)

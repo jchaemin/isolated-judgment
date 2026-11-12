@@ -1,0 +1,6 @@
+condition,pos,cells
+negated,13,14
+zero_means_correct,13,14
+false_means_correct,13,14
+no_means_correct,13,14
+yes_no,10,14

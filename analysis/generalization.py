@@ -68,13 +68,13 @@ def _first_rows(S, rows, fq):
 
 def _correctness_negation_pairs(model):
     X = []
-    for c in _all_cells():
+    for ci, c in enumerate(_all_cells()):
         if c["family"] == "correctness" and c["primary"] and c["model"] == model:
             S = data.load_cell(c, wordings=config.FIVE, rows=_ROWS)
             for p in config.FIVE:
                 if ("negated", p) in S["H"] and ("yes_no", p) in S["H"]:
-                    X.append(S["H"][("negated", p)] - S["H"][("yes_no", p)])
-    return np.concatenate(X)
+                    X.append((S["H"][("negated", p)] - S["H"][("yes_no", p)], ci, S["q"], estimators.wording_number(p)))
+    return estimators.cross_block(X)
 
 
 def _task_states(model, task):
@@ -111,7 +111,7 @@ def _tasks_cell(model, task, cross):
         for p in pids:
             ytr = y[tr]; Hy = H[("yes_no", p)]; ss = StandardScaler().fit(Hy[tr]); X = ss.transform(Hy[tr])
             Bm, _ = estimators.expression_subspace(H, tr, p, q, cross); Bs, _ = np.linalg.qr((Bm / ss.scale_).T); Bs = Bs.T
-            wcm = estimators.class_mean(X, ytr); w_iso = wcm - Bs.T @ (Bs @ wcm)
+            wcm = estimators.class_mean(X, ytr); w_iso = estimators.unit(wcm - Bs.T @ (Bs @ wcm))
             for nm, w_ in (("readout", wcm), ("isolated", w_iso)):
                 for t in ["yes_no"] + have:
                     put((nm, t, p), te, ss.transform(H[(t, p)][te]) @ w_)
@@ -217,7 +217,7 @@ def _dataset_candidates_cell(job):
             n_pairs = sum(1 for i, f in enumerate(config.FORMATS) for g in config.FORMATS[i + 1:] if (f, p) in Hx and (g, p) in Hx)
             wxs = None
             if n_pairs >= 10:
-                Bm, _ = estimators.expression_subspace(Hx, trx, p, qx, cross); Qs = np.linalg.qr((Bm / sx.scale_).T)[0].T; wxs = wx - Qs.T @ (Qs @ wx)
+                Bm, _ = estimators.expression_subspace(Hx, trx, p, qx, cross); Qs = np.linalg.qr((Bm / sx.scale_).T)[0].T; wxs = estimators.unit(wx - Qs.T @ (Qs @ wx))
             for c in conv:
                 Ht = Hx[(c, p)]; st = StandardScaler().fit(Ht[trx]); Xt = st.transform(Ht[trx]); wt = estimators.class_mean(Xt, yx[trx])
                 put(("fitted", c, p), tex, st.transform(Ht[tex]) @ wt)
@@ -255,7 +255,7 @@ def _instruction_family_cell(job):
     for tr, te in So["folds"]:
         for p in config.FIVE:
             ss = StandardScaler().fit(So["H"][("yes_no", p)][tr]); X = ss.transform(So["H"][("yes_no", p)][tr]); w0 = estimators.class_mean(X, y[tr])
-            Bm, _ = estimators.expression_subspace(So["H"], tr, p, q, cross); Bs, _ = np.linalg.qr((Bm / ss.scale_).T); Bs = Bs.T; wp = w0 - Bs.T @ (Bs @ w0)
+            Bm, _ = estimators.expression_subspace(So["H"], tr, p, q, cross); Bs, _ = np.linalg.qr((Bm / ss.scale_).T); Bs = Bs.T; wp = estimators.unit(w0 - Bs.T @ (Bs @ w0))
             for w in prompts.NEWW:
                 for c in prompts.SEVEN:
                     Zt = ss.transform(Hn[(c, w)][te]); put(("readout", c, p, w), te, Zt @ w0); put(("isolated", c, p, w), te, Zt @ wp)
@@ -265,7 +265,7 @@ def _instruction_family_cell(job):
                 put(("fitted_new_family", c, "-", w), te, st.transform(Hn[(c, w)][te]) @ wt)
     rows = []
     for (rd, c) in sorted({k[:2] for k in SC}):
-        rows.append(dict(cell=config.cell_name(model, task), method=rd, condition=c, auroc=float(np.mean([estimators.auroc(y, v) for k, v in SC.items() if k[:2] == (rd, c)]))))
+        rows.append(dict(cell=config.cell_name(model, task), method=rd, condition=c, auroc=float(estimators.mean_in_order([estimators.auroc(y, v) for k, v in SC.items() if k[:2] == (rd, c)]))))
     print(f"[instruction-family] {config.cell_name(model, task)}", flush=True); return rows
 
 
@@ -325,14 +325,14 @@ def _other_model_states(t0, task, wordings, extra):
             if name != "sentence":
                 zz = Z["Z"].astype(np.float64); marg[(name, p)] = np.logaddexp(zz[:, 0], zz[:, 2]) - np.logaddexp(zz[:, 1], zz[:, 3])
     X = []
-    for tk in config.CROSS_TASKS:
+    for ti, tk in enumerate(config.CROSS_TASKS):
         f1 = storage.path("states", model=t0, task=tk, condition="negated"); f0 = storage.path("states", model=t0, task=tk, condition="yes_no")
         if os.path.exists(f1) and os.path.exists(f0):
             Za = np.load(f1, allow_pickle=True); Zb = np.load(f0, allow_pickle=True)
             for p_ in [str(x) for x in Za["prompt_ids"]]:
                 if f"G_{p_}" in Zb:
-                    X.append(Za[f"G_{p_}"].astype(np.float64) - Zb[f"G_{p_}"].astype(np.float64))
-    return dict(y=y, q=q, n=len(y), H=H, marg=marg, cross=np.concatenate(X) if X else None)
+                    X.append((Za[f"G_{p_}"].astype(np.float64) - Zb[f"G_{p_}"].astype(np.float64), ti, Za["qid"], estimators.wording_number(p_)))
+    return dict(y=y, q=q, n=len(y), H=H, marg=marg, cross=estimators.cross_block(X) if X else None)
 
 
 _FULL_ORDER = {}
@@ -364,7 +364,7 @@ def _other_model_cell(name, S, rule, full):
             ytr = y[tr]; Hy = H[("yes_no", p)]; ss = StandardScaler().fit(Hy[tr]); X = ss.transform(Hy[tr])
             Bm, _ = estimators.expression_subspace(H, tr, p, q, cross, rule=rule)
             Bs, _ = np.linalg.qr((Bm / ss.scale_).T); Bs = Bs.T
-            wcm = estimators.class_mean(X, ytr); w_iso = wcm - Bs.T @ (Bs @ wcm)
+            wcm = estimators.class_mean(X, ytr); w_iso = estimators.unit(wcm - Bs.T @ (Bs @ wcm))
             R = {"readout": wcm, "isolated": w_iso}
             if full:
                 other = [ss.transform(H[("yes_no", p2)][tr]) for p2 in pids if p2 != p]

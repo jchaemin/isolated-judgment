@@ -1,0 +1,21 @@
+location,context,value,source_file,source_key
+Table 13 / No means correct / readout,which pairs are needed,0.6397432324971275,subspace/pair_sources.csv,condition=no_means_correct; method=readout; mean over 14 cells
+Table 13 / No means correct / five formats only,which pairs are needed,0.7382531636671558,subspace/pair_sources.csv,condition=no_means_correct; method=isolated_format_pairs; mean over 14 cells
+Table 13 / No means correct / negation pairs only,which pairs are needed,0.7829311138428175,subspace/pair_sources.csv,condition=no_means_correct; method=isolated_negation_pairs; mean over 14 cells
+Table 13 / No means correct / both,which pairs are needed,0.7936019662757066,subspace/pair_sources.csv,condition=no_means_correct; method=isolated; mean over 14 cells
+Table 13 / No means correct / condition-fitted,which pairs are needed,0.8053529464085795,subspace/pair_sources.csv,condition=no_means_correct; method=fitted; mean over 14 cells
+Table 13 / False means correct / readout,which pairs are needed,0.6651136778103426,subspace/pair_sources.csv,condition=false_means_correct; method=readout; mean over 14 cells
+Table 13 / False means correct / five formats only,which pairs are needed,0.7592435558859915,subspace/pair_sources.csv,condition=false_means_correct; method=isolated_format_pairs; mean over 14 cells
+Table 13 / False means correct / negation pairs only,which pairs are needed,0.7919328905220172,subspace/pair_sources.csv,condition=false_means_correct; method=isolated_negation_pairs; mean over 14 cells
+Table 13 / False means correct / both,which pairs are needed,0.7925115624069139,subspace/pair_sources.csv,condition=false_means_correct; method=isolated; mean over 14 cells
+Table 13 / False means correct / condition-fitted,which pairs are needed,0.8034081523503505,subspace/pair_sources.csv,condition=false_means_correct; method=fitted; mean over 14 cells
+Table 13 / 0 means correct / readout,which pairs are needed,0.787222689619667,subspace/pair_sources.csv,condition=zero_means_correct; method=readout; mean over 14 cells
+Table 13 / 0 means correct / five formats only,which pairs are needed,0.8060763184131874,subspace/pair_sources.csv,condition=zero_means_correct; method=isolated_format_pairs; mean over 14 cells
+Table 13 / 0 means correct / negation pairs only,which pairs are needed,0.8095878931688639,subspace/pair_sources.csv,condition=zero_means_correct; method=isolated_negation_pairs; mean over 14 cells
+Table 13 / 0 means correct / both,which pairs are needed,0.8100896822528971,subspace/pair_sources.csv,condition=zero_means_correct; method=isolated; mean over 14 cells
+Table 13 / 0 means correct / condition-fitted,which pairs are needed,0.8098931373520661,subspace/pair_sources.csv,condition=zero_means_correct; method=fitted; mean over 14 cells
+Table 13 / negated question / readout,which pairs are needed,0.6498912083896956,subspace/pair_sources.csv,condition=negated; method=readout; mean over 14 cells
+Table 13 / negated question / five formats only,which pairs are needed,0.7396513682155843,subspace/pair_sources.csv,condition=negated; method=isolated_format_pairs; mean over 14 cells
+Table 13 / negated question / negation pairs only,which pairs are needed,0.8027293583968521,subspace/pair_sources.csv,condition=negated; method=isolated_negation_pairs; mean over 14 cells
+Table 13 / negated question / both,which pairs are needed,0.8077303969893447,subspace/pair_sources.csv,condition=negated; method=isolated; mean over 14 cells
+Table 13 / negated question / condition-fitted,which pairs are needed,0.8054377686843431,subspace/pair_sources.csv,condition=negated; method=fitted; mean over 14 cells

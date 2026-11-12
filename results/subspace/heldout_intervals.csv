@@ -1,5 +1,5 @@
 condition,interval
-negated,"[-0.012, +0.004]"
-zero_means_correct,"[-0.005, +0.003]"
-false_means_correct,"[-0.028, -0.007]"
-no_means_correct,"[-0.043, -0.008]"
+negated,"[-0.004, +0.009]"
+zero_means_correct,"[-0.003, +0.004]"
+false_means_correct,"[-0.020, -0.002]"
+no_means_correct,"[-0.022, -0.002]"

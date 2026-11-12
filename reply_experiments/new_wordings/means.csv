@@ -1,0 +1,4 @@
+form,method,auroc,n_cells
+negated,fitted,0.7834764307392739,11
+negated,plain,0.6619885912126539,11
+negated,rank8,0.7854850805405204,11

@@ -1,0 +1,17 @@
+location,context,value,source_file,source_key
+Table 16 / No means correct / readout,verdict-free subspace (median),0.6901205119918293,subspace/verdict_free.csv,condition=no_means_correct; subspace=none; median over 14 cells
+Table 16 / No means correct / identical-verdict pairs,verdict-free subspace (median),0.7993111774464571,subspace/verdict_free.csv,condition=no_means_correct; subspace=identical_verdict_pairs; median over 14 cells
+Table 16 / No means correct / verdict sign regressed out,verdict-free subspace (median),0.7694950570696653,subspace/verdict_free.csv,condition=no_means_correct; subspace=verdict_regressed_out; median over 14 cells
+Table 16 / No means correct / as in Table 7,verdict-free subspace (median),0.7995868269614158,subspace/verdict_free.csv,condition=no_means_correct; subspace=all_pairs; median over 14 cells
+Table 16 / False means correct / readout,verdict-free subspace (median),0.6754037117729725,subspace/verdict_free.csv,condition=false_means_correct; subspace=none; median over 14 cells
+Table 16 / False means correct / identical-verdict pairs,verdict-free subspace (median),0.7932543470783602,subspace/verdict_free.csv,condition=false_means_correct; subspace=identical_verdict_pairs; median over 14 cells
+Table 16 / False means correct / verdict sign regressed out,verdict-free subspace (median),0.7960922335613947,subspace/verdict_free.csv,condition=false_means_correct; subspace=verdict_regressed_out; median over 14 cells
+Table 16 / False means correct / as in Table 7,verdict-free subspace (median),0.7943890231205198,subspace/verdict_free.csv,condition=false_means_correct; subspace=all_pairs; median over 14 cells
+Table 16 / 0 means correct / readout,verdict-free subspace (median),0.7657241713049336,subspace/verdict_free.csv,condition=zero_means_correct; subspace=none; median over 14 cells
+Table 16 / 0 means correct / identical-verdict pairs,verdict-free subspace (median),0.8173076820383565,subspace/verdict_free.csv,condition=zero_means_correct; subspace=identical_verdict_pairs; median over 14 cells
+Table 16 / 0 means correct / verdict sign regressed out,verdict-free subspace (median),0.8185647206412009,subspace/verdict_free.csv,condition=zero_means_correct; subspace=verdict_regressed_out; median over 14 cells
+Table 16 / 0 means correct / as in Table 7,verdict-free subspace (median),0.818356711818883,subspace/verdict_free.csv,condition=zero_means_correct; subspace=all_pairs; median over 14 cells
+Table 16 / negated question / readout,verdict-free subspace (median),0.6944214861389667,subspace/verdict_free.csv,condition=negated; subspace=none; median over 14 cells
+Table 16 / negated question / identical-verdict pairs,verdict-free subspace (median),0.8090841244829732,subspace/verdict_free.csv,condition=negated; subspace=identical_verdict_pairs; median over 14 cells
+Table 16 / negated question / verdict sign regressed out,verdict-free subspace (median),0.7917620598326267,subspace/verdict_free.csv,condition=negated; subspace=verdict_regressed_out; median over 14 cells
+Table 16 / negated question / as in Table 7,verdict-free subspace (median),0.8088941896918871,subspace/verdict_free.csv,condition=negated; subspace=all_pairs; median over 14 cells
