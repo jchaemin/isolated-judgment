@@ -242,12 +242,13 @@ def _verdicts(S, p):
 def _directions_cell(cell):
     name = cell["name"]; S = data.load_cell(cell, config.FIVE, rows=400)
     y, q, n, H, cross, fld = (S[k] for k in ("y", "q", "n", "H", "cross", "folds"))
-    Pz = _negation_directions(cross); SC = {}
+    SC = {}
 
     def put(key, te, v):
         SC.setdefault(key, np.full(n, np.nan)); SC[key][te] = v; est.pool(SC[key], te)
 
     for tr, te in fld:
+        Pz = _negation_directions(est.sub_cross(cross, len(tr)))
         for p in config.FIVE:
             ytr = y[tr]; ss = StandardScaler().fit(H[("yes_no", p)][tr]); X = ss.transform(H[("yes_no", p)][tr])
             w = est.class_mean(X, ytr)

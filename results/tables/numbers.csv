@@ -494,58 +494,58 @@ Table 13 / negated question / negation pairs only,which pairs are needed,0.80272
 Table 13 / negated question / both,which pairs are needed,0.8077303969893447,subspace/pair_sources.csv,condition=negated; method=isolated; mean over 14 cells
 Table 13 / negated question / condition-fitted,which pairs are needed,0.8054377686843431,subspace/pair_sources.csv,condition=negated; method=fitted; mean over 14 cells
 Table 14 / Yes/No / readout,directions removed (median),0.820463524277258,subspace/directions_removed.csv,condition=yes_no; method=readout; median over 14 cells
-Table 14 / Yes/No / rank 1,directions removed (median),0.8189182664922796,subspace/directions_removed.csv,condition=yes_no; method=negation_rank_1; median over 14 cells
-Table 14 / Yes/No / rank 3,directions removed (median),0.8205013462414777,subspace/directions_removed.csv,condition=yes_no; method=negation_rank_3; median over 14 cells
+Table 14 / Yes/No / rank 1,directions removed (median),0.818953661470109,subspace/directions_removed.csv,condition=yes_no; method=negation_rank_1; median over 14 cells
+Table 14 / Yes/No / rank 3,directions removed (median),0.820284694061421,subspace/directions_removed.csv,condition=yes_no; method=negation_rank_3; median over 14 cells
 Table 14 / Yes/No / full subspace (selected rank),directions removed (median),0.8215917409071192,subspace/directions_removed.csv,condition=yes_no; method=subspace_full; median over 14 cells
 Table 14 / Yes/No / condition-fitted,directions removed (median),0.820463524277258,subspace/directions_removed.csv,condition=yes_no; method=fitted; median over 14 cells
 Table 14 / True/False / readout,directions removed (median),0.8193787195534729,subspace/directions_removed.csv,condition=true_false; method=readout; median over 14 cells
-Table 14 / True/False / rank 1,directions removed (median),0.8201438754449744,subspace/directions_removed.csv,condition=true_false; method=negation_rank_1; median over 14 cells
-Table 14 / True/False / rank 3,directions removed (median),0.8208939361077519,subspace/directions_removed.csv,condition=true_false; method=negation_rank_3; median over 14 cells
+Table 14 / True/False / rank 1,directions removed (median),0.8201091010335892,subspace/directions_removed.csv,condition=true_false; method=negation_rank_1; median over 14 cells
+Table 14 / True/False / rank 3,directions removed (median),0.820747594647677,subspace/directions_removed.csv,condition=true_false; method=negation_rank_3; median over 14 cells
 Table 14 / True/False / full subspace (selected rank),directions removed (median),0.8215491128936854,subspace/directions_removed.csv,condition=true_false; method=subspace_full; median over 14 cells
 Table 14 / True/False / condition-fitted,directions removed (median),0.8187930079788632,subspace/directions_removed.csv,condition=true_false; method=fitted; median over 14 cells
 Table 14 / A/B / readout,directions removed (median),0.8051274828515782,subspace/directions_removed.csv,condition=a_b; method=readout; median over 14 cells
-Table 14 / A/B / rank 1,directions removed (median),0.8119605312450707,subspace/directions_removed.csv,condition=a_b; method=negation_rank_1; median over 14 cells
-Table 14 / A/B / rank 3,directions removed (median),0.811243735020462,subspace/directions_removed.csv,condition=a_b; method=negation_rank_3; median over 14 cells
+Table 14 / A/B / rank 1,directions removed (median),0.8119276214465359,subspace/directions_removed.csv,condition=a_b; method=negation_rank_1; median over 14 cells
+Table 14 / A/B / rank 3,directions removed (median),0.81091352110061,subspace/directions_removed.csv,condition=a_b; method=negation_rank_3; median over 14 cells
 Table 14 / A/B / full subspace (selected rank),directions removed (median),0.8130787147337313,subspace/directions_removed.csv,condition=a_b; method=subspace_full; median over 14 cells
 Table 14 / A/B / condition-fitted,directions removed (median),0.8149281194408662,subspace/directions_removed.csv,condition=a_b; method=fitted; median over 14 cells
 Table 14 / sentence / readout,directions removed (median),0.8190281107324693,subspace/directions_removed.csv,condition=sentence; method=readout; median over 14 cells
-Table 14 / sentence / rank 1,directions removed (median),0.8083000157577827,subspace/directions_removed.csv,condition=sentence; method=negation_rank_1; median over 14 cells
-Table 14 / sentence / rank 3,directions removed (median),0.8181071383999521,subspace/directions_removed.csv,condition=sentence; method=negation_rank_3; median over 14 cells
+Table 14 / sentence / rank 1,directions removed (median),0.808230069067482,subspace/directions_removed.csv,condition=sentence; method=negation_rank_1; median over 14 cells
+Table 14 / sentence / rank 3,directions removed (median),0.8179836302677586,subspace/directions_removed.csv,condition=sentence; method=negation_rank_3; median over 14 cells
 Table 14 / sentence / full subspace (selected rank),directions removed (median),0.8166511770849765,subspace/directions_removed.csv,condition=sentence; method=subspace_full; median over 14 cells
 Table 14 / sentence / condition-fitted,directions removed (median),0.8163860247456147,subspace/directions_removed.csv,condition=sentence; method=fitted; median over 14 cells
 Table 14 / 1/0 / readout,directions removed (median),0.8086865129114307,subspace/directions_removed.csv,condition=one_zero; method=readout; median over 14 cells
-Table 14 / 1/0 / rank 1,directions removed (median),0.8109701256802408,subspace/directions_removed.csv,condition=one_zero; method=negation_rank_1; median over 14 cells
-Table 14 / 1/0 / rank 3,directions removed (median),0.8154265313907583,subspace/directions_removed.csv,condition=one_zero; method=negation_rank_3; median over 14 cells
+Table 14 / 1/0 / rank 1,directions removed (median),0.8109110222288676,subspace/directions_removed.csv,condition=one_zero; method=negation_rank_1; median over 14 cells
+Table 14 / 1/0 / rank 3,directions removed (median),0.8149510234830959,subspace/directions_removed.csv,condition=one_zero; method=negation_rank_3; median over 14 cells
 Table 14 / 1/0 / full subspace (selected rank),directions removed (median),0.8130773797200606,subspace/directions_removed.csv,condition=one_zero; method=subspace_full; median over 14 cells
 Table 14 / 1/0 / condition-fitted,directions removed (median),0.8148358699962318,subspace/directions_removed.csv,condition=one_zero; method=fitted; median over 14 cells
 Table 14 / correct/incorrect / readout,directions removed (median),0.8205708559532572,subspace/directions_removed.csv,condition=correct_incorrect; method=readout; median over 14 cells
-Table 14 / correct/incorrect / rank 1,directions removed (median),0.815015770131844,subspace/directions_removed.csv,condition=correct_incorrect; method=negation_rank_1; median over 14 cells
-Table 14 / correct/incorrect / rank 3,directions removed (median),0.8188913300241426,subspace/directions_removed.csv,condition=correct_incorrect; method=negation_rank_3; median over 14 cells
+Table 14 / correct/incorrect / rank 1,directions removed (median),0.8149602692362614,subspace/directions_removed.csv,condition=correct_incorrect; method=negation_rank_1; median over 14 cells
+Table 14 / correct/incorrect / rank 3,directions removed (median),0.8186818732254587,subspace/directions_removed.csv,condition=correct_incorrect; method=negation_rank_3; median over 14 cells
 Table 14 / correct/incorrect / full subspace (selected rank),directions removed (median),0.8203030077104912,subspace/directions_removed.csv,condition=correct_incorrect; method=subspace_full; median over 14 cells
 Table 14 / correct/incorrect / condition-fitted,directions removed (median),0.8157231816976882,subspace/directions_removed.csv,condition=correct_incorrect; method=fitted; median over 14 cells
 Table 14 / B/A / readout,directions removed (median),0.8019929426385017,subspace/directions_removed.csv,condition=b_a; method=readout; median over 14 cells
-Table 14 / B/A / rank 1,directions removed (median),0.811528657745763,subspace/directions_removed.csv,condition=b_a; method=negation_rank_1; median over 14 cells
-Table 14 / B/A / rank 3,directions removed (median),0.8136690885868518,subspace/directions_removed.csv,condition=b_a; method=negation_rank_3; median over 14 cells
+Table 14 / B/A / rank 1,directions removed (median),0.8115402792109206,subspace/directions_removed.csv,condition=b_a; method=negation_rank_1; median over 14 cells
+Table 14 / B/A / rank 3,directions removed (median),0.8134235761497275,subspace/directions_removed.csv,condition=b_a; method=negation_rank_3; median over 14 cells
 Table 14 / B/A / full subspace (selected rank),directions removed (median),0.8143837932900433,subspace/directions_removed.csv,condition=b_a; method=subspace_full; median over 14 cells
 Table 14 / B/A / condition-fitted,directions removed (median),0.815195977952968,subspace/directions_removed.csv,condition=b_a; method=fitted; median over 14 cells
 Table 14 / negated question / readout,directions removed (median),0.6944214861389667,subspace/directions_removed.csv,condition=negated; method=readout; median over 14 cells
-Table 14 / negated question / rank 1,directions removed (median),0.791380703673621,subspace/directions_removed.csv,condition=negated; method=negation_rank_1; median over 14 cells
-Table 14 / negated question / rank 3,directions removed (median),0.8073593313210912,subspace/directions_removed.csv,condition=negated; method=negation_rank_3; median over 14 cells
+Table 14 / negated question / rank 1,directions removed (median),0.7908352523593892,subspace/directions_removed.csv,condition=negated; method=negation_rank_1; median over 14 cells
+Table 14 / negated question / rank 3,directions removed (median),0.8072950760861944,subspace/directions_removed.csv,condition=negated; method=negation_rank_3; median over 14 cells
 Table 14 / negated question / full subspace (selected rank),directions removed (median),0.8088941896918871,subspace/directions_removed.csv,condition=negated; method=subspace_full; median over 14 cells
 Table 14 / negated question / condition-fitted,directions removed (median),0.8106392921771212,subspace/directions_removed.csv,condition=negated; method=fitted; median over 14 cells
 Table 14 / 0 means correct / readout,directions removed (median),0.7657241713049336,subspace/directions_removed.csv,condition=zero_means_correct; method=readout; median over 14 cells
-Table 14 / 0 means correct / rank 1,directions removed (median),0.8132784794715627,subspace/directions_removed.csv,condition=zero_means_correct; method=negation_rank_1; median over 14 cells
-Table 14 / 0 means correct / rank 3,directions removed (median),0.8190915033431481,subspace/directions_removed.csv,condition=zero_means_correct; method=negation_rank_3; median over 14 cells
+Table 14 / 0 means correct / rank 1,directions removed (median),0.8129846032322461,subspace/directions_removed.csv,condition=zero_means_correct; method=negation_rank_1; median over 14 cells
+Table 14 / 0 means correct / rank 3,directions removed (median),0.8188353655664511,subspace/directions_removed.csv,condition=zero_means_correct; method=negation_rank_3; median over 14 cells
 Table 14 / 0 means correct / full subspace (selected rank),directions removed (median),0.818356711818883,subspace/directions_removed.csv,condition=zero_means_correct; method=subspace_full; median over 14 cells
 Table 14 / 0 means correct / condition-fitted,directions removed (median),0.8185142365857827,subspace/directions_removed.csv,condition=zero_means_correct; method=fitted; median over 14 cells
 Table 14 / False means correct / readout,directions removed (median),0.6754037117729725,subspace/directions_removed.csv,condition=false_means_correct; method=readout; median over 14 cells
-Table 14 / False means correct / rank 1,directions removed (median),0.7484480048615845,subspace/directions_removed.csv,condition=false_means_correct; method=negation_rank_1; median over 14 cells
-Table 14 / False means correct / rank 3,directions removed (median),0.7918172279661551,subspace/directions_removed.csv,condition=false_means_correct; method=negation_rank_3; median over 14 cells
+Table 14 / False means correct / rank 1,directions removed (median),0.7492609030413022,subspace/directions_removed.csv,condition=false_means_correct; method=negation_rank_1; median over 14 cells
+Table 14 / False means correct / rank 3,directions removed (median),0.7920828786174148,subspace/directions_removed.csv,condition=false_means_correct; method=negation_rank_3; median over 14 cells
 Table 14 / False means correct / full subspace (selected rank),directions removed (median),0.7943890231205198,subspace/directions_removed.csv,condition=false_means_correct; method=subspace_full; median over 14 cells
 Table 14 / False means correct / condition-fitted,directions removed (median),0.8087801281777434,subspace/directions_removed.csv,condition=false_means_correct; method=fitted; median over 14 cells
 Table 14 / No means correct / readout,directions removed (median),0.6901205119918293,subspace/directions_removed.csv,condition=no_means_correct; method=readout; median over 14 cells
-Table 14 / No means correct / rank 1,directions removed (median),0.7213107824388861,subspace/directions_removed.csv,condition=no_means_correct; method=negation_rank_1; median over 14 cells
-Table 14 / No means correct / rank 3,directions removed (median),0.7704257453222203,subspace/directions_removed.csv,condition=no_means_correct; method=negation_rank_3; median over 14 cells
+Table 14 / No means correct / rank 1,directions removed (median),0.7214747134025417,subspace/directions_removed.csv,condition=no_means_correct; method=negation_rank_1; median over 14 cells
+Table 14 / No means correct / rank 3,directions removed (median),0.7695700954614006,subspace/directions_removed.csv,condition=no_means_correct; method=negation_rank_3; median over 14 cells
 Table 14 / No means correct / full subspace (selected rank),directions removed (median),0.7995868269614158,subspace/directions_removed.csv,condition=no_means_correct; method=subspace_full; median over 14 cells
 Table 14 / No means correct / condition-fitted,directions removed (median),0.802493209915085,subspace/directions_removed.csv,condition=no_means_correct; method=fitted; median over 14 cells
 Table 15 / No means correct / readout,concept erasure (median),0.6901205119918293,subspace/erasure.csv,condition=no_means_correct; method=readout; median over 14 cells
